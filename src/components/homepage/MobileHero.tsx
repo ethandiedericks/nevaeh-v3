@@ -5,7 +5,7 @@ import GradientButton from "../GradientButton";
 
 export const MobileHeroSection = () => {
   return (
-    <div className="relative overflow-hidden bg-black min-h-screen md:hidden">
+    <div className="relative overflow-hidden bg-background min-h-screen md:hidden">
       {/* Mobile hero content */}
       <div className="relative z-10 px-6 py-8 flex flex-col h-full">
         {/* Headline and subheadline */}

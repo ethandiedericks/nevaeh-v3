@@ -33,3 +33,23 @@ p {
 .hero-sub-headline {
   @apply text-base sm:text-lg 2xl:text-xl text-white max-w-xl mx-auto md:mx-0;
 }
+
+.gradient-button {
+  position: relative;
+  border-radius: 10px;
+  border: none;
+  padding: 3px;
+  background: linear-gradient(to bottom, #c0c0c0, #006528, #40b16d);
+  box-shadow: 4px 4px 8px 0px rgba(255, 255, 255, 0.3);
+}
+
+.gradient-button-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #d9d9d9, #006528);
+  padding: 0.5rem 1.25rem;
+}

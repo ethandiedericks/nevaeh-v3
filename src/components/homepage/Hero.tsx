@@ -13,7 +13,7 @@ export const HeroSection = () => {
       <MobileHeroSection />
 
       {/* Desktop/Tablet Hero */}
-      <div className="relative overflow-hidden bg-[#000000] min-h-screen hidden md:block">
+      <div className="relative overflow-hidden bg-background min-h-screen hidden md:block">
         {/* Background with token graphics */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -24,7 +24,7 @@ export const HeroSection = () => {
             priority
             className="w-full object-cover"
           />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 bg-background opacity-50"></div>
         </div>
 
         {/* Hero content */}
