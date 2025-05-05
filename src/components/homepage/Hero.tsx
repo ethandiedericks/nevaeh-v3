@@ -33,7 +33,7 @@ export const HeroSection = () => {
             {/* Main headline */}
             <h1 className="hero-headline">
               Drive Results With Tailored
-              <br className="hidden sm:block" />
+              <br />
               Web & App Development.
             </h1>
 

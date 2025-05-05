@@ -11,11 +11,11 @@ export const MobileHeroSection = () => {
         {/* Headline and subheadline */}
         <div className="mb-8">
           <h1 className="hero-headline text-left">
-            Build Websites, Apps & APIs that drive real business results.
+            Drive Results With Tailored Web & App Development.
           </h1>
           <p className="hero-sub-headline">
-            Tailored software solutions that deliver speed, scalability, and
-            results—so your business stays ahead.
+            Partner with Software Development experts who build websites and
+            mobile apps that solve real business challenges.
           </p>
         </div>
 
@@ -24,14 +24,14 @@ export const MobileHeroSection = () => {
           {/* Feature 1 */}
           <MobileFeatureCard
             icon={<WaypointsIcon size={28} className="text-white" />}
-            title="Custom-Tailored Solutions"
-            description="Designed exclusively for your business goals."
+            title="Enterprise-Grade Software"
+            description="Scalable, secure, and efficient enterprise solutions."
           />
 
           {/* Feature 2 */}
           <MobileFeatureCard
             icon={<RocketIcon size={28} className="text-white" />}
-            title="14-day delivery guarantee"
+            title="Guaranteed 14-Day Delivery"
             description="Fast, reliable development without compromises."
           />
 
@@ -39,7 +39,7 @@ export const MobileHeroSection = () => {
           <MobileFeatureCard
             icon={<EarthIcon size={28} className="text-white" />}
             title="Free professional domain"
-            description="Establish credibility from day one."
+            description="Establish credibility, reinforcing your brand's authority and trust"
           />
         </div>
 
