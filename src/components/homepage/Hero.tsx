@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import heroImage from "@/assets/images/homepage/nevaeh-solutions-hero-background-image.png";
 import GradientButton from "../GradientButton";
 import { FeatureCard } from "./FeatureCard";
 import { MobileHeroSection } from "./MobileHero";
@@ -17,14 +18,15 @@ export const HeroSection = () => {
         {/* Background with token graphics */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/homepage/nevaeh-solutions-hero-background-image.png"
+            src={heroImage}
             alt="Nevaeh Solutions Hero Desktop Background"
             width={1440}
             height={673}
             priority
             className="w-full object-cover"
           />
-          <div className="absolute inset-0 bg-background opacity-50"></div>
+          {/* Darker overlay for better text contrast */}
+          <div className="absolute inset-0 bg-background opacity-70"></div>
         </div>
 
         {/* Hero content */}
@@ -40,14 +42,14 @@ export const HeroSection = () => {
             <div className="max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 justify-center items-center">
               {/* Center CTA button */}
               <div className="md:col-span-4 flex justify-center md:justify-end">
-                <Link href="/contact">
+                <Link href="/contact" aria-label="Book your consultation">
                   <GradientButton text="Book your consultation" />
                 </Link>
               </div>
 
               {/* Description */}
               <div className="text-center md:text-left m-0 md:col-span-8">
-                <p className="hero-sub-headline text-[#D1D5DB]">
+                <p className="hero-sub-headline">
                   Partner with Software Development experts who build websites
                   and mobile apps that solve real business challenges.
                 </p>

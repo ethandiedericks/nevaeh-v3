@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import logo from "@/assets/images/homepage/nevaeh-solutions-logo.png";
 import GradientButton from "../GradientButton";
 
 export default function Navbar() {
@@ -51,8 +52,8 @@ export default function Navbar() {
         <div className="flex items-center">
           <Link href="/" className="relative z-50">
             <Image
-              src="/homepage/nevaeh-solutions-logo.png"
-              alt="Nevaeh.dev Logo"
+              src={logo}
+              alt="Nevaeh Solutions Logo"
               width={180}
               height={40}
               className="h-4 sm:h-5 2xl:h-6 w-auto"

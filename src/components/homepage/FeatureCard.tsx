@@ -52,7 +52,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
 
           <h2>{title}</h2>
 
-          <p>{description}</p>
+          <p className="text-[#E2E8F0]">{description}</p>
         </div>
       </motion.div>
     </motion.div>

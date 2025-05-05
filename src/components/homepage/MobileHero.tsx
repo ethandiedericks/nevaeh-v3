@@ -13,7 +13,7 @@ export const MobileHeroSection = () => {
           <h1 className="hero-headline text-white text-left">
             Drive Results With Tailored Web & App Development.
           </h1>
-          <p className="hero-sub-headline text-[#D1D5DB]">
+          <p className="hero-sub-headline">
             Partner with Software Development experts who build websites and
             mobile apps that solve real business challenges.
           </p>
@@ -45,7 +45,7 @@ export const MobileHeroSection = () => {
 
         {/* CTA Button */}
         <div className="mt-6 w-full max-w-xs flex justify-center">
-          <Link href="/contact">
+          <Link href="/contact" aria-label="Book your consultation">
             <GradientButton text="Book your consultation" />
           </Link>
         </div>

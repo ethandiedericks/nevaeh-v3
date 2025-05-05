@@ -13,7 +13,7 @@ export const MobileFeatureCard: React.FC<FeatureProps> = ({
     <div className="flex flex-col items-left text-left mb-8">
       <div className="mb-2 text-white">{icon}</div>
       <h3 className="text-lg font-semibold text-white mb-1">{title}</h3>
-      <p className="text-sm text-[#D1D5DB] leading-1">{description}</p>
+      <p className="text-sm text-[#E2E8F0] leading-1">{description}</p>
     </div>
   );
 };
