@@ -3,7 +3,7 @@
 :root {
   /* Force dark mode values for everyone */
   --background: #000000;
-  --foreground: #ededed;
+  --foreground: #ffffff;
 }
 
 @theme inline {
