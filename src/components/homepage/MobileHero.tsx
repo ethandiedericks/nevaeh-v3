@@ -44,7 +44,7 @@ export const MobileHeroSection = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-6 w-full max-w-xs flex justify-center">
+        <div className="mt-6 w-full flex justify-center">
           <Link href="/contact" aria-label="Book your consultation">
             <GradientButton text="Book your consultation" />
           </Link>
