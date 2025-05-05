@@ -10,10 +10,10 @@ export const MobileHeroSection = () => {
       <div className="relative z-10 px-6 py-8 flex flex-col h-full">
         {/* Headline and subheadline */}
         <div className="mb-8">
-          <h1 className="hero-headline text-left">
+          <h1 className="hero-headline text-white text-left">
             Drive Results With Tailored Web & App Development.
           </h1>
-          <p className="hero-sub-headline">
+          <p className="hero-sub-headline text-[#D1D5DB]">
             Partner with Software Development experts who build websites and
             mobile apps that solve real business challenges.
           </p>

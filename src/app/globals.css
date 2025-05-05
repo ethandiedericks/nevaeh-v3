@@ -23,7 +23,7 @@ h2 {
 }
 
 p {
-  @apply text-gray-200 text-base 2xl:text-[1rem] tracking-tight leading-relaxed;
+  @apply text-[#D1D5DB] text-base 2xl:text-[1rem] tracking-tight leading-relaxed;
 }
 
 .hero-headline {
@@ -31,7 +31,7 @@ p {
 }
 
 .hero-sub-headline {
-  @apply text-base sm:text-lg 2xl:text-xl text-white max-w-xl mx-auto md:mx-0;
+  @apply text-[#D1D5DB] text-base sm:text-lg 2xl:text-xl max-w-xl mx-auto md:mx-0;
 }
 
 .gradient-button {

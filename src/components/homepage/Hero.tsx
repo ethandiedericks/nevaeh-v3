@@ -31,7 +31,7 @@ export const HeroSection = () => {
         <div className="container mx-auto relative z-10 pt-10 pb-16 px-4">
           <div className="max-w-6xl mx-auto">
             {/* Main headline */}
-            <h1 className="hero-headline">
+            <h1 className="hero-headline text-white">
               Drive Results With Tailored
               <br />
               Web & App Development.
@@ -47,7 +47,7 @@ export const HeroSection = () => {
 
               {/* Description */}
               <div className="text-center md:text-left m-0 md:col-span-8">
-                <p className="hero-sub-headline">
+                <p className="hero-sub-headline text-[#D1D5DB]">
                   Partner with Software Development experts who build websites
                   and mobile apps that solve real business challenges.
                 </p>
