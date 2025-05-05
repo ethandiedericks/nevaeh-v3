@@ -18,7 +18,7 @@ export const HeroSection = () => {
         <div className="absolute inset-0 z-0">
           <Image
             src="/homepage/nevaeh-solutions-hero-background-image.png"
-            alt=""
+            alt="Nevaeh Solutions Hero Desktop Background"
             width={1440}
             height={673}
             priority
