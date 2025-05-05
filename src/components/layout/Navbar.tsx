@@ -45,7 +45,7 @@ export default function Navbar() {
   return (
     <header
       ref={navRef}
-      className="sticky top-0 right-0 left-0 z-50 w-full  bg-[#0a0a0a]/95 backdrop-blur supports-[backdrop-filter]:bg-[#0a0a0a]/60"
+      className="sticky top-0 right-0 left-0 z-50 w-full  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
       <div className="container max-w-6xl mx-auto flex py-4 px-4 items-center justify-between">
         {/* Logo on the left */}

@@ -25,7 +25,7 @@ h2 {
 }
 
 p {
-  @apply text-[#E2E8F0] text-sm/6 tracking-tight leading-relaxed; /* Improved from #D1D5DB */
+  @apply text-[#E2E8F0] text-lg tracking-tight leading-relaxed;
 }
 
 .hero-headline {

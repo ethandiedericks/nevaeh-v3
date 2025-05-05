@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ibmPlexSans.variable} antialiased bg-[#000000] text-white`}
+        className={`${ibmPlexSans.variable} antialiased bg-background text-white`}
       >
         <Navbar />
         {children}
