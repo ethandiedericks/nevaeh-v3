@@ -46,7 +46,7 @@ export default function Navbar() {
       ref={navRef}
       className="sticky top-0 right-0 left-0 z-50 w-full  bg-[#0a0a0a]/95 backdrop-blur supports-[backdrop-filter]:bg-[#0a0a0a]/60"
     >
-      <div className="container max-w-6xl mx-auto flex py-3 2xl:py-4 px-4 items-center justify-between">
+      <div className="container max-w-6xl mx-auto flex py-4 px-4 items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center">
           <Link href="/" className="relative z-50">
