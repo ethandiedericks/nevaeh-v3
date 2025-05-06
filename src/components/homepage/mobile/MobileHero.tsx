@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { EarthIcon, RocketIcon, WaypointsIcon } from "../Icons";
-import { MobileFeatureCard } from "./MobileFeatureCard";
-import GradientButton from "../GradientButton";
+
+import { MobileFeatureCard } from "../cards/MobileFeatureCard";
+import { EarthIcon, RocketIcon, WaypointsIcon } from "@/components/Icons";
+import GradientButton from "@/components/GradientButton";
 
 export const MobileHeroSection = () => {
   return (
@@ -11,7 +12,7 @@ export const MobileHeroSection = () => {
         {/* Headline and subheadline */}
         <div className="mb-8">
           <h1 className="hero-headline text-white text-left">
-            Drive Results With Tailored Web & App Development.
+            Drive Results with Tailored Web & App Development.
           </h1>
           <p className="hero-sub-headline">
             Partner with Software Development experts who build websites and

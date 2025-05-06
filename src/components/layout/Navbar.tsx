@@ -8,7 +8,7 @@ import Image from "next/image";
 import logo from "@/assets/images/homepage/nevaeh-solutions-logo.png";
 import GradientButton from "../GradientButton";
 
-export default function Navbar() {
+export const Navbar = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
@@ -45,8 +45,14 @@ export default function Navbar() {
   return (
     <header
       ref={navRef}
-      className="sticky top-0 right-0 left-0 z-50 w-full  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      className="sticky top-0 right-0 left-0 z-50 w-full  bg-gradient-to-r from-[#001E05] via-[#0B0C1B]/50 to-[#0B0C1B]  backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
+      <h1 className="hidden">
+        Now to him who is able to do immeasurably more than all we ask or
+        imagine, according to his power that is at work within us, to him be the
+        glory in the church and in Christ Jesus throughout all generations, for
+        ever and ever! Amen. - Ephesians 3:20 NIV
+      </h1>
       <div className="container max-w-6xl mx-auto flex py-4 px-4 items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center">
@@ -81,7 +87,7 @@ export default function Navbar() {
             ))}
           </nav>
           <Link href="/contact">
-            <GradientButton text="Contact" />
+            <GradientButton text="Contact" className="h-10" />
           </Link>
         </div>
 
@@ -126,4 +132,4 @@ export default function Navbar() {
       )}
     </header>
   );
-}
+};

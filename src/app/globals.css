@@ -33,7 +33,7 @@ p {
 }
 
 .hero-sub-headline {
-  @apply text-[#E2E8F0] text-base sm:text-lg 2xl:text-xl max-w-xl mx-auto md:mx-0; /* Improved from #D1D5DB */
+  @apply text-[#E2E8F0] text-base sm:text-lg 2xl:text-xl max-w-xl mx-auto md:mx-0 md:leading-6;
 }
 
 .gradient-button {
@@ -54,12 +54,22 @@ p {
   border-radius: 8px;
   background: linear-gradient(to bottom, #d9d9d9, #006528);
   padding: 0.5rem 1.25rem;
-  color: var(--text-primary); /* Ensuring button text has good contrast */
-  font-weight: 500; /* Making button text slightly bolder for better readability */
+  color: var(--text-primary);
+  font-weight: 300;
 }
 
-/* Add a focus style for better accessibility */
 .gradient-button:focus-visible {
   outline: 2px solid #ffffff;
   outline-offset: 2px;
+}
+
+.section-spacing {
+  @apply max-w-6xl mx-auto;
+}
+.section-tag {
+  @apply text-white uppercase text-lg font-medium text-center m-0;
+}
+
+.section-title {
+  @apply text-white text-4xl sm:text-5xl font-normal text-center mt-4;
 }

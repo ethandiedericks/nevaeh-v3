@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
+import { Navbar } from "@/components/layout/Navbar";
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibm-plex-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // Adjust weights as needed
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {

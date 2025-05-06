@@ -3,7 +3,6 @@
 
 import type React from "react";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import GradientButton from "@/components/GradientButton";
@@ -23,19 +22,6 @@ export default function NotFound() {
 
   return (
     <div className="relative overflow-hidden bg-[#000000] min-h-screen flex flex-col items-center justify-center">
-      {/* Background with token graphics */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/homepage/nevaeh-solutions-hero-background-image.png"
-          alt=""
-          width={1440}
-          height={673}
-          priority
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black opacity-70"></div>
-      </div>
-
       {/* 404 content */}
       <div className="container mx-auto relative z-10 px-4 text-center">
         <div className="max-w-3xl mx-auto">
