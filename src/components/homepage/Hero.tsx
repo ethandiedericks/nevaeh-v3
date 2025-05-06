@@ -1,7 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-
-import heroImage from "@/assets/images/homepage/nevaeh-solutions-hero-background-image.png";
 
 import { MobileHeroSection } from "./mobile/MobileHero";
 import GradientButton from "../GradientButton";
@@ -16,18 +13,6 @@ export const HeroSection = () => {
 
       {/* Desktop/Tablet Hero */}
       <div className="relative bg-gradient-to-r from-[#001E05] via-[#0B0C1B]/50 to-[#0B0C1B]  overflow-hidden bg-background min-h-screen hidden md:block">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={heroImage}
-            alt="Nevaeh Solutions Hero Desktop Background"
-            width={1440}
-            height={673}
-            priority
-            className="w-full object-cover"
-          />
-          {/* <div className="absolute inset-0 bg-background opacity-70"></div> */}
-        </div>
-
         <div className="container mx-auto relative z-10 pt-10 pb-16 px-4">
           <div className="section-spacing">
             <h1 className="hero-headline text-white">
