@@ -73,3 +73,7 @@ p {
 .section-title {
   @apply text-white text-4xl sm:text-5xl font-normal text-center mt-4;
 }
+
+.card-titles {
+  @apply text-white text-base sm:text-lg font-medium text-center;
+}

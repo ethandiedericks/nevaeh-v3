@@ -42,7 +42,7 @@ export const StorySection = () => {
                 onHoverEnd={() => setIsMissionHovered(false)}
               >
                 <motion.div
-                  className="relative rounded-[0.438rem] border overflow-hidden p-4 sm:px-6 sm:py-4 max-w-fit hover:border-none"
+                  className="relative rounded-[0.438rem] border overflow-hidden p-4 sm:px-6 sm:py-[0.8rem] max-w-fit hover:border-none"
                   animate={{
                     border: isMissionHovered
                       ? "1px solid rgba(255, 255, 255, 0)"
@@ -51,7 +51,7 @@ export const StorySection = () => {
                   }}
                   transition={{ duration: 0.2 }}
                 >
-                  <h2>Our Mission</h2>
+                  <h2 className="card-titles">Our Mission</h2>
                 </motion.div>
                 <motion.div className="mt-4 text-left px-8 pb-6">
                   <p>
@@ -77,7 +77,7 @@ export const StorySection = () => {
                 onHoverEnd={() => setIsWCUHovered(false)}
               >
                 <motion.div
-                  className="relative rounded-[0.438rem] border overflow-hidden p-4 sm:px-6 sm:py-4 max-w-fit hover:border-none"
+                  className="relative rounded-[0.438rem] border overflow-hidden p-4 sm:px-6 sm:py-[0.8rem] max-w-fit hover:border-none"
                   animate={{
                     border: isWCUHovered
                       ? "1px solid rgba(255, 255, 255, 0)"
@@ -86,7 +86,7 @@ export const StorySection = () => {
                   }}
                   transition={{ duration: 0.2 }}
                 >
-                  <h2 className="">Why Choose Us</h2>
+                  <h2 className="card-titles">Why Choose Us</h2>
                 </motion.div>
                 <motion.div className="mt-4 text-left px-8 pb-6">
                   <ul className="space-y-2">
