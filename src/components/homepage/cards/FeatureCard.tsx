@@ -38,7 +38,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
       >
         <div>
           <motion.div
-            className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-[0.938rem] mb-3 sm:mb-4 mx-auto"
+            className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-[0.438rem] mb-3 sm:mb-4 mx-auto"
             animate={{
               border: isHovered
                 ? "1px solid rgba(255, 255, 255, 0)"

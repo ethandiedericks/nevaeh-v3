@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/homepage/Hero";
+import { ServicesSection } from "@/components/homepage/Services";
 import { StorySection } from "@/components/homepage/Story";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <main className="relative z-10 bg-gradient-to-r from-[#001E05] via-[#0B0C1B]/50 to-[#0B0C1B] ">
         <HeroSection />
         <StorySection />
+        <ServicesSection />
       </main>
     </div>
   );
