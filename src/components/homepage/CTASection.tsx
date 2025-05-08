@@ -27,8 +27,12 @@ export const CTASection = () => {
             />
           </div>
           <div className=" flex justify-center items-center">
-            <Link href={"/contact"} passHref>
-              <GradientButton text="Start" />
+            <Link
+              href={"/contact"}
+              passHref
+              aria-label="Start your project with Nevaeh Solutions"
+            >
+              <GradientButton text="Start Your Project" />
             </Link>
           </div>
         </div>

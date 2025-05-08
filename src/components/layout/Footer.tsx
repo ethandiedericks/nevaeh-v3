@@ -37,13 +37,15 @@ export const Footer = () => {
           <div className="hidden lg:grid lg:grid-cols-4 gap-10 mb-16 px-4">
             {/* Company Info */}
             <div className="space-y-4">
-              <Image
-                src={logo}
-                alt="Nevaeh.dev Logo"
-                width={180}
-                height={30}
-                className="h-8 w-auto"
-              />
+              <div className="relative w-44 h-8">
+                <Image
+                  src={logo}
+                  alt="Nevaeh.dev Logo"
+                  fill
+                  className="object-contain" // Maintain aspect ratio
+                  priority
+                />
+              </div>
               <p className="text-muted-foreground text-sm">
                 Creating exceptional digital experiences with precision and
                 expertise.
@@ -111,9 +113,9 @@ export const Footer = () => {
             {/* Quick Links */}
             <div className="flex flex-col lg:items-end">
               <div className="text-left space-y-4">
-                <h3 className="text-base font-semibold text-white">
+                <h1 className="text-base font-semibold text-white">
                   Quick Links
-                </h3>
+                </h1>
                 <nav className="flex flex-col space-y-2">
                   {footerLinks.quickLinks.map((link) => (
                     <Link
@@ -131,7 +133,7 @@ export const Footer = () => {
             {/* Services */}
             <div className="flex flex-col items-center md:items-start lg:items-end">
               <div className="text-left space-y-4">
-                <h3 className="text-base font-semibold text-white">Services</h3>
+                <h1 className="text-base font-semibold text-white">Services</h1>
                 <nav className="flex flex-col space-y-2">
                   {footerLinks.services.map((link) => (
                     <Link
@@ -149,7 +151,7 @@ export const Footer = () => {
             {/* Legal */}
             <div className="flex flex-col items-center md:items-start lg:items-end">
               <div className="text-left space-y-4">
-                <h3 className="text-base font-semibold text-white">Legal</h3>
+                <h1 className="text-base font-semibold text-white">Legal</h1>
                 <nav className="flex flex-col space-y-2">
                   {footerLinks.legal.map((link) => (
                     <Link
@@ -169,13 +171,15 @@ export const Footer = () => {
           <div className="sm:block lg:hidden mb-16 px-4">
             {/* Company Info (full width) */}
             <div className="space-y-4 mb-10">
-              <Image
-                src={logo}
-                alt="Nevaeh.dev Logo"
-                width={180}
-                height={30}
-                className="h-8 w-auto"
-              />
+              <div className="relative w-44 h-8">
+                <Image
+                  src={logo}
+                  alt="Nevaeh.dev Logo"
+                  fill
+                  className="object-contain" // Maintain aspect ratio
+                  priority
+                />
+              </div>
               <p className="text-muted-foreground text-sm">
                 Creating exceptional digital experiences with precision and
                 expertise.
@@ -244,9 +248,9 @@ export const Footer = () => {
             <div className="grid grid-cols-3 gap-6">
               {/* Quick Links */}
               <div className="space-y-4">
-                <h3 className="text-base font-semibold text-white">
+                <h1 className="text-base font-semibold text-white">
                   Quick Links
-                </h3>
+                </h1>
                 <nav className="flex flex-col space-y-2">
                   {footerLinks.quickLinks.map((link) => (
                     <Link
@@ -262,7 +266,7 @@ export const Footer = () => {
 
               {/* Services */}
               <div className="space-y-4">
-                <h3 className="text-base font-semibold text-white">Services</h3>
+                <h1 className="text-base font-semibold text-white">Services</h1>
                 <nav className="flex flex-col space-y-2">
                   {footerLinks.services.map((link) => (
                     <Link
@@ -278,7 +282,7 @@ export const Footer = () => {
 
               {/* Legal */}
               <div className="space-y-4">
-                <h3 className="text-base font-semibold text-white">Legal</h3>
+                <h1 className="text-base font-semibold text-white">Legal</h1>
                 <nav className="flex flex-col space-y-2">
                   {footerLinks.legal.map((link) => (
                     <Link

@@ -32,13 +32,15 @@ export const MobileFooter = () => {
       <div className="px-6">
         {/* Logo */}
         <div className="mb-6">
-          <Image
-            src={logo}
-            alt="Nevaeh.dev Logo"
-            width={180}
-            height={30}
-            className="h-8 w-auto"
-          />
+          <div className="relative w-44 h-8">
+            <Image
+              src={logo}
+              alt="Nevaeh.dev Logo"
+              fill
+              className="object-contain" // Maintain aspect ratio
+              priority
+            />
+          </div>
         </div>
 
         {/* Tagline */}
