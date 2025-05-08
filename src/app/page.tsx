@@ -1,7 +1,7 @@
 import { CTASection } from "@/components/homepage/CTASection";
-import { HeroSection } from "@/components/homepage/Hero";
-import { ServicesSection } from "@/components/homepage/Services";
-import { StorySection } from "@/components/homepage/Story";
+import { HeroSection } from "@/components/homepage/HeroSection";
+import { ServicesSection } from "@/components/homepage/ServicesSection";
+import { StorySection } from "@/components/homepage/StorySection";
 import { ValueSection } from "@/components/homepage/ValueSection";
 
 export default function Home() {

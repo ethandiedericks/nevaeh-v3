@@ -78,7 +78,7 @@ export const MobileFooter = () => {
         <div className="grid grid-cols-2 gap-x-4 gap-y-12">
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-medium text-white mb-4">Quick Links</h3>
+            <h1 className="text-lg font-medium text-white mb-4">Quick Links</h1>
             <nav className="flex flex-col space-y-3">
               {footerLinks.quickLinks.map((link) => (
                 <Link
@@ -94,7 +94,7 @@ export const MobileFooter = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-medium text-white mb-4">Services</h3>
+            <h1 className="text-lg font-medium text-white mb-4">Services</h1>
             <nav className="flex flex-col space-y-3">
               {footerLinks.services.map((link) => (
                 <Link
@@ -110,7 +110,7 @@ export const MobileFooter = () => {
 
           {/* Legal */}
           <div className="col-span-2 mt-8">
-            <h3 className="text-lg font-medium text-white mb-4">Legal</h3>
+            <h1 className="text-lg font-medium text-white mb-4">Legal</h1>
             <nav className="flex flex-col space-y-3">
               {footerLinks.legal.map((link) => (
                 <Link
