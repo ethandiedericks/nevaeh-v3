@@ -21,7 +21,7 @@ export default function NotFound() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden bg-[#000000] min-h-screen flex flex-col items-center justify-center">
+    <div className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center">
       {/* 404 content */}
       <div className="container mx-auto relative z-10 px-4 text-center">
         <div className="max-w-3xl mx-auto">
