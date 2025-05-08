@@ -29,17 +29,11 @@ export const MobileServiceCard: React.FC<MobileServiceCardProps> = ({
         onHoverStart={() => setIsServiceHovered(true)}
         onHoverEnd={() => setIsServiceHovered(false)}
       >
-        <motion.div className="grid grid-cols-6 p-4">
-          <motion.div className="flex col-span-2 items-center align-middle">
-            <span className="border rounded-[0.438rem] p-2 ">{icon}</span>
+        <motion.div className="flex flex-col p-4 space-y-4">
+          <motion.div>
+            <h2>{title}</h2>
           </motion.div>
-
-          <motion.div className="col-span-4">
-            <motion.div>
-              <h2>{title}</h2>
-            </motion.div>
-            <p>{description}</p>
-          </motion.div>
+          <p>{description}</p>
         </motion.div>
       </motion.div>
     </motion.div>

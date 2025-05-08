@@ -10,7 +10,6 @@ export const MobileCTA = () => {
         <div className="section-spacing">
           {/* text wrapper */}
           <div className="">
-            <span className="section-tag">Professional Services</span>
             <h1 className="section-title">Ready to Start?</h1>
             <p className="mt-4 ml-4">
               Let&apos;s discuss how we can help bring your vision to life with

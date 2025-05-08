@@ -14,7 +14,6 @@ export const CTASection = () => {
           <div className="section-spacing">
             {/* text wrapper */}
             <div className="text-center items-center">
-              <span className="section-tag">Professional Services</span>
               <h1 className="section-title">Ready to Start Your Project?</h1>
               <p className="mt-4">
                 Let&apos;s discuss how we can help bring your vision to life
