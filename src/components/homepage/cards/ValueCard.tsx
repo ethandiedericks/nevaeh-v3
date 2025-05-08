@@ -31,13 +31,13 @@ export const ValueCard: React.FC<ValueProps> = ({
         onHoverEnd={() => setIsValueHovered(false)}
       >
         <motion.div className="space-y-3">
-          <motion.div className="border rounded-[0.438rem] p-2 max-w-fit">
+          <motion.div className="border rounded-[0.438rem] p-2 max-w-fit mx-auto sm:mx-0">
             {icon}
           </motion.div>
-          <motion.div>
+          <motion.div className="text-center">
             <h2>{title}</h2>
           </motion.div>
-          <motion.div className="flex-1">
+          <motion.div className="flex-1 text-center">
             <p>{description}</p>
           </motion.div>
         </motion.div>

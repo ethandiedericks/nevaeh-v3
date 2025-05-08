@@ -63,14 +63,14 @@ p {
 }
 
 .section-spacing {
-  @apply max-w-6xl mx-auto py-8;
+  @apply max-w-6xl mx-auto py-8 px-4;
 }
 .section-tag {
-  @apply text-white uppercase text-lg font-medium text-center m-0;
+  @apply text-white uppercase text-lg font-medium text-left md:text-center m-0;
 }
 
 .section-title {
-  @apply text-white text-4xl sm:text-5xl font-normal text-center mt-4;
+  @apply text-white text-4xl sm:text-5xl font-normal text-left md:text-center mt-4;
 }
 
 .card-titles {
