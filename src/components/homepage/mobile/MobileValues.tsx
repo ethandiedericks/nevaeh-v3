@@ -19,7 +19,7 @@ export const MobileValuesSection = () => {
             </p>
           </div>
           {/* Value Cards */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
             <div className="h-full">
               <ValueCard
                 icon={<UserIcon />}

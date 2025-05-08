@@ -27,7 +27,7 @@ export const MobileServices = () => {
             </p>
           </div>
           {/* Service Cards */}
-          <div className="grid grid-cols-1 gap-4 mt-16">
+          <div className="grid grid-cols-1 gap-4 mt-8">
             <div className="h-full">
               <MobileServiceCard
                 icon={<LaptopIcon />}
