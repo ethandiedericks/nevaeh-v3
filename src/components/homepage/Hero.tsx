@@ -12,7 +12,7 @@ export const HeroSection = () => {
       <MobileHeroSection />
 
       {/* Desktop/Tablet Hero */}
-      <div className="relative bg-gradient-to-r from-[#001E05] via-[#0B0C1B]/50 to-[#0B0C1B]  overflow-hidden bg-background min-h-screen hidden md:block">
+      <div className="relative overflow-hidden  hidden md:block">
         <div className="container mx-auto relative z-10 pt-10 pb-16 px-4">
           <div className="section-spacing">
             <h1 className="hero-headline text-white">

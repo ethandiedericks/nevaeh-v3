@@ -12,7 +12,7 @@ export const StorySection = () => {
   return (
     <>
       <MobileStorySection />
-      <div className="min-h-screen hidden md:block">
+      <div className="hidden md:block">
         <div className="container mx-auto">
           <div className="section-spacing">
             {/* text wrapper */}

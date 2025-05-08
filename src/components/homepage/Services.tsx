@@ -6,7 +6,7 @@ import { ServiceCard } from "./cards/ServiceCard";
 export const ServicesSection = () => {
   return (
     <>
-      <div className="min-h-screen hidden md:block">
+      <div className="hidden md:block">
         <div className="container mx-auto">
           <div className="section-spacing">
             {/* text wrapper */}

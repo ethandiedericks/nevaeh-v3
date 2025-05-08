@@ -45,7 +45,7 @@ export const Navbar = () => {
   return (
     <header
       ref={navRef}
-      className="sticky top-0 right-0 left-0 z-50 w-full  bg-gradient-to-r from-[#001E05] via-[#0B0C1B]/50 to-[#0B0C1B]  backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      className="sticky top-0 right-0 left-0 z-50 w-full  bg-gradient-to-r from-[#001E05] via-[#0B0C1B]/50 to-[#0B0C1B]  backdrop-blur supports-[backdrop-filter]:bg-background/10"
     >
       <h1 className="hidden">
         Now to him who is able to do immeasurably more than all we ask or

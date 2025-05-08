@@ -1,14 +1,18 @@
+import { CTASection } from "@/components/homepage/CTASection";
 import { HeroSection } from "@/components/homepage/Hero";
 import { ServicesSection } from "@/components/homepage/Services";
 import { StorySection } from "@/components/homepage/Story";
+import { ValueSection } from "@/components/homepage/ValueSection";
 
 export default function Home() {
   return (
     <div>
-      <main className="relative z-10 bg-gradient-to-r from-[#001E05] via-[#0B0C1B]/50 to-[#0B0C1B] ">
+      <main className="">
         <HeroSection />
         <StorySection />
         <ServicesSection />
+        <ValueSection />
+        <CTASection />
       </main>
     </div>
   );

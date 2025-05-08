@@ -1,20 +1,22 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
-interface ServiceCardProps {
+import { useState } from "react";
+
+interface ValueProps {
   icon: ReactNode;
   title: string;
   description: string;
 }
 
-export const ServiceCard: React.FC<ServiceCardProps> = ({
+export const ValueCard: React.FC<ValueProps> = ({
   icon,
   title,
   description,
 }) => {
-  const [isServiceHovered, setIsServiceHovered] = useState(false);
+  const [isValueHovered, setIsValueHovered] = useState(false);
   return (
     <motion.div className="h-full">
       <motion.div
@@ -25,12 +27,14 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           border: "1px solid rgba(255, 255, 255, 1)",
           boxShadow: "4px 4px 8px 0px rgba(255, 255, 255, 0.3)",
         }}
-        onHoverStart={() => setIsServiceHovered(true)}
-        onHoverEnd={() => setIsServiceHovered(false)}
+        onHoverStart={() => setIsValueHovered(true)}
+        onHoverEnd={() => setIsValueHovered(false)}
       >
-        <motion.div className="flex flex-col gap-4">
-          <motion.div className="inline-flex gap-4 items-center align-middle">
-            <span className="border rounded-[0.438rem] p-2 ">{icon}</span>
+        <motion.div className="space-y-3">
+          <motion.div className="border rounded-[0.438rem] p-2 max-w-fit">
+            {icon}
+          </motion.div>
+          <motion.div>
             <h2>{title}</h2>
           </motion.div>
           <motion.div className="flex-1">
