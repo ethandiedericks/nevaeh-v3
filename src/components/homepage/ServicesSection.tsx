@@ -2,10 +2,12 @@ import Link from "next/link";
 import GradientButton from "../GradientButton";
 import { CodeIcon, LaptopIcon, MobilePhonesIcon, WebIcon } from "../Icons";
 import { ServiceCard } from "./cards/ServiceCard";
+import { MobileServices } from "./mobile/MobileServices";
 
 export const ServicesSection = () => {
   return (
     <>
+      <MobileServices />
       <div className="hidden md:block">
         <div className="container mx-auto">
           <div className="section-spacing">
