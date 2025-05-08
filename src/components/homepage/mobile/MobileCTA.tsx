@@ -22,7 +22,8 @@ export const MobileCTA = () => {
               alt="Nevaeh Solutions Call To Action"
               width={1440}
               height={713}
-              className=""
+              className="w-full h-full"
+              priority
             />
           </div>
           <div className=" flex justify-center items-center">
