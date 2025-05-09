@@ -4,6 +4,7 @@ import GradientButton from "@/components/GradientButton";
 import { CheckIcon } from "@/components/Icons";
 import { MobilePricing } from "@/components/pricing/MobilePricing";
 import { pricingData } from "@/pricing";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function PricingPage() {
@@ -85,8 +86,13 @@ export default function PricingPage() {
             )}
           </div>
 
-          {/* Get Started button */}
-          <GradientButton text="Get Started" />
+          <Link
+            href={"/contact"}
+            passHref
+            aria-label="Start your project with Nevaeh Solutions"
+          >
+            <GradientButton text="Get Started" />
+          </Link>
         </div>
       </div>
     </>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { pricingData } from "@/pricing";
 import { TickIcon } from "@/components/Icons";
 import GradientButton from "@/components/GradientButton";
@@ -21,7 +23,7 @@ export const MobilePricing = () => {
         {tabs.map((tab, tabIndex) => (
           <div key={tab.id} className="w-full mb-12">
             {/* Tab label as heading */}
-            <div className="px-6 py-3 rounded-lg bg-transparent border border-gray-600 text-center mb-6">
+            <div className="text-center px-6 py-3 rounded-lg bg-transparent border border-gray-600 mb-6">
               <h2 className="text-base font-light">{tab.label}</h2>
             </div>
 
@@ -58,7 +60,13 @@ export const MobilePricing = () => {
         ))}
 
         <div className="mb-10">
-          <GradientButton text="Get Started" />
+          <Link
+            href={"/contact"}
+            passHref
+            aria-label="Start your project with Nevaeh Solutions"
+          >
+            <GradientButton text="Get Started" />
+          </Link>
         </div>
       </div>
     </div>
