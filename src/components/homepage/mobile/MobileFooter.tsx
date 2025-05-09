@@ -36,7 +36,8 @@ export const MobileFooter = () => {
             <Image
               src={logo}
               alt="Nevaeh.dev Logo"
-              fill
+              width={3217}
+              height={246}
               className="object-contain" // Maintain aspect ratio
               priority
             />
