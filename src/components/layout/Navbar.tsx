@@ -53,7 +53,7 @@ export const Navbar = () => {
         glory in the church and in Christ Jesus throughout all generations, for
         ever and ever! Amen. - Ephesians 3:20 NIV
       </h1>
-      <div className="container max-w-6xl mx-auto flex py-4 px-4 items-center justify-between">
+      <div className="container max-w-6xl mx-auto flex py-6 md:py-4 px-4 items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center">
           <Link href="/" className="relative z-50">
@@ -98,9 +98,9 @@ export const Navbar = () => {
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {mobileMenuOpen ? (
-            <X className="h-5 w-5" />
+            <X className="h-6 w-6" />
           ) : (
-            <Menu className="h-5 w-5" />
+            <Menu className="h-6 w-6" />
           )}
         </button>
       </div>
