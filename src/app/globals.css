@@ -231,5 +231,5 @@ p {
 }
 
 .page-title {
-  @apply text-3xl md:text-5xl font-normal md:font-light text-left md:text-center mb-8 md:mb-16 w-full md:max-w-3xl;
+  @apply text-4xl md:text-5xl font-normal md:font-light text-left md:text-center mb-8 md:mb-16 w-full md:max-w-3xl;
 }
