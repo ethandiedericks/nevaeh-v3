@@ -43,7 +43,7 @@ export const Footer = () => {
                   alt="Nevaeh.dev Logo"
                   width={3217}
                   height={246}
-                  className="object-contain" // Maintain aspect ratio
+                  className="object-contain"
                   priority
                 />
               </div>
@@ -171,7 +171,7 @@ export const Footer = () => {
                   alt="Nevaeh.dev Logo"
                   width={3217}
                   height={246}
-                  className="object-contain" // Maintain aspect ratio
+                  className="object-contain"
                   priority
                 />
               </div>

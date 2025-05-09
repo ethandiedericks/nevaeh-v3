@@ -86,7 +86,7 @@ export const Navbar = () => {
               </Link>
             ))}
           </nav>
-          <Link href="/contact">
+          <Link href="/contact" aria-label="Contact Nevaeh Solutions">
             <GradientButton text="Contact" className="h-10" />
           </Link>
         </div>
@@ -123,7 +123,11 @@ export const Navbar = () => {
               </Link>
             ))}
             <div className="pt-2">
-              <Link href="/contact" onClick={handleMenuClose}>
+              <Link
+                href="/contact"
+                onClick={handleMenuClose}
+                aria-label="Contact Nevaeh Solutions"
+              >
                 <GradientButton text="Contact" />
               </Link>
             </div>
