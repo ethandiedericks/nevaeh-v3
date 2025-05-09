@@ -15,6 +15,8 @@
 }
 
 body {
+  background: linear-gradient(to right, #001e05, #0b0c1b, #0b0c1b);
+
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
 }
@@ -75,4 +77,159 @@ p {
 
 .card-titles {
   @apply text-white text-base sm:text-lg font-medium text-center;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #a6a6a6 0%,
+    #2ca05a 51%,
+    #2ca05a 100%
+  );
+  filter: blur(10px);
+  z-index: 1;
+}
+
+.btn-grad {
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 0.625rem;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.table-gradient-0,
+.table-gradient-1,
+.table-gradient-2,
+.table-gradient-3 {
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+  border-radius: 1.875rem;
+  overflow: hidden;
+}
+
+.table-gradient-0::before,
+.table-gradient-1::before,
+.table-gradient-2::before,
+.table-gradient-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  backdrop-filter: blur(8px);
+}
+
+/* Single Page Website - gradient at top left (25% position) */
+.table-gradient-0::before {
+  background: radial-gradient(
+      circle at 0% 0%,
+      rgba(44, 160, 90, 0.5) 0%,
+      transparent 15%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(44, 160, 90, 0.5) 0%,
+      transparent 15%
+    );
+}
+
+/* 5+ Page Website - gradient at top center-left (42% position) */
+.table-gradient-1::before {
+  background: radial-gradient(
+      circle at 42% 0%,
+      rgba(44, 160, 90, 0.5) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(44, 160, 90, 0.5) 0%,
+      transparent 15%
+    );
+}
+
+/* Web Application - gradient at top center-right (60% position) */
+.table-gradient-2::before {
+  background: radial-gradient(
+      circle at 60% 0%,
+      rgba(44, 160, 90, 0.5) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(44, 160, 90, 0.5) 0%,
+      transparent 15%
+    );
+}
+
+/* Mobile Application - gradient at top right (75% position) */
+.table-gradient-3::before {
+  background: radial-gradient(
+      circle at 100% 0%,
+      rgba(44, 160, 90, 0.5) 0%,
+      transparent 15%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(44, 160, 90, 0.5) 0%,
+      transparent 15%
+    );
+}
+
+/* Tab glow effect styles */
+.tab-glow {
+  background: radial-gradient(
+    circle at top left,
+    rgba(44, 160, 90, 0.7) 0%,
+    transparent 70%
+  );
+  backdrop-filter: blur(6px);
+}
+
+/* Position specific styles for each tab */
+.tab-position-0 {
+  background: radial-gradient(
+    circle at top left,
+    rgba(44, 160, 90, 0.7) 0%,
+    transparent 70%
+  );
+}
+
+.tab-position-1 {
+  background: radial-gradient(
+    circle at top,
+    rgba(44, 160, 90, 0.7) 0%,
+    transparent 70%
+  );
+}
+
+.tab-position-2 {
+  background: radial-gradient(
+    circle at top right,
+    rgba(44, 160, 90, 0.7) 0%,
+    transparent 70%
+  );
+}
+
+.tab-position-3 {
+  background: radial-gradient(
+    circle at right,
+    rgba(44, 160, 90, 0.7) 0%,
+    transparent 70%
+  );
+}
+
+.page-title {
+  @apply text-3xl md:text-5xl font-normal md:font-light text-left md:text-center mb-8 md:mb-16 w-full md:max-w-3xl;
 }

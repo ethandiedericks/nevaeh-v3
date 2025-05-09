@@ -129,9 +129,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`bg-gradient-to-r from-[#001E05] via-[#0B0C1B] to-[#0B0C1B] ${inter.variable} antialiased text-white`}
-      >
+      <body className={` ${inter.variable} antialiased text-white`}>
         <Navbar />
         {children}
         <Footer />

@@ -34,10 +34,10 @@ export const ValueCard: React.FC<ValueProps> = ({
           <motion.div className="border rounded-[0.438rem] p-2 max-w-fit mx-auto sm:mx-0">
             {icon}
           </motion.div>
-          <motion.div className="text-center">
+          <motion.div className="text-center md:text-left">
             <h2>{title}</h2>
           </motion.div>
-          <motion.div className="flex-1 text-center">
+          <motion.div className="flex-1 text-center md:text-left">
             <p>{description}</p>
           </motion.div>
         </motion.div>
