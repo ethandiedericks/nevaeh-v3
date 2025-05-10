@@ -21,6 +21,11 @@ export const pricingData = {
       price: "R150 P/M",
       features: "Boost rankings up to 300%",
     },
+    {
+      service: "Marketing & Social Add-on (Optional)",
+      price: "R3,000 P/M",
+      features: "Logo + 15 posts/month",
+    },
   ],
   "5-plus-page": [
     {
@@ -46,13 +51,13 @@ export const pricingData = {
     {
       service: "Marketing & Social Add-on (Optional)",
       price: "R3,000 P/M",
-      features: "Logo + templates + 30 posts/month",
+      features: "Logo + 15 posts/month",
     },
   ],
   "web-app": [
     {
       service: "Web App Development",
-      price: "R25,000–R70,000",
+      price: "R25,000-R70,000",
       features: "Pricing depends on features & complexity",
     },
     {
@@ -74,7 +79,7 @@ export const pricingData = {
     {
       service: "Marketing & Social Add-on (Optional)",
       price: "R3,000 P/M",
-      features: "Logo + templates + 30 posts/month",
+      features: "Logo + 15 posts/month",
     },
   ],
   "mobile-app": [
@@ -96,7 +101,7 @@ export const pricingData = {
     {
       service: "Marketing & Social Add-on (Optional)",
       price: "R3,000 P/M",
-      features: "Logo + templates + 30 posts/month",
+      features: "Logo + 15 posts/month",
     },
     {
       service: "Payment Schedule",
