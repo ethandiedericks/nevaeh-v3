@@ -66,7 +66,7 @@ const Contact = () => {
         {/* Contact Section */}
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {/* Contact Form */}
-          <div className="border border-[#A6A6A6] p-8 rounded-[1.875rem]">
+          <div className="border border-[#A6A6A6] p-4 md:p-8 rounded-[1.875rem]">
             <div className="">
               <h2 className="text-xl mb-4">Send us a Message</h2>
               <form onSubmit={handleSubmit}>
