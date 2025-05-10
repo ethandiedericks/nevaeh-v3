@@ -17,9 +17,9 @@ const ContactCard: React.FC<ContactCardProps> = ({
   return (
     <div className="w-full table-gradient-0 p-6 md:p-10">
       {/* Mobile view (side by side): flex-row on small screens */}
-      <div className="flex flex-row md:flex-col items-center md:justify-between gap-4 md:gap-6">
+      <div className="flex flex-row md:flex-col items-center md:justify-between gap-10 md:gap-6">
         {/* Icon and title section */}
-        <div className="flex flex-col  items-left md:items-center gap-2">
+        <div className="flex flex-col items-left md:items-center gap-2">
           <div className="border border-white p-2 rounded-[7px] max-w-fit">
             <Icon />
           </div>
