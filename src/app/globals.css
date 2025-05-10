@@ -237,3 +237,25 @@ p {
 .tab-label {
   @apply m-0 text-base font-light;
 }
+
+.card {
+  padding: 1em 2em;
+  background-color: #0b0c1b;
+  border: none;
+  color: white;
+  border-radius: 0.625rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  height: 100.3%;
+  width: 100.4%;
+  border-radius: 0.625rem;
+  background-image: linear-gradient(to bottom, #a6a6a6, #528b69);
+  z-index: -1;
+}
