@@ -259,3 +259,95 @@ p {
   background-image: linear-gradient(to bottom, #a6a6a6, #528b69);
   z-index: -1;
 }
+
+.top-bottom-gradient-card {
+  position: relative; /* Now defaults to relative, can be overridden if needed */
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem;
+  background: radial-gradient(
+      149.38% 28.85% at 100% 100%,
+      rgba(44, 160, 90, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      119.94% 28.31% at 0% -1.38%,
+      rgba(44, 160, 90, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    rgba(255, 255, 255, 0.001);
+
+  backdrop-filter: blur(8px);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.top-gradient-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem;
+
+  background: radial-gradient(
+      119.94% 28.31% at 0% -1.38%,
+      rgba(44, 160, 90, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    rgba(255, 255, 255, 0.001);
+  backdrop-filter: blur(8px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 30px;
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left, #528b69, #a6a6a6);
+  border-radius: 7px;
+  padding: 0.75rem;
+  box-shadow: 0 0 50px 2px white;
+  position: relative;
+}
+
+/* Gradient border using a pseudo-element */
+.icon-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 7px;
+  padding: 0.5px; /* Border thickness */
+  background: linear-gradient(to bottom, #a6a6a6, #528b69);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.icon {
+  color: white;
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.mobile-services-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+
+  background: radial-gradient(
+      119.94% 28.31% at 0% -1.38%,
+      rgba(44, 160, 90, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    rgba(255, 255, 255, 0.001);
+  backdrop-filter: blur(8px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 30px;
+}

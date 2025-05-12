@@ -2,7 +2,7 @@
 
 import GradientButton from "@/components/GradientButton";
 import { CheckIcon } from "@/components/Icons";
-import { MobilePricing } from "@/components/pricing/MobilePricing";
+import { MobilePricing } from "@/components/page-components/pricing/MobilePricingPage";
 import { pricingData } from "@/pricing";
 import Link from "next/link";
 import { useState } from "react";
