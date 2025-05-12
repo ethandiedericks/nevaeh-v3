@@ -113,7 +113,7 @@ export const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors p-2 rounded-md
+                className={`text-base font-medium transition-colors p-2 rounded-md
                   ${
                     pathname === item.href ? "text-green-500" : "text-gray-300"
                   }`}
