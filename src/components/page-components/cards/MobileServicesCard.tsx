@@ -19,7 +19,7 @@ const MobileServicesCard = ({
       <div className="flex flex-col gap-4 flex-1">
         <div className="inline-flex items-center gap-4">
           <div className="icon-wrapper">{icon}</div>
-          <h1 className="text-[1.25rem] font-thin">{title}</h1>
+          <h1 className="text-[1.25rem] font-normal">{title}</h1>
         </div>
         <p className="flex-1 mb-4 text-sm">{description}</p>
       </div>
