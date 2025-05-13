@@ -3,17 +3,20 @@ import Link from "next/link";
 
 import { getFeaturedPost, getLatestArticles } from "@/lib/posts";
 import { CalendarDays, Clock } from "lucide-react";
-import MobileBlogPage from "@/components/blog/MobileBlogPage";
 import GradientButton from "@/components/GradientButton";
 import LatestArticles from "@/components/blog/LatestArticles";
+import { MobileBlogPage } from "@/components/blog/MobileBlogPage";
 
 const Blog = () => {
   const featuredPost = getFeaturedPost();
   const latestArticles = getLatestArticles(6);
-
+  if (!featuredPost) return null;
   return (
     <>
-      <MobileBlogPage />
+      <MobileBlogPage
+        featuredArticle={featuredPost}
+        latestArticles={latestArticles}
+      />
       <div className="min-h-screen hidden md:block">
         <div className="section-spacing">
           <div className="flex flex-col space-y-4 justify-center items-center">
@@ -48,11 +51,10 @@ const Blog = () => {
                 </span>
               </div>
               <h3 className="text-4xl leading-[100%] tracking-[-4%]">
-                The Power of API Development with C# for Your Business
+                {featuredPost?.title}
               </h3>
               <p className="text-base leading-[20px] tracking-[-4%]">
-                APIs power modern applications—discover how C# API development
-                can elevate your software solutions.
+                {featuredPost?.excerpt}
               </p>
               {/* read time and cta */}
               <div className="flex flex-row justify-between">
