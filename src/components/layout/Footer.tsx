@@ -14,10 +14,10 @@ const footerLinks = {
     { label: "Contact", href: "/contact" },
   ],
   services: [
-    { label: "Web Applications", href: "/services#web-apps" },
-    { label: "Mobile Apps", href: "/services#mobile-apps" },
-    { label: "Landing Pages", href: "/services#landing-pages" },
-    { label: "Full Scale Websites", href: "/services#websites" },
+    { label: "Web Applications", href: "/services" },
+    { label: "Mobile Apps", href: "/services" },
+    { label: "Landing Pages", href: "/services" },
+    { label: "Full Scale Websites", href: "/services" },
   ],
   legal: [
     { label: "Terms of Service", href: "/terms-of-service" },
