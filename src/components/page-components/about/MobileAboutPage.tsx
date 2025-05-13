@@ -5,8 +5,8 @@ import React from "react";
 import MobileAboutImage from "@/assets/images/about/nevaeh-solutions-desktop-about-image.png";
 import MobileAboutImage2 from "@/assets/images/about/nevaeh-solutions-desktop-about-image-2.png";
 import GradientButton from "@/components/GradientButton";
-import { UserIcon, ZapIcon } from "@/components/Icons";
-import { FastForward, Lightbulb } from "lucide-react";
+import { CodeIcon, UserIcon, ZapIcon } from "@/components/Icons";
+import { Blocks, FastForward, Gem, Lightbulb, Trophy } from "lucide-react";
 
 const MobileAboutPage = () => {
   const values = [
@@ -36,21 +36,30 @@ const MobileAboutPage = () => {
     },
   ];
 
-  const approach = [
+  const concepts = [
     {
-      title: "Discovery & Planning",
+      icon: <CodeIcon />,
+      title: "Full-Stack Development",
       description:
-        "We begin by understanding your vision, goals, and requirements through in-depth consultation.",
+        "Expertise in both front-end and back-end development, creating seamless, end-to-end solutions using modern technologies.",
     },
     {
-      title: "Design & Development",
+      icon: <Blocks />,
+      title: "Architecture Design",
       description:
-        "Our iterative development process ensures transparency and continuous improvement.",
+        "Building scalable, maintainable systems that grow with your business needs and handle increasing demands.",
     },
     {
-      title: "Launch & Support",
+      icon: <Gem />,
+      title: "Quality Assurance",
       description:
-        "We ensure smooth deployment and provide ongoing support for your success.",
+        "Rigorous testing and quality control processes to ensure robust, reliable software solutions.",
+    },
+    {
+      icon: <Trophy />,
+      title: "Project Management",
+      description:
+        "Efficient project delivery with clear communication and milestone-based development approach.",
     },
   ];
   return (
@@ -84,7 +93,7 @@ const MobileAboutPage = () => {
           >
             <GradientButton text="Book your consultation" />
           </Link>
-          <div className="flex flex-col gap-[25px] w-full justify-center">
+          <div className="flex flex-col gap-[25px] w-full justify-center mt-10">
             <h1 className="text-[32px] leading-[100%]">Our Vision</h1>
             <p className="text-[#E2E8F0] text-base tracking-tight leading-4">
               We envision a future where businesses of all sizes can harness the
@@ -107,7 +116,7 @@ const MobileAboutPage = () => {
               </div>
             </div>
           ))}
-          <div className="flex items-center justify-center ">
+          <div className="flex items-center justify-center mt-10">
             <Image
               src={MobileAboutImage2}
               alt="Nevaeh Solutions Services Image"
@@ -128,16 +137,42 @@ const MobileAboutPage = () => {
               in your project&apos;s success.
             </p>
           </div>
-          {approach.map((approach, index) => (
-            <div key={index} className="top-bottom-gradient-card p-4">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-base font-bold">{approach.title}</h3>
-                <p className="text-sm font-normal text-white tracking-[-4%] leading-5">
-                  {approach.description}
-                </p>
+          {/* concept cards */}
+          {concepts.map((concept, index) => (
+            <div key={index} className="mt-4">
+              <div className="mobile-top-bottom-gradient-card">
+                <div className="flex justify-end mt-[-2.7rem]">
+                  <div className="mobile-about-icon-wrapper">
+                    {concept.icon}
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-base font-bold">{concept.title}</h3>
+                  <p className="text-sm font-normal text-white tracking-[-4%] leading-5">
+                    {concept.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
+
+          {/* cta */}
+          <div className="flex flex-col gap-[18px] items-center justify-center my-10">
+            <h1 className="text-[32px]  tracking-[-4%] leading-8">
+              Ready to Build Something Amazing?
+            </h1>
+            <p className="text-base tracking-[-4%] leading-5">
+              Let&apos;s collaborate to bring your digital vision to life with
+              innovative solutions tailored to your needs.
+            </p>
+            <Link
+              href={"/contact"}
+              aria-label="Start a Conversation with Nevaeh Solutions"
+            >
+              <GradientButton text="Start a Conversation" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
