@@ -15,7 +15,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
   line2,
 }) => {
   return (
-    <div className="w-full table-gradient-0 p-6 md:p-10">
+    <div className="w-full top-bottom-gradient-card p-6 md:p-10">
       {/* Mobile view (side by side): flex-row on small screens */}
       <div className="flex flex-row md:flex-col items-center md:justify-between gap-10 md:gap-6">
         {/* Icon and title section */}

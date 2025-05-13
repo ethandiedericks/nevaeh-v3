@@ -3,6 +3,7 @@
 import ContactCard from "@/components/contact/ContactInfoCards";
 import GradientButton from "@/components/GradientButton";
 import { CheckIcon } from "@/components/Icons";
+import { contactInfo } from "@/contactInfo";
 import { Clock, Mail, Phone } from "lucide-react";
 import React, { useState } from "react";
 
@@ -70,36 +71,38 @@ const Contact = () => {
             <div className="">
               <h2 className="text-xl mb-4">Send us a Message</h2>
               <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                  <label htmlFor="fullName" className="block mb-1">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    placeholder="John Doe"
-                    className="w-full p-3 bg-transparent border border-white/30 rounded-md"
-                    required
-                  />
-                </div>
+                <div className="flex flex-col md:flex-row md:gap-4">
+                  <div className="mb-4">
+                    <label htmlFor="fullName" className="block mb-1">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      placeholder="John Doe"
+                      className="w-full p-3 bg-transparent border border-white/30 rounded-md"
+                      required
+                    />
+                  </div>
 
-                <div className="mb-4">
-                  <label htmlFor="email" className="block mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="john@example.com"
-                    className="w-full p-3 bg-transparent border border-white/30 rounded-md"
-                    required
-                  />
+                  <div className="mb-4">
+                    <label htmlFor="email" className="block mb-1">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="john@example.com"
+                      className="w-full p-3 bg-transparent border border-white/30 rounded-md"
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div className="mb-4">
@@ -191,13 +194,17 @@ const Contact = () => {
               </ul>
             </div>
 
-            <div className="mt-4 table-gradient-0 p-8">
-              <h3 className="text-lg mb-3">Need immediate assistance?</h3>
+            <div className="flex flex-col top-bottom-gradient-card p-4 justify-center">
+              <h3 className="text-lg mb-3 text0left">
+                Need immediate assistance?
+              </h3>
               <p className="text-white/80 mb-4">
                 If you&apos;re in need of urgent assistance don&apos;t hesitate
                 to give us a call!
               </p>
-              <GradientButton text="Give us a call" />
+              <a href={`tel:${contactInfo.phone}`} className="max-w-fit">
+                <GradientButton text="Give us a call" />
+              </a>
             </div>
           </div>
         </div>
