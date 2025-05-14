@@ -53,33 +53,35 @@ export const MobileBlogPage = ({
               height={201}
               className="w-full rounded-[30px]"
             />
-            <div className="flex flex-col gap-4">
-              <div className="flex flex-row justify-between">
-                <span className="border border-white rounded-[0.625rem] p-2 inline-flex items-center justify-center font-thin">
-                  {featuredArticle?.category}
-                </span>
-                <span className="inline-flex items-center justify-center font-thin">
-                  <CalendarDays className="mr-2" />
-                  {featuredArticle?.date}
-                </span>
-              </div>
-              <h3 className="text-2xl font-thin tracking-[-4%] leading-[100%]">
-                {featuredArticle.title}
-              </h3>
-              <p className="text-base font-thin tracking-[-4%] leading-[20px]">
-                {featuredArticle.excerpt}
-              </p>
-              <div className="flex flex-row justify-between">
-                <span className="inline-flex items-center justify-center font-thin">
-                  <Clock className="mr-2" />
-                  {featuredArticle?.readTime}
-                </span>
-                <Link
-                  href={`/blog/${featuredArticle?.slug}`}
-                  aria-label={`Read ${featuredArticle?.title}, by ${featuredArticle?.author}`}
-                >
-                  <GradientButton text="Read article" />
-                </Link>
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-row justify-between">
+                  <span className="border border-white rounded-[0.625rem] p-2 inline-flex items-center justify-center font-thin">
+                    {featuredArticle?.category}
+                  </span>
+                  <span className="inline-flex items-center justify-center font-thin">
+                    <CalendarDays className="mr-2" />
+                    {featuredArticle?.date}
+                  </span>
+                </div>
+                <h3 className="text-2xl font-thin tracking-[-4%] leading-[100%]">
+                  {featuredArticle.title}
+                </h3>
+                <p className="text-base font-thin tracking-[-4%] leading-[20px]">
+                  {featuredArticle.excerpt}
+                </p>
+                <div className="flex flex-row justify-between">
+                  <span className="inline-flex items-center justify-center font-thin">
+                    <Clock className="mr-2" />
+                    {featuredArticle?.readTime}
+                  </span>
+                  <Link
+                    href={`/blog/${featuredArticle?.slug}`}
+                    aria-label={`Read ${featuredArticle?.title}, by ${featuredArticle?.author}`}
+                  >
+                    <GradientButton text="Read article" />
+                  </Link>
+                </div>
               </div>
 
               <SelectMenu onCategoryChange={handleCategoryChange} />

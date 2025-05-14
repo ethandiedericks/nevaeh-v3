@@ -32,8 +32,8 @@ export default function SelectMenu({ onCategoryChange }: SelectMenuProps) {
   };
 
   return (
-    <div className="relative w-full max-w-md">
-      <div className="flex items-center">
+    <div className="relative w-full mt-4">
+      <div className="flex flex-row justify-between items-center">
         <h2 className="text-white text-xl font-medium mr-8">Latest Articles</h2>
 
         {/* Selected option button */}
