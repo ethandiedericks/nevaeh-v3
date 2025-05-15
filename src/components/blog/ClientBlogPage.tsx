@@ -33,8 +33,8 @@ export async function generateMetadata({
 
 // Generate static params for dynamic routes (optional, for static generation)
 export async function generateStaticParams() {
-  const { getAllPostsData } = await import("@/lib/posts");
-  const posts = await getAllPostsData();
+  const { getAllPosts } = await import("@/lib/posts");
+  const posts = await getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
