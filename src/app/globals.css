@@ -45,7 +45,7 @@ body {
 }
 
 .article-card {
-  @apply bg-[var(--card-background)] p-6 rounded-[var(--border-radius)];
+  @apply bg-[var(--card-background)] rounded-[var(--border-radius)];
 }
 
 /* Header meta info styling */
