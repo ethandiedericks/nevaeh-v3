@@ -2,7 +2,7 @@
 
 import GradientButton from "@/components/GradientButton";
 import { CheckIcon } from "@/components/Icons";
-import { MobilePricing } from "@/components/page-components/pricing/MobilePricingPage";
+import { MobilePricing } from "@/components/pricing/MobilePricingPage";
 import { pricingData } from "@/pricing";
 import Link from "next/link";
 import { useState } from "react";
@@ -35,8 +35,8 @@ export default function PricingPage() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-1 py-1 rounded-[0.625rem] transition-all relative hover:cursor-pointer ${
                   activeTab === tab.id
-                    ? "bg-transparent border border-gray-600"
-                    : "bg-transparent border border-gray-600 "
+                    ? "bg-transparent gradient-border"
+                    : "bg-transparent gradient-border "
                 }`}
               >
                 <div

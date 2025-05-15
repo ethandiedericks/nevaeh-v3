@@ -4,12 +4,14 @@ import Link from "next/link";
 import { getFeaturedPost, getLatestArticles } from "@/lib/posts";
 import { CalendarDays, Clock } from "lucide-react";
 import GradientButton from "@/components/GradientButton";
-import LatestArticles from "@/components/blog/LatestArticles";
 import { MobileBlogPage } from "@/components/blog/MobileBlogPage";
+import LatestArticles from "@/components/blog/LatestArticles";
 
-const Blog = () => {
-  const featuredPost = getFeaturedPost();
-  const latestArticles = getLatestArticles(6);
+// Make the component async
+const Blog = async () => {
+  // Await the data fetching functions
+  const featuredPost = await getFeaturedPost();
+  const latestArticles = await getLatestArticles(6);
 
   if (!featuredPost) return null;
 

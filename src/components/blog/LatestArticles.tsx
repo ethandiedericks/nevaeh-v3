@@ -71,13 +71,11 @@ const LatestArticles = ({ latestArticles }: { latestArticles: PostData[] }) => {
               key={article.id}
               href={`/blog/${article.slug}`}
               aria-label={`Read ${article.title}, by Nevaeh Solutions`}
-              className="block"
+              className="block h-full"
             >
-              <div
-                key={article.id}
-                className="relative p-6 w-[21.563rem] h-[18.75rem] overflow-hidden rounded-[30px] latest-articles-gradient-card"
-              >
-                <div className="">
+              <div className="relative flex flex-col overflow-hidden rounded-[30px] w-[21.563rem] h-[18.75rem] latest-articles-gradient-card ">
+                {/* Image background */}
+                <div className="absolute inset-0">
                   <Image
                     src={article.coverImage}
                     alt={article.title}
@@ -87,9 +85,9 @@ const LatestArticles = ({ latestArticles }: { latestArticles: PostData[] }) => {
                   />
                 </div>
 
-                {/* Content over image - Now positioned at the bottom */}
-                <div className="absolute bottom-6 left-6 right-6 z-20 flex flex-col gap-2">
-                  <div className="flex flex-row justify-between">
+                {/* Content pinned to bottom */}
+                <div className="relative z-20 flex flex-col p-6 mt-auto">
+                  <div className="flex flex-row justify-between mb-2">
                     <span className="border border-white rounded-full py-1 px-3 inline-flex items-center justify-center text-sm font-thin">
                       {article?.category}
                     </span>
@@ -98,13 +96,14 @@ const LatestArticles = ({ latestArticles }: { latestArticles: PostData[] }) => {
                       {article?.readTime}
                     </span>
                   </div>
-                  <h3 className="text-base leading-[100%] tracking-[-4%] font-medium">
-                    The Power of API Development with C# for Your Business
+
+                  <h3 className="text-base leading-[100%] tracking-[-4%] font-medium mb-2">
+                    {article.title}
                   </h3>
-                  <p className="text-sm leading-4 tracking-[-4%] font-thin">
-                    APIs power modern applications—discover how C# API
-                    development can elevate your software solutions.
+                  <p className="text-sm leading-4 tracking-[-4%] font-thin mb-4">
+                    {article.excerpt}
                   </p>
+
                   <div className="flex flex-row justify-between">
                     <span className="inline-flex items-center justify-center text-sm font-thin">
                       {article?.date}

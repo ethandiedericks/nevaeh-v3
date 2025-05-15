@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { CheckIcon } from "../../Icons";
+import { CheckIcon } from "../Icons";
 
 interface ServicesCardProps {
   icon: ReactNode;

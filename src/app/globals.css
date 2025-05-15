@@ -20,6 +20,92 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
+.prose {
+  @apply max-w-none text-white; /* Ensure white text and remove max width */
+}
+
+.prose h1 {
+  @apply text-3xl sm:text-4xl md:text-5xl font-thin mb-6 text-white tracking-[-4%] leading-[100%]; /* Title styling */
+}
+
+.prose h2 {
+  @apply text-2xl sm:text-3xl md:text-4xl font-normal mb-6 text-white tracking-[-4%] leading-[100%]; /* Section headings */
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-4 text-white; /* Bullet points styling */
+}
+
+.prose li {
+  @apply mb-2; /* Spacing between list items */
+}
+
+.prose p {
+  @apply text-base mb-6 text-white tracking-[-4%] leading-[20px]; /* Paragraph styling */
+}
+
+.article-card {
+  @apply bg-[var(--card-background)] p-6 rounded-[var(--border-radius)];
+}
+
+/* Header meta info styling */
+.meta-info {
+  @apply flex items-center gap-4 text-sm text-[var(--text-secondary)] mb-4;
+}
+
+.meta-info svg {
+  @apply w-4 h-4 mr-1;
+}
+
+/* Category tag styling */
+.category-tag {
+  @apply px-3 py-1 bg-transparent text-white rounded-[10px]  text-sm;
+}
+
+/* Social share buttons */
+.social-share {
+  @apply flex gap-2;
+}
+
+.social-share button {
+  @apply p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition;
+}
+
+/* Tags styling */
+.tags {
+  @apply flex flex-wrap gap-2 mt-6;
+}
+
+.tags span {
+  @apply px-3 py-1 bg-teal-900/50 text-white rounded-full text-sm;
+}
+
+/* Conclusion and call-to-action */
+.conclusion {
+  @apply mt-8;
+}
+
+.cta-buttons {
+  @apply flex gap-4 mt-4;
+}
+
+.cta-buttons a {
+  @apply px-4 py-2 bg-teal-700 text-white rounded hover:bg-teal-600 transition;
+}
+
+/* Share section */
+.share-section {
+  @apply flex justify-between items-center mt-8 border-t border-gray-800 pt-4;
+}
+
+.share-section h3 {
+  @apply text-lg text-white;
+}
+
+.share-section .social-share {
+  @apply gap-2;
+}
+
 .hero-headline {
   @apply text-white text-5xl md:text-6xl font-normal text-left sm:text-center tracking-tight leading-[1.1] mb-4 sm:mb-8 md:mb-12;
 }
@@ -444,4 +530,27 @@ body {
   backdrop-filter: blur(8px);
   border-radius: 30px;
   overflow: hidden;
+}
+
+.gradient-border {
+  position: relative;
+
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  padding: 0.5px; /* Border thickness */
+  background: linear-gradient(to bottom, #a6a6a6, #528b69);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }

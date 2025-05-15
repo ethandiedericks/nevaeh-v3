@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { TickIcon } from "../../Icons";
+import { TickIcon } from "../Icons";
 
 interface MobileServicesCardProps {
   icon: ReactNode;

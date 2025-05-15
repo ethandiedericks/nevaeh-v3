@@ -3,9 +3,9 @@ import Image from "next/image";
 import DesktopServicesImage from "@/assets/images/services/nevaeh-solutions-desktop-services-image.png";
 import { CodeIcon, LaptopIcon } from "@/components/Icons";
 import { Globe, Smartphone } from "lucide-react";
-import ServicesCard from "@/components/page-components/cards/ServicesCard";
+import ServicesCard from "@/components/cards/ServicesCard";
 import Link from "next/link";
-import MobileServicesPage from "@/components/page-components/services/MobileServicesPage";
+import MobileServicesPage from "@/components/services/MobileServicesPage";
 
 const Services = () => {
   const services = [

@@ -23,7 +23,7 @@ export const MobilePricing = () => {
         {tabs.map((tab, tabIndex) => (
           <div key={tab.id} className="w-full mb-12">
             {/* Tab label as heading */}
-            <div className="text-center px-6 py-3 rounded-[0.625rem] bg-transparent border border-gray-600 mb-6">
+            <div className="text-center px-6 py-3 rounded-[0.625rem] bg-transparent gradient-border mb-6">
               <h2 className="tab-label">{tab.label}</h2>
             </div>
 

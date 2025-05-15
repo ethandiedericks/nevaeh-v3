@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { readdir, readFile } from "fs/promises";
 import path from 'path';
 import matter from 'gray-matter';
 
@@ -16,41 +16,63 @@ export type PostData = {
   coverImage: string;
   featured: boolean;
   slug: string;
+  content: string;
 };
 
-export function getAllPostsData(): PostData[] {
-  const fileNames = fs.readdirSync(postsDirectory);
+export async function getAllPosts(): Promise<PostData[]> {
+  const files = await readdir(postsDirectory);
 
-  const allPostsData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, '');
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const matterResult = matter(fileContents);
+  const posts = await Promise.all(
+    files
+      .filter((file) => file.endsWith(".mdx"))
+      .map(async (file) => {
+        const filePath = path.join(postsDirectory, file);
+        const content = await readFile(filePath, "utf8");
+        const { data, content: mdxContent } = matter(content);
 
-    return {
-      id,
-      ...(matterResult.data as Omit<PostData, 'id'>),
-    };
-  });
+        return {
+          id: file.replace(".mdx", ""),
+          slug: data.slug || file.replace(".mdx", ""),
+          title: data.title,
+          excerpt: data.excerpt,
+          date: data.date,
+          readTime: data.readTime,
+          author: data.author,
+          category: data.category,
+          tags: data.tags,
+          coverImage: data.coverImage,
+          featured: data.featured || false,
+          content: mdxContent,
+        } as PostData;
+      })
+  );
 
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getFeaturedPost(): PostData | null {
-  const allPosts = getAllPostsData();
-  const featuredPosts = allPosts.filter((post) => post.featured);
+// ✅ getFeaturedPost must be async and await the promise
+export async function getFeaturedPost(): Promise<PostData | null> {
+  const allPosts = await getAllPosts();
+  const featuredPosts = allPosts.filter((post: PostData) => post.featured);
 
   if (featuredPosts.length === 0) return null;
 
-  // Already sorted by date, so take first
   return featuredPosts[0];
 }
 
-export function getLatestArticles(limit: number = 3): PostData[] {
-  const allPosts = getAllPostsData();
+// ✅ getLatestArticles must also be async and await the promise
+export async function getLatestArticles(limit: number = 3): Promise<PostData[]> {
+  const allPosts = await getAllPosts();
 
-  // Remove featured post if exists
-  const latestPosts = allPosts.filter((post) => !post.featured);
+  const latestPosts = allPosts.filter((post: PostData) => !post.featured);
 
   return latestPosts.slice(0, limit);
+}
+
+
+
+
+export async function getPostBySlug(slug: string): Promise<PostData | null> {
+  const posts = await getAllPosts();
+  return posts.find((post) => post.slug === slug) || null;
 }

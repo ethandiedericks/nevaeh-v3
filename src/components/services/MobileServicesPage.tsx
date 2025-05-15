@@ -1,10 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import GradientButton from "../../GradientButton";
+
 import DesktopServicesImage from "@/assets/images/services/nevaeh-solutions-desktop-services-image.png";
 import Image from "next/image";
-import { CodeIcon, LaptopIcon } from "../../Icons";
+
 import { Globe, Smartphone } from "lucide-react";
+import { CodeIcon, LaptopIcon } from "../Icons";
+import GradientButton from "../GradientButton";
 import MobileServicesCard from "../cards/MobileServicesCard";
 
 const MobileServicesPage = () => {

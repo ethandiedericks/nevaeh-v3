@@ -3,12 +3,12 @@ import Link from "next/link";
 import React from "react";
 
 import GradientButton from "@/components/GradientButton";
-import MobileAboutPage from "@/components/page-components/about/MobileAboutPage";
+import MobileAboutPage from "@/components/about/MobileAboutPage";
 import DesktopAboutImage from "@/assets/images/about/nevaeh-solutions-desktop-about-image.png";
 import DesktopAboutImage2 from "@/assets/images/about/nevaeh-solutions-desktop-about-image-2.png";
 import { CodeIcon, UserIcon, ZapIcon } from "@/components/Icons";
 import { Blocks, FastForward, Gem, Lightbulb, Trophy } from "lucide-react";
-import ValuesCard from "@/components/page-components/cards/ValuesCard";
+import ValuesCard from "@/components/cards/ValuesCard";
 
 const AboutPage = () => {
   const values = [
