@@ -31,8 +31,11 @@ export const Footer = () => {
   return (
     <>
       <MobileFooter />
-      <footer className="mt-20 mb-8 hidden sm:block">
+      <footer className="mt-10 mb-8 hidden sm:block">
         <div className="section-spacing">
+          <div className="relative py-8">
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#103A21] to-white" />
+          </div>
           {/* Desktop layout (lg screens) */}
           <div className="hidden lg:grid lg:grid-cols-4 gap-10 mb-16 px-4">
             {/* Company Info */}
@@ -271,7 +274,7 @@ export const Footer = () => {
           </div>
 
           <div className="relative pt-8">
-            <div className="absolute bottom-full left-0 w-full h-[2px] bg-gradient-to-r from-[#103A21] to-white" />
+            <div className="absolute bottom-full left-0 w-full h-[1px] bg-gradient-to-r from-[#103A21] to-white" />
             <div className="text-center">
               <p className="text-sm text-muted-foreground">
                 © {currentYear} Nevaeh Solutions (Pty) Ltd.
