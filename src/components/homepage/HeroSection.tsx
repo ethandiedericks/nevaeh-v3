@@ -37,6 +37,8 @@ export const HeroSection = () => {
             </div>
             {/* feature cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 ">
+              {/* <NewFeatureCard /> */}
+
               <FeatureCard
                 icon={<WaypointsIcon />}
                 title="Enterprise-Grade Software"

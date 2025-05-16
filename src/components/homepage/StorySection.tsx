@@ -5,6 +5,7 @@ import { MobileStorySection } from "./mobile/MobileStory";
 
 import { motion } from "framer-motion";
 import { CheckIcon } from "../Icons";
+
 export const StorySection = () => {
   const [isMissionHovered, setIsMissionHovered] = useState(false);
   const [isWCUHovered, setIsWCUHovered] = useState(false);
@@ -31,22 +32,22 @@ export const StorySection = () => {
             <div className="grid grid-cols-2 gap-8 justify-center mt-12">
               {/* mission card */}
               <motion.div
-                className="text-center rounded-[0.938rem] p-2 sm:p-4"
+                className={`text-center rounded-[0.938rem] p-2 sm:p-4 ${
+                  isMissionHovered ? "gradient-border-hover" : ""
+                }`}
                 whileHover={{
                   scale: 1.03,
                   transition: { duration: 0.3 },
-                  border: "1px solid rgba(255, 255, 255, 1)",
-                  boxShadow: "4px 4px 8px 0px rgba(255, 255, 255, 0.3)",
+                  boxShadow: "4px 4px 15px 0px rgb(82, 200, 148, 0.2)",
                 }}
                 onHoverStart={() => setIsMissionHovered(true)}
                 onHoverEnd={() => setIsMissionHovered(false)}
               >
                 <motion.div
-                  className="relative rounded-[0.438rem] border overflow-hidden p-4 sm:px-6 sm:py-[0.8rem] max-w-fit hover:border-none"
+                  className={`relative rounded-[0.438rem] overflow-hidden p-4 sm:px-6 sm:py-[0.8rem] max-w-fit ${
+                    isMissionHovered ? "" : "gradient-border"
+                  }`}
                   animate={{
-                    border: isMissionHovered
-                      ? "1px solid rgba(255, 255, 255, 0)"
-                      : "1px solid rgba(255, 255, 255, 1)",
                     scale: isMissionHovered ? 1.05 : 1,
                   }}
                   transition={{ duration: 0.2 }}
@@ -66,22 +67,22 @@ export const StorySection = () => {
               </motion.div>
               {/* why choose us card */}
               <motion.div
-                className="text-center rounded-[0.938rem] p-2 sm:p-4"
+                className={`text-center rounded-[0.938rem] p-2 sm:p-4 ${
+                  isWCUHovered ? "gradient-border-hover" : ""
+                }`}
                 whileHover={{
                   scale: 1.03,
                   transition: { duration: 0.3 },
-                  border: "1px solid rgba(255, 255, 255, 1)",
-                  boxShadow: "4px 4px 8px 0px rgba(255, 255, 255, 0.3)",
+                  boxShadow: "4px 4px 15px 0px rgb(82, 200, 148, 0.2)",
                 }}
                 onHoverStart={() => setIsWCUHovered(true)}
                 onHoverEnd={() => setIsWCUHovered(false)}
               >
                 <motion.div
-                  className="relative rounded-[0.438rem] border overflow-hidden p-4 sm:px-6 sm:py-[0.8rem] max-w-fit hover:border-none"
+                  className={`relative rounded-[0.438rem] overflow-hidden p-4 sm:px-6 sm:py-[0.8rem] max-w-fit ${
+                    isWCUHovered ? "" : "gradient-border"
+                  }`}
                   animate={{
-                    border: isWCUHovered
-                      ? "1px solid rgba(255, 255, 255, 0)"
-                      : "1px solid rgba(255, 255, 255, 1)",
                     scale: isWCUHovered ? 1.05 : 1,
                   }}
                   transition={{ duration: 0.2 }}

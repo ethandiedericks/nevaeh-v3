@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import React, { ReactNode } from "react";
@@ -20,19 +19,25 @@ export const ValueCard: React.FC<ValueProps> = ({
   return (
     <motion.div className="h-full">
       <motion.div
-        className="relative h-full flex flex-col justify-between rounded-[0.938rem] border overflow-hidden p-4 sm:p-6"
+        className={`relative h-full flex flex-col justify-between  overflow-hidden p-4 sm:p-6 ${
+          isValueHovered ? "gradient-border-hover" : "gradient-border"
+        }`}
         whileHover={{
           scale: 1.03,
           transition: { duration: 0.3 },
-          border: "1px solid rgba(255, 255, 255, 1)",
-          boxShadow: "4px 4px 8px 0px rgba(255, 255, 255, 0.3)",
+          boxShadow: "4px 4px 15px 0px rgb(82, 200, 148, 0.2)",
         }}
         onHoverStart={() => setIsValueHovered(true)}
         onHoverEnd={() => setIsValueHovered(false)}
       >
         <motion.div className="space-y-3">
-          <motion.div className="border rounded-[0.438rem] p-2 max-w-fit mx-auto sm:mx-0">
-            {icon}
+          <motion.div className="relative max-w-fit mx-auto sm:mx-0">
+            {/* Glow effect */}
+            <div className="absolute inset-0 icon-glow"></div>
+            {/* Icon with a higher z-index to appear above the glow */}
+            <div className="rounded-[0.438rem] p-2 gradient-border relative z-10">
+              {icon}
+            </div>
           </motion.div>
           <motion.div className="text-center md:text-left">
             <h2>{title}</h2>
