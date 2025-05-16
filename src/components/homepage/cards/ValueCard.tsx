@@ -19,7 +19,7 @@ export const ValueCard: React.FC<ValueProps> = ({
   return (
     <motion.div className="h-full">
       <motion.div
-        className={`relative h-full flex flex-col justify-between  overflow-hidden p-4 sm:p-6 ${
+        className={`relative h-full flex flex-col rounded-[10px] justify-between  overflow-hidden p-4 sm:p-6 ${
           isValueHovered ? "gradient-border-hover" : "gradient-border"
         }`}
         whileHover={{
