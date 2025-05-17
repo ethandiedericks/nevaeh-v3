@@ -50,7 +50,7 @@ export const Footer = () => {
                   priority
                 />
               </div>
-              <p className="text-muted-foreground text-sm text-white font-thin leading-[20px] tracking-[-4%]">
+              <p className="text-muted-foreground text-base text-white font-thin leading-[20px] tracking-[-4%]">
                 Creating exceptional digital experiences with precision and
                 expertise.
               </p>

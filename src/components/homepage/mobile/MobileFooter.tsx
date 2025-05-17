@@ -31,7 +31,7 @@ export const MobileFooter = () => {
     <footer className="mt-20 mb-8 sm:hidden">
       <div className="px-6">
         {/* Logo */}
-        <div className="mb-6">
+        <div className="mb-3">
           <div className="relative w-44 h-8">
             <Image
               src={logo}
@@ -45,7 +45,7 @@ export const MobileFooter = () => {
         </div>
 
         {/* Tagline */}
-        <p className="text-sm text-white/80 mb-8">
+        <p className=" text-white/80 mb-8 text-base font-thin leading-[20px] tracking-[-4%]">
           Creating exceptional digital experiences with precision and expertise.
         </p>
 
