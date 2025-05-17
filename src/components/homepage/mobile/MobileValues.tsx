@@ -13,7 +13,7 @@ export const MobileValuesSection = () => {
               Driven by Purpose, <br />
               Grounded in Values
             </h1>
-            <p className="mt-4 pl-4">
+            <p className="mt-4 pl-4 text-base text-white font-thin leading-[20px] tracking-[-4%]">
               These principles guide everything we do and define how we work
               with our clients.
             </p>

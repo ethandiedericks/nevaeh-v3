@@ -40,9 +40,11 @@ export const ValueCard: React.FC<ValueProps> = ({
             </div>
           </motion.div>
           <motion.div className="text-center md:text-left">
-            <h2>{title}</h2>
+            <h2 className="text-base text-white text-bold leading-[20px] tracking-[-4%]">
+              {title}
+            </h2>
           </motion.div>
-          <motion.div className="flex-1 text-center md:text-left">
+          <motion.div className="flex-1 text-center md:text-left text-[15px] md:text-base text-white font-thin leading-[20px] tracking-[-4%]">
             <p>{description}</p>
           </motion.div>
         </motion.div>

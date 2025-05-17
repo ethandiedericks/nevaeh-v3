@@ -15,7 +15,7 @@ export const CTASection = () => {
             {/* text wrapper */}
             <div className="text-center items-center">
               <h1 className="section-title">Ready to Start Your Project?</h1>
-              <p className="mt-4">
+              <p className="mt-4 text-base text-white font-thin leading-[20px] tracking-[-4%]">
                 Let&apos;s discuss how we can help bring your vision to life
                 with our expertise in digital solutions.
               </p>

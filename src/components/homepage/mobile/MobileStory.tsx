@@ -11,7 +11,7 @@ export const MobileStorySection = () => {
             <h1 className="section-title">
               Transforming Visions into <br /> Digital Reality
             </h1>
-            <p className="mt-4 ml-4">
+            <p className="mt-4 ml-4 text-base  text-white font-thin leading-[20px] tracking-[-4%]">
               We&apos;re a team of passionate developers, designers, and
               strategists dedicated to creating <br /> exceptional digital
               experiences that drive business growth and user engagement.

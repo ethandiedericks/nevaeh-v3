@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import GradientButton from "@/components/GradientButton";
-import CTA from "@/assets/images/homepage/nevaeh-solutions-cta-background-image.png";
+import CTA from "@/assets/images/homepage/nevaeh-solutions-mobile-cta-background-image.png";
 export const MobileCTA = () => {
   return (
     <div className="md:hidden">
@@ -11,7 +11,7 @@ export const MobileCTA = () => {
           {/* text wrapper */}
           <div className="">
             <h1 className="section-title">Ready to Start?</h1>
-            <p className="mt-4 ml-4">
+            <p className="mt-4 ml-4 text-base text-white font-thin leading-[20px] tracking-[-4%]">
               Let&apos;s discuss how we can help bring your vision to life with
               our expertise in digital solutions.
             </p>
@@ -26,7 +26,7 @@ export const MobileCTA = () => {
               priority
             />
           </div>
-          <div className=" flex justify-center items-center">
+          <div className=" flex justify-center items-center mt-10">
             <Link
               href={"/contact"}
               passHref
