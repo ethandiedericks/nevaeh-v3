@@ -13,6 +13,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-ibm-plex-sans);
 }
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background: linear-gradient(to right, #001e05, #0b0c1b, #080914);
