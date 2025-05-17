@@ -90,7 +90,7 @@ const AboutPage = () => {
           {/* header */}
           <div className="grid grid-cols-2 gap-8">
             <div className="flex flex-col gap-[25px] items-start justify-center">
-              <h1 className="text-5xl text-white">
+              <h1 className="text-5xl">
                 Building Tomorrow&apos;s Digital Solutions Today
               </h1>
               <p>
