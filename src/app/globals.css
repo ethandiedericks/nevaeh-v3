@@ -20,7 +20,7 @@ body {
 }
 
 body {
-  background: linear-gradient(to right, #001e05, #0b0c1b, #080914);
+  background: linear-gradient(to right, #001e05 0%, #000000 50%, #000000 100%);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
 }
@@ -605,11 +605,11 @@ body {
 .new-hero-card-container {
   background-image: linear-gradient(
     to bottom right,
-    #2ca05a,
+    #2ca05aa7,
     #002d1f44,
     #002d1f16,
     #002d1f44,
-    #2ca05a
+    #2ca05aa7
   );
   padding: 5px 0;
   border-radius: 30px;
@@ -620,7 +620,7 @@ body {
     linear-gradient(
       45deg,
       rgba(0, 0, 0, 0.1) 0%,
-      rgba(44, 160, 90, 0.1) 50%,
+      rgba(40, 160, 90, 0.1) 50%,
       rgba(0, 0, 0, 0.1) 100%
     );
 
