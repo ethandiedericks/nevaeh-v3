@@ -132,9 +132,11 @@ export default function RootLayout({
       <body
         className={` ${inter.variable} scheme-dark antialiased text-white `}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="min-h-screen flex flex-col">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
