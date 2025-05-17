@@ -129,7 +129,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${inter.variable} antialiased text-white `}>
+      <body className={` ${inter.variable} dark antialiased text-white `}>
         <Navbar />
         {children}
         <Footer />
