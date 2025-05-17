@@ -8,7 +8,7 @@ export const MobileHeroSection = () => {
   return (
     <div className="relative overflow-hidden md:hidden">
       {/* Mobile hero content */}
-      <div className="relative z-10 px-6 py-8 flex flex-col h-full">
+      <div className="relative z-10 px-6  flex flex-col h-full">
         {/* Headline and subheadline */}
         <div className="mb-10">
           <h1 className="hero-headline text-white text-left">
