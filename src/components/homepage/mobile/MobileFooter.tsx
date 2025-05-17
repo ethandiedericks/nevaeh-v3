@@ -29,12 +29,12 @@ export const MobileFooter = () => {
 
   return (
     <footer className="mt-20 mb-8 sm:hidden">
-      <div className="relative py-8">
+      <div className="relative py-4">
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#103A21] to-white" />
       </div>
       <div className="px-6">
         {/* Logo */}
-        <div className="mb-3">
+        <div className="">
           <div className="relative w-44 h-8">
             <Image
               src={logo}
@@ -48,7 +48,7 @@ export const MobileFooter = () => {
         </div>
 
         {/* Tagline */}
-        <p className=" text-white/80 mb-8 text-base font-thin leading-[20px] tracking-[-4%]">
+        <p className=" text-white/80 mb-4 text-base font-thin leading-[20px] tracking-[-4%]">
           Creating exceptional digital experiences with precision and expertise.
         </p>
 
