@@ -32,9 +32,7 @@ const MobileServiceCard: React.FC<{ service: Service }> = ({ service }) => {
                 {service.icon}
               </div>
             </div>
-            <h2 className="text-lg text-white font-medium leading-[20px] tracking-[-4%]">
-              {service.title}
-            </h2>
+            <h2 className="mobile-card-title">{service.title}</h2>
           </motion.div>
           <p className="text-base text-white font-thin leading-[20px] tracking-[-4%]">
             {service.description}

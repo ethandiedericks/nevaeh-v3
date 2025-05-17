@@ -650,7 +650,7 @@ body {
       rgba(44, 160, 90, 0.1) 50%,
       rgba(0, 0, 0, 0.1) 100%
     );
-
+  backdrop-filter: blur(2px);
   padding: 1rem;
   border-radius: 27px;
   color: #fff;
@@ -662,4 +662,8 @@ body {
   border-radius: 40px;
   z-index: 1;
   opacity: 0.8;
+}
+
+.mobile-card-title {
+  @apply text-lg text-white font-medium leading-[20px] tracking-[-4%];
 }

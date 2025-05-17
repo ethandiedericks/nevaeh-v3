@@ -1,14 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { MobileFeatureCard } from "../cards/MobileFeatureCard";
 import { RocketIcon, WaypointsIcon } from "@/components/Icons";
 import GradientButton from "@/components/GradientButton";
+import heroDecoration from "@/assets/images/homepage/hero-decoration.png";
 
 export const MobileHeroSection = () => {
   return (
     <div className="relative overflow-hidden md:hidden">
       {/* Mobile hero content */}
-      <div className="relative z-10 px-6  flex flex-col h-full">
+      <div className="relative z-10 px-6 flex flex-col h-full">
         {/* Headline and subheadline */}
         <div className="mb-10">
           <h1 className="hero-headline text-white text-left">
@@ -22,7 +24,18 @@ export const MobileHeroSection = () => {
 
         {/* Feature blocks */}
         <div className="grid grid-cols-2 gap-8">
-          {/* Feature 1 */}
+          {/* Background Decoration Image */}
+          <div className="absolute left-0 w-full z-0 sm:hidden flex justify-center">
+            <Image
+              src={heroDecoration}
+              alt="Nevaeh Hero Background decoration"
+              width={393}
+              height={209}
+              className="w-full max-w-none object-cover"
+              priority
+              quality={100}
+            />
+          </div>
           <div className="rotate-[-10deg]">
             <MobileFeatureCard
               icon={<WaypointsIcon size={40} className="text-white" />}
@@ -31,7 +44,6 @@ export const MobileHeroSection = () => {
             />
           </div>
           <div className="rotate-[10deg]">
-            {/* Feature 2 */}
             <MobileFeatureCard
               icon={<RocketIcon size={40} className="text-white" />}
               title="Guaranteed 14-Day Delivery"
