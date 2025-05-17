@@ -628,6 +628,19 @@ body {
   border-radius: 27px;
   color: #fff;
 }
+.left-hero-card {
+  background: #05130bed
+    linear-gradient(
+      45deg,
+      rgba(44, 169, 90, 0) 0%,
+      rgba(40, 160, 90, 0.1) 50%,
+      rgba(0, 0, 0, 2) 100%
+    );
+
+  padding: 27px;
+  border-radius: 27px;
+  color: #fff;
+}
 
 .mobile-hero-card-container {
   background-image: linear-gradient(

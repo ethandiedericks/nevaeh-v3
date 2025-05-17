@@ -37,11 +37,24 @@ export const HeroSection = () => {
             </div>
             {/* feature cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 ">
-              <NewFeatureCard
-                icon={<WaypointsIcon size={40} />}
-                title="Enterprise-Grade Software"
-                description="Scalable, secure, and efficient enterprise solutions."
-              />
+              <div className="new-hero-card-container">
+                <div className="left-hero-card">
+                  <div className="flex flex-col p-4 items-center justify-center">
+                    <div className="relative">
+                      <div className="absolute inset-0 hero-icon-glow"></div>
+                      <div className="relative z-10">
+                        <WaypointsIcon size={40} />
+                      </div>
+                    </div>
+                    <h2 className="text-xl font-normal tracking-[-4%] leading-[20px] mt-6">
+                      Enterprise-Grade Software
+                    </h2>
+                    <p className="text-base text-center font-thin tracking-[-4%] leading-[20px] mt-2">
+                      Scalable, secure, and efficient enterprise solutions.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
               <NewFeatureCard
                 icon={<RocketIcon size={40} />}
