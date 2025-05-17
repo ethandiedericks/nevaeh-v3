@@ -1,6 +1,8 @@
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
+
 
 import GradientButton from "@/components/GradientButton";
 import MobileAboutPage from "@/components/about/MobileAboutPage";
@@ -8,9 +10,11 @@ import DesktopAboutImage from "@/assets/images/about/nevaeh-solutions-desktop-ab
 import DesktopAboutImage2 from "@/assets/images/about/nevaeh-solutions-desktop-about-image-2.png";
 import { CodeIcon, UserIcon, ZapIcon } from "@/components/Icons";
 import { Blocks, FastForward, Gem, Lightbulb, Trophy } from "lucide-react";
-import ValuesCard from "@/components/cards/ValuesCard";
+import { ValueCard } from "@/components/homepage/cards/ValueCard";
+import ConceptCard from "@/components/cards/ConceptCard";
 
 const AboutPage = () => {
+
   const values = [
     {
       icon: <ZapIcon />,
@@ -126,7 +130,7 @@ const AboutPage = () => {
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-10">
             {values.map((value, index) => (
-              <ValuesCard
+              <ValueCard
                 key={index}
                 icon={value.icon}
                 title={value.title}
@@ -167,7 +171,7 @@ const AboutPage = () => {
                 className="object-cover rounded-[30px]"
               />
             </div>
-            <div className="flex flex-col gap-[25px] items-start justify-end">
+            <div className="flex flex-col gap-[25px] items-start justify-center">
               <h1 className="text-5xl">Expert Solutions, Personal Attention</h1>
               <p>
                 As developers with comprehensive expertise, we provide dedicated
@@ -180,19 +184,10 @@ const AboutPage = () => {
               </p>
             </div>
           </div>
+          {/* Concept Cards */}
           <div className="grid grid-cols-2 gap-4 my-20">
             {concepts.map((concept, index) => (
-              <div className="values-card-wrapper h-full flex-1" key={index}>
-                <div className="flex flex-row flex-1 gap-8 items-center justify-center p-2">
-                  <div className="icon-wrapper">{concept.icon}</div>
-                  <div className="flex flex-col flex-1 space-y-4">
-                    <h3 className="text-base font-bold">{concept.title}</h3>
-                    <p className="text-sm font-normal text-white tracking-[-4%] leading-5">
-                      {concept.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <ConceptCard key={index} concept={concept} />
             ))}
           </div>
           {/* cta */}

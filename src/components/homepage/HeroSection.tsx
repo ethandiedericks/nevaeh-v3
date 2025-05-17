@@ -2,8 +2,8 @@ import Link from "next/link";
 
 import { MobileHeroSection } from "./mobile/MobileHero";
 import GradientButton from "../GradientButton";
-import { FeatureCard } from "./cards/FeatureCard";
 import { EarthIcon, RocketIcon, WaypointsIcon } from "../Icons";
+import NewFeatureCard from "./cards/NewFeatureCard";
 
 export const HeroSection = () => {
   return (
@@ -37,22 +37,20 @@ export const HeroSection = () => {
             </div>
             {/* feature cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 ">
-              {/* <NewFeatureCard /> */}
-
-              <FeatureCard
-                icon={<WaypointsIcon />}
+              <NewFeatureCard
+                icon={<WaypointsIcon size={40} />}
                 title="Enterprise-Grade Software"
                 description="Scalable, secure, and efficient enterprise solutions."
               />
 
-              <FeatureCard
-                icon={<RocketIcon />}
+              <NewFeatureCard
+                icon={<RocketIcon size={40} />}
                 title="Guaranteed 14-Day Delivery"
                 description="Fast, reliable development without compromises."
               />
 
-              <FeatureCard
-                icon={<EarthIcon />}
+              <NewFeatureCard
+                icon={<EarthIcon size={40} />}
                 title="Free professional domain"
                 description="Establish credibility, reinforcing your brand's authority and trust"
               />
