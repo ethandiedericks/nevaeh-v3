@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { MobileFeatureCard } from "../cards/MobileFeatureCard";
-import { EarthIcon, RocketIcon, WaypointsIcon } from "@/components/Icons";
+import { RocketIcon, WaypointsIcon } from "@/components/Icons";
 import GradientButton from "@/components/GradientButton";
 
 export const MobileHeroSection = () => {
@@ -10,7 +10,7 @@ export const MobileHeroSection = () => {
       {/* Mobile hero content */}
       <div className="relative z-10 px-6 py-8 flex flex-col h-full">
         {/* Headline and subheadline */}
-        <div className="mb-8">
+        <div className="mb-10">
           <h1 className="hero-headline text-white text-left">
             Drive Results with Tailored Web & App Development.
           </h1>
@@ -21,31 +21,27 @@ export const MobileHeroSection = () => {
         </div>
 
         {/* Feature blocks */}
-        <div className="flex flex-col">
+        <div className="grid grid-cols-2 gap-8">
           {/* Feature 1 */}
-          <MobileFeatureCard
-            icon={<WaypointsIcon size={28} className="text-white" />}
-            title="Enterprise-Grade Software"
-            description="Scalable, secure, and efficient enterprise solutions."
-          />
-
-          {/* Feature 2 */}
-          <MobileFeatureCard
-            icon={<RocketIcon size={28} className="text-white" />}
-            title="Guaranteed 14-Day Delivery"
-            description="Fast, reliable development without compromises."
-          />
-
-          {/* Feature 3 */}
-          <MobileFeatureCard
-            icon={<EarthIcon size={28} className="text-white" />}
-            title="Free professional domain"
-            description="Establish credibility, reinforcing your brand's authority and trust"
-          />
+          <div className="rotate-[-10deg]">
+            <MobileFeatureCard
+              icon={<WaypointsIcon size={40} className="text-white" />}
+              title="Enterprise-Grade Software"
+              description="Scalable, secure, and efficient enterprise solutions."
+            />
+          </div>
+          <div className="rotate-[10deg]">
+            {/* Feature 2 */}
+            <MobileFeatureCard
+              icon={<RocketIcon size={40} className="text-white" />}
+              title="Guaranteed 14-Day Delivery"
+              description="Fast, reliable development without compromises."
+            />
+          </div>
         </div>
 
         {/* CTA Button */}
-        <div className="mt-6 w-full flex justify-center">
+        <div className="mt-10 w-full flex justify-center">
           <Link href="/contact" aria-label="Book your consultation">
             <GradientButton text="Book your consultation" />
           </Link>
