@@ -29,6 +29,9 @@ export const MobileFooter = () => {
 
   return (
     <footer className="mt-20 mb-8 sm:hidden">
+      <div className="relative py-8">
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#103A21] to-white" />
+      </div>
       <div className="px-6">
         {/* Logo */}
         <div className="mb-3">
@@ -144,7 +147,7 @@ export const MobileFooter = () => {
         </div>
 
         {/* Divider */}
-        <div className="w-full h-px bg-white/20 my-8"></div>
+        <div className="w-full h-px bg-gradient-to-r from-[#103A21] to-white my-8"></div>
 
         {/* Copyright */}
         <div className="text-center text-sm text-white/70 pb-4">

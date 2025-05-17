@@ -43,10 +43,9 @@ export const MobileServices = () => {
           <div className="">
             <span className="section-tag">Professional Services</span>
             <h1 className="section-title">
-              Tailored Solutions for <br />
-              Business Growth
+              Tailored Solutions for Business Growth
             </h1>
-            <p className="mt-4 pl-4 text-base text-white font-thin leading-[20px] tracking-[-4%]">
+            <p className="mt-4 text-base text-white font-thin leading-[20px] tracking-[-4%]">
               We deliver comprehensive software development services designed to
               address <br /> your specific business challenges and drive
               measurable results.
@@ -59,7 +58,7 @@ export const MobileServices = () => {
               <MobileServiceCard key={index} service={service} />
             ))}
           </div>
-          <div className="my-16 flex justify-center items-center">
+          <div className="mt-8 flex justify-center items-center">
             <Link href={"/services"} passHref>
               <GradientButton text="Explore Our Services" />
             </Link>

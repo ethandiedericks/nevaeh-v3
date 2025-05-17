@@ -10,10 +10,9 @@ export const MobileValuesSection = () => {
           <div className="">
             <span className="section-tag">Our Core Values</span>
             <h1 className="section-title">
-              Driven by Purpose, <br />
-              Grounded in Values
+              Driven by Purpose, Grounded in Values
             </h1>
-            <p className="mt-4 pl-4 text-base text-white font-thin leading-[20px] tracking-[-4%]">
+            <p className="mt-4 text-base text-white font-thin leading-[20px] tracking-[-4%]">
               These principles guide everything we do and define how we work
               with our clients.
             </p>
