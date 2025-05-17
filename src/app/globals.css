@@ -116,7 +116,7 @@ body {
 }
 
 .hero-sub-headline {
-  @apply text-[#E2E8F0] text-base font-thin sm:text-lg italic 2xl:text-xl max-w-2xl mx-auto md:mx-0 md:leading-5 tracking-[-4%];
+  @apply text-[#E2E8F0] text-base font-thin sm:text-lg italic 2xl:text-xl max-w-2xl mx-auto md:mx-0 md:leading-6 tracking-[-4%];
 }
 
 .gradient-button {
