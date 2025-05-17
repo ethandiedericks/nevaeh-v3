@@ -128,15 +128,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={` ${inter.variable} scheme-dark antialiased text-white `}
       >
-        <div className="min-h-screen flex flex-col">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );
