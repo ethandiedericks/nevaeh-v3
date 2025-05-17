@@ -1,8 +1,5 @@
-
 import Image from "next/image";
 import Link from "next/link";
-
-
 
 import GradientButton from "@/components/GradientButton";
 import MobileAboutPage from "@/components/about/MobileAboutPage";
@@ -14,7 +11,6 @@ import { ValueCard } from "@/components/homepage/cards/ValueCard";
 import ConceptCard from "@/components/cards/ConceptCard";
 
 const AboutPage = () => {
-
   const values = [
     {
       icon: <ZapIcon />,
@@ -94,7 +90,7 @@ const AboutPage = () => {
           {/* header */}
           <div className="grid grid-cols-2 gap-8">
             <div className="flex flex-col gap-[25px] items-start justify-center">
-              <h1 className="text-5xl">
+              <h1 className="text-5xl text-white">
                 Building Tomorrow&apos;s Digital Solutions Today
               </h1>
               <p>
