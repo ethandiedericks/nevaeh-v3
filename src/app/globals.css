@@ -112,11 +112,11 @@ body {
 }
 
 .hero-headline {
-  @apply text-white text-5xl md:text-6xl font-normal text-left sm:text-center tracking-tight leading-[1.1] mb-4 sm:mb-8 md:mb-12;
+  @apply text-white text-5xl md:text-[64px] font-normal text-left sm:text-center tracking-[-4%] leading-[100%] mb-4 sm:mb-8 md:mb-12;
 }
 
 .hero-sub-headline {
-  @apply text-[#E2E8F0] text-base font-thin sm:text-lg 2xl:text-xl max-w-xl mx-auto md:mx-0 md:leading-6;
+  @apply text-[#E2E8F0] text-base font-thin sm:text-lg italic 2xl:text-xl max-w-2xl mx-auto md:mx-0 md:leading-5 tracking-[-4%];
 }
 
 .gradient-button {
