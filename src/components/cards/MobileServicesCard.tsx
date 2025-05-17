@@ -18,7 +18,13 @@ const MobileServicesCard = ({
     <div className="">
       <div className="flex flex-col gap-4 flex-1">
         <div className="inline-flex items-center gap-4">
-          <div className="icon-wrapper">{icon}</div>
+          <div className="relative">
+            <div className="absolute inset-0 icon-glow"></div>
+            <div className="rounded-[0.438rem] p-2 gradient-border relative z-10">
+              {icon}
+            </div>
+          </div>
+
           <h1 className="text-[1.25rem] font-normal">{title}</h1>
         </div>
         <p className="flex-1 mb-4 text-sm">{description}</p>

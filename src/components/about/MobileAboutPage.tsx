@@ -142,8 +142,11 @@ const MobileAboutPage = () => {
             <div key={index} className="mt-4">
               <div className="mobile-top-bottom-gradient-card">
                 <div className="flex justify-end mt-[-2.7rem]">
-                  <div className="mobile-about-icon-wrapper">
-                    {concept.icon}
+                  <div className="relative">
+                    <div className="absolute inset-0 icon-glow"></div>
+                    <div className="rounded-[0.438rem] p-2 gradient-border relative z-10">
+                      {concept.icon}
+                    </div>
                   </div>
                 </div>
 
