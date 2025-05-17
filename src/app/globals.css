@@ -606,9 +606,9 @@ body {
   background-image: linear-gradient(
     to bottom right,
     #2ca05aa7,
-    #002d1f44,
-    #002d1f16,
-    #002d1f44,
+    #002d1f00,
+    #002d1f00,
+    #002d1f00,
     #2ca05aa7
   );
   padding: 5px 0;
@@ -619,9 +619,9 @@ body {
   background: #05130bed
     linear-gradient(
       45deg,
-      rgba(0, 0, 0, 0.1) 0%,
-      rgba(40, 160, 90, 0.1) 50%,
-      rgba(0, 0, 0, 0.1) 100%
+      rgba(0, 0, 0, 2) 0%,
+      rgba(40, 160, 90, 0) 50%,
+      rgba(0, 0, 0, 2) 100%
     );
 
   padding: 27px;
