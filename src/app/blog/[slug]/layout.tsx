@@ -3,12 +3,13 @@ import { getPostBySlug } from "@/lib/posts";
 import Script from "next/script";
 
 type Props = {
-  params: { slug: string };
+  children: React.ReactNode;
+  params: Promise<{ slug: string }>;
 };
 
 // Enhance metadata generation with structured data preparation
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   const post = await getPostBySlug(slug);
 
   if (!post) {
@@ -68,17 +69,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// BlogPostLayout component
-export default function BlogPostLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { slug: string };
-}) {
+export default async function BlogPostLayout({ children, params }: Props) {
+  // If params is Promise, await it
+  const resolvedParams = await params;
+
+  // Use resolvedParams.slug
   return (
     <>
-      <BlogPostStructuredData slug={params.slug} />
+      <BlogPostStructuredData slug={resolvedParams.slug} />
       {children}
     </>
   );
