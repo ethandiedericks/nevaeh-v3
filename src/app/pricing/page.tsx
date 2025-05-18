@@ -33,7 +33,7 @@ export default function PricingPage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-1 py-1 rounded-[0.625rem] transition-all relative hover:cursor-pointer ${
+                className={` rounded-[0.625rem] transition-all relative hover:cursor-pointer ${
                   activeTab === tab.id
                     ? "bg-transparent gradient-border"
                     : "bg-transparent gradient-border "
@@ -45,7 +45,7 @@ export default function PricingPage() {
                   }`}
                 >
                   {activeTab === tab.id && (
-                    <div className="absolute inset-0 btn-grad rounded-[0.625rem]"></div>
+                    <div className="absolute inset-0 icon-glow"></div>
                   )}
                   <div className="px-[27px] py-[11px] relative z-20 font-thin text-base">
                     {tab.label}

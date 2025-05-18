@@ -15,9 +15,16 @@ type Metadata = NextMetadata & {
   jsonLd?: Record<string, any> | Array<Record<string, any>>;
 };
 
+// Use environment variables for configurable values
 const GOOGLE_VERIFICATION = process.env.GOOGLE_VERIFICATION || "";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za";
+const OG_IMAGE_URL =
+  process.env.NEXT_PUBLIC_OG_IMAGE_URL || "/opengraph-image.jpg";
+const TWITTER_IMAGE_URL =
+  process.env.NEXT_PUBLIC_TWITTER_IMAGE_URL || "/opengraph-image.jpg";
 
 export const metadata: Metadata = {
+  // Basic metadata
   title: "Nevaeh Solutions | Custom Web & Mobile App Development South Africa",
   description:
     "Nevaeh Solutions (Pty) Ltd provides expert custom software development, mobile app creation, and enterprise-grade web app solutions for businesses across South Africa.",
@@ -33,16 +40,19 @@ export const metadata: Metadata = {
     "responsive website development",
     "API development services",
   ],
+
+  // Open Graph metadata for social sharing
   openGraph: {
     title:
       "Nevaeh Solutions | Custom Web & Mobile App Development South Africa",
     description:
-      "Nevaeh Solutions (Pty) Ltd provides expert custom software development, mobile app creation, and enterprise-grade web app solutions for businesses across South Africa.",
-    url: process.env.NEXT_PUBLIC_BASE_URL,
+      "Nevaeh Solutions provides expert custom software development, mobile app creation, and enterprise-grade web app solutions for businesses across South Africa.",
+    url: BASE_URL,
     siteName: "Nevaeh Solutions (Pty) Ltd",
     images: [
       {
-        url: process.env.NEXT_PUBLIC_OG_IMAGE_URL || "/opengraph-image.jpg",
+        url: OG_IMAGE_URL,
+        width: 1200,
         height: 630,
         alt: "Nevaeh Solutions Logo",
       },
@@ -50,21 +60,28 @@ export const metadata: Metadata = {
     locale: "en_ZA",
     type: "website",
   },
+
+  // Twitter Card metadata
   twitter: {
     card: "summary_large_image",
     title: "Nevaeh Solutions | Web & Mobile App Experts South Africa",
     description:
       "Custom web app and mobile app development solutions by Nevaeh Solutions (Pty) Ltd in Port Elizabeth, South Africa. We build powerful, scalable digital products for your business.",
-    images: [
-      process.env.NEXT_PUBLIC_TWITTER_IMAGE_URL || "/opengraph-image.jpg",
-    ],
+    images: [TWITTER_IMAGE_URL],
+    creator: "@nevaehsolutions", // Added based on best practices
   },
+
+  // Verification tokens
   verification: {
     google: GOOGLE_VERIFICATION,
   },
+
+  // Canonical URL
   alternates: {
-    canonical: process.env.NEXT_PUBLIC_BASE_URL,
+    canonical: BASE_URL,
   },
+
+  // Robots directives
   robots: {
     index: true,
     follow: true,
@@ -76,13 +93,17 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
+  // Favicon and icons
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
     shortcut: "/favicon.ico",
   },
 
+  // Structured data for SEO
   jsonLd: [
+    // Organization schema
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -104,6 +125,8 @@ export const metadata: Metadata = {
         "https://za.pinterest.com/nevaehsolutions/",
       ],
     },
+
+    // Local Business schema
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -118,8 +141,21 @@ export const metadata: Metadata = {
         addressRegion: "Eastern Cape",
         addressCountry: "ZA",
       },
+      // Added geo coordinates for better local SEO (you should replace with actual coordinates)
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "-33.929497441583706",
+        longitude: "25.47286134368047",
+      },
     },
   ],
+
+  // Additional metadata
+  applicationName: "Nevaeh Solutions",
+  authors: [{ name: "Nevaeh Solutions" }],
+  generator: "Next.js",
+  publisher: "Nevaeh Solutions (Pty) Ltd",
+  category: "Software Development",
 };
 
 export default function RootLayout({
@@ -129,9 +165,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${inter.variable} antialiased text-white `}>
+      <body className={`${inter.variable} antialiased text-white`}>
         <Navbar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
