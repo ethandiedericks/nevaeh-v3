@@ -31,7 +31,7 @@ export const Footer = () => {
   return (
     <>
       <MobileFooter />
-      <footer className="mt-10 mb-8 hidden sm:block">
+      <footer className="mt-10 hidden sm:block">
         <div className="section-spacing">
           <div className="relative py-8">
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#103A21] to-white" />

@@ -28,7 +28,7 @@ export const MobileFooter = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-20 mb-8 sm:hidden">
+    <footer className="mt-20 mb-4 sm:hidden">
       <div className="relative py-4">
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#103A21] to-white" />
       </div>

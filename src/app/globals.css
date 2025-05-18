@@ -230,7 +230,7 @@ body {
 /* 5+ Page Website - gradient at top center-left (42% position) */
 .table-gradient-1::before {
   background: radial-gradient(
-      circle at 42% 0%,
+      circle at 42% -20%,
       rgba(44, 160, 90, 0.5) 0%,
       transparent 30%
     ),
@@ -244,7 +244,7 @@ body {
 /* Web Application - gradient at top center-right (60% position) */
 .table-gradient-2::before {
   background: radial-gradient(
-      circle at 60% 0%,
+      circle at 60% -20%,
       rgba(44, 160, 90, 0.5) 0%,
       transparent 30%
     ),
@@ -349,12 +349,12 @@ body {
   padding: 2.5rem;
   background: radial-gradient(
       149.38% 28.85% at 100% 100%,
-      rgba(44, 160, 90, 0.5) 0%,
+      rgba(44, 160, 90, 0.35) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
     radial-gradient(
       119.94% 28.31% at 0% -1.38%,
-      rgba(44, 160, 90, 0.5) 0%,
+      rgba(44, 160, 90, 0.385) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
     rgba(255, 255, 255, 0.001);

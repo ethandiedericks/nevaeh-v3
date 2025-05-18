@@ -1,35 +1,11 @@
-"use client";
-
 import ContactCard from "@/components/contact/ContactInfoCards";
 import GradientButton from "@/components/GradientButton";
 import { CheckIcon } from "@/components/Icons";
 import { contactInfo } from "@/contactInfo";
 import { Clock, Mail, Phone } from "lucide-react";
-import React, { useState } from "react";
+import { sendContactEmail } from "@/app/actions/sendContactEmail";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phoneNumber: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
-    // Reset form or show success message
-  };
-
   return (
     <div className="min-h-screen text-white md:flex flex-col items-center">
       <div className="w-full max-w-6xl px-4 pt-10 flex flex-col items-center mb-8 md:mb-16">
@@ -40,6 +16,7 @@ const Contact = () => {
           Ready to start your project? Get in touch with us and let&apos;s
           discuss how we can help bring your vision to life.
         </p>
+
         {/* cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 w-full mt-8">
           <ContactCard
@@ -68,11 +45,11 @@ const Contact = () => {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {/* Contact Form */}
           <div className="border border-[#A6A6A6] p-6 md:p-8 rounded-[1.875rem]">
-            <div className="">
+            <div>
               <h2 className="text-xl mb-4">Send us a Message</h2>
-              <form onSubmit={handleSubmit}>
+              <form action={sendContactEmail}>
                 <div className="flex flex-col md:flex-row md:gap-4">
-                  <div className="mb-4">
+                  <div className="mb-4 w-full">
                     <label htmlFor="fullName" className="block mb-1">
                       Full Name
                     </label>
@@ -80,15 +57,13 @@ const Contact = () => {
                       type="text"
                       id="fullName"
                       name="fullName"
-                      value={formData.fullName}
-                      onChange={handleChange}
                       placeholder="John Doe"
                       className="w-full p-3 bg-transparent border border-white/30 rounded-md"
                       required
                     />
                   </div>
 
-                  <div className="mb-4">
+                  <div className="mb-4 w-full">
                     <label htmlFor="email" className="block mb-1">
                       Email
                     </label>
@@ -96,8 +71,6 @@ const Contact = () => {
                       type="email"
                       id="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleChange}
                       placeholder="john@example.com"
                       className="w-full p-3 bg-transparent border border-white/30 rounded-md"
                       required
@@ -113,8 +86,6 @@ const Contact = () => {
                     type="tel"
                     id="phoneNumber"
                     name="phoneNumber"
-                    value={formData.phoneNumber}
-                    onChange={handleChange}
                     placeholder="+27 81 279 9063"
                     className="w-full p-3 bg-transparent border border-white/30 rounded-md"
                   />
@@ -128,8 +99,6 @@ const Contact = () => {
                     type="text"
                     id="subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
                     placeholder="How can we help you?"
                     className="w-full p-3 bg-transparent border border-white/30 rounded-md"
                     required
@@ -143,8 +112,6 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     placeholder="Tell us about your project..."
                     rows={4}
                     className="w-full p-3 bg-transparent border border-white/30 rounded-md resize-none"
@@ -195,7 +162,7 @@ const Contact = () => {
             </div>
 
             <div className="flex flex-col top-bottom-gradient-card p-4 justify-center">
-              <h3 className="text-lg mb-3 text0left">
+              <h3 className="text-lg mb-3 text-left">
                 Need immediate assistance?
               </h3>
               <p className="text-white/80 mb-4">

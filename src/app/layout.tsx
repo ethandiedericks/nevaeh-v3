@@ -103,11 +103,10 @@ export const metadata: Metadata = {
 
   // Structured data for SEO
   jsonLd: [
-    // Organization schema
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: "Nevaeh Solutions (Pty) Ltd",
+      name: "Nevaeh Solutions",
       legalName: "Nevaeh Solutions (Pty) Ltd",
       url: "https://nevaeh.co.za",
       logo: "https://nevaeh.co.za/assets/images/Full%20Logo%20Black.webp",
@@ -141,7 +140,7 @@ export const metadata: Metadata = {
         addressRegion: "Eastern Cape",
         addressCountry: "ZA",
       },
-      // Added geo coordinates for better local SEO (you should replace with actual coordinates)
+
       geo: {
         "@type": "GeoCoordinates",
         latitude: "-33.929497441583706",
