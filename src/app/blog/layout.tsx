@@ -40,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Nevaeh Solutions",
       images: [
         {
-          url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/blog-cover.jpg`, // Update with your actual blog cover image
+          url: `${process.env.NEXT_PUBLIC_OG_IMAGE_URL}`, // Update with your actual blog cover image
           width: 1200,
           height: 630,
           alt: "Nevaeh Solutions Blog",
@@ -52,7 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Nevaeh Solutions Blog | Technology Insights & Expertise",
       description:
         "Explore our latest thoughts on technology, development trends, and digital innovation.",
-      images: [`${process.env.NEXT_PUBLIC_BASE_URL}/images/blog-cover.jpg`], // Update with your actual blog cover image
+      images: [`${process.env.NEXT_PUBLIC_TWITTER_IMAGE_URL}`], // Update with your actual blog cover image
     },
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`,

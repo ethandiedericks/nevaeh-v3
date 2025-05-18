@@ -14,25 +14,25 @@ export const MobileServices = () => {
       icon: <LaptopIcon />,
       title: "Web Applications Development",
       description:
-        "Web applications	are	browser-based	programs	for	tasks,	services,	or	data	management.	Built with	HTML, CSS, and	JavaScript,	they	offer	user-friendly,	dynamic	interfaces,	integrating	APIs	and	databases	for real-time	functionality,	accessible	across	devices	without	installation.",
+        "Secure, scalable, and tailored web apps built for performance-ideal for e-commerce, booking systems, CRMs, internal tools, and more. Includes responsive UI, admin dashboard, user management, API integration, and full documentation. Automate processes, gain insights, and reduce costs with solutions built around your business.",
     },
     {
       icon: <MobilePhonesIcon />,
       title: "Mobile Application Development",
       description:
-        "Mobile application development involves creating software for smartphones and tablets, using platforms like iOS (Swift) and Android (Kotlin/Java). These apps offer intuitive interfaces, leverage device features, and integrate APIs for seamless, high-performance user experiences.",
+        "High-performance native and cross-platform apps for iOS and Android-perfect for e-commerce, booking, social, and service-based platforms. Includes backend integration, push notifications, analytics, and app store launch support. Elevate your brand, engage users, and grow your reach across all devices.",
     },
     {
       icon: <WebIcon />,
       title: "Websites",
       description:
-        "Websites are digital platforms hosted on servers, accessible via browsers, built with HTML, CSS, and JavaScript. They provide information, services, or e-commerce, featuring user-friendly designs, responsive layouts, and often integrate APIs for dynamic functionality.",
+        "Professional, conversion-focused websites that combine beautiful design with powerful functionality. Ideal for businesses, portfolios, blogs, and service providers. Includes custom design, CMS, SEO, performance and security optimization, and lead generation tools. Build trust, attract traffic, and convert visitors with a site that works for your goals.",
     },
     {
       icon: <CodeIcon />,
       title: "API Development",
       description:
-        "Enterprise API development involves creating secure, scalable application programming interfaces (APIs) to enable seamless data exchange and functionality between enterprise systems, applications, or third-party services. Built with robust frameworks, they ensure high performance, reliability, and compliance with industry standards.",
+        "Robust, secure, and scalable APIs built with .NET to power your apps, websites, and integrations. Ideal for internal tools, mobile apps, third-party services, and enterprise systems. Includes authentication, data validation, documentation, and performance tuning. Enable seamless communication across platforms with reliable backend infrastructure.",
     },
   ];
   return (

@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -167,6 +168,15 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased text-white`}>
         <Navbar />
         <main>{children}</main>
+        <Toaster
+          position="bottom-right"
+          toastOptions={{
+            classNames: {
+              toast:
+                "bg-gradient-to-r from-[#001e05] via-black to-black text-white",
+            },
+          }}
+        />
         <Footer />
       </body>
     </html>

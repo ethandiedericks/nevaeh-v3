@@ -1,11 +1,37 @@
+"use client";
+
 import ContactCard from "@/components/contact/ContactInfoCards";
 import GradientButton from "@/components/GradientButton";
 import { CheckIcon } from "@/components/Icons";
 import { contactInfo } from "@/contactInfo";
 import { Clock, Mail, Phone } from "lucide-react";
 import { sendContactEmail } from "@/app/actions/sendContactEmail";
+import { toast } from "sonner";
+import { useRef, useTransition } from "react";
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isPending, startTransition] = useTransition();
+
+  const handleSubmit = (formData: FormData) => {
+    startTransition(async () => {
+      try {
+        const response = await sendContactEmail(formData);
+        if (response.success) {
+          toast.success("Message sent successfully!");
+          formRef.current?.reset();
+        } else {
+          toast.error(
+            response.error || "Failed to send your message. Please try again."
+          );
+        }
+      } catch (error) {
+        console.error("Error sending contact email:", error);
+        toast.error("An unexpected error occurred. Please try again later.");
+      }
+    });
+  };
+
   return (
     <div className="min-h-screen text-white md:flex flex-col items-center">
       <div className="w-full max-w-6xl px-4 pt-10 flex flex-col items-center mb-8 md:mb-16">
@@ -23,20 +49,18 @@ const Contact = () => {
             icon={Phone}
             title="Phone"
             line1="+27 81 279 9063"
-            line2="Mon - Fri, 9AM - 6PM EST"
+            line2="Mon - Sat, 7AM - 8PM SAST"
           />
-
           <ContactCard
             icon={Mail}
             title="Email"
             line1="info@nevaeh.co.za"
             line2="Online support"
           />
-
           <ContactCard
             icon={Clock}
             title="Hours"
-            line1="Monday - Friday"
+            line1="Monday - Saturday"
             line2="7:00 AM - 20:00 PM"
           />
         </div>
@@ -47,7 +71,7 @@ const Contact = () => {
           <div className="border border-[#A6A6A6] p-6 md:p-8 rounded-[1.875rem]">
             <div>
               <h2 className="text-xl mb-4">Send us a Message</h2>
-              <form action={sendContactEmail}>
+              <form ref={formRef} action={handleSubmit}>
                 <div className="flex flex-col md:flex-row md:gap-4">
                   <div className="mb-4 w-full">
                     <label htmlFor="fullName" className="block mb-1">
@@ -62,7 +86,6 @@ const Contact = () => {
                       required
                     />
                   </div>
-
                   <div className="mb-4 w-full">
                     <label htmlFor="email" className="block mb-1">
                       Email
@@ -119,7 +142,9 @@ const Contact = () => {
                   />
                 </div>
 
-                <GradientButton text="Send Message" />
+                <GradientButton
+                  text={isPending ? "Sending..." : "Send Message"}
+                />
               </form>
             </div>
           </div>
