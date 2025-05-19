@@ -5,6 +5,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "sonner";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -163,9 +164,134 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Main website structured data
+  const mainStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Nevaeh Solutions",
+    alternateName: "Nevaeh Solutions (Pty) Ltd",
+    url: process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za"}/search?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  // Professional service structured data
+  const serviceStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Nevaeh Solutions",
+    image: `${process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za"}/assets/images/Full%20Logo%20Black.webp`,
+    "@id": `${process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za"}/#professionalservice`,
+    url: process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za",
+    telephone: "+27812799063",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Port Elizabeth",
+      addressRegion: "Eastern Cape",
+      addressCountry: "ZA",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "-33.929497441583706",
+      longitude: "25.47286134368047",
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "07:00",
+      closes: "20:00",
+    },
+    sameAs: [
+      "https://www.facebook.com/nevaehsolutions",
+      "https://www.instagram.com/nevaehsolutions/",
+      "https://www.linkedin.com/company/nevaeh-solutions-pty-ltd/",
+      "https://za.pinterest.com/nevaehsolutions/",
+    ],
+    priceRange: "$$$",
+    servesCuisine: "Software Development Services",
+  };
+
+  // BreadcrumbList structured data for improved navigation understanding
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za"}/services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Pricing",
+        item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za"}/pricing`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "About",
+        item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za"}/about`,
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: "Blog",
+        item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za"}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
+        name: "Contact",
+        item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za"}/contact`,
+      },
+    ],
+  };
+
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased text-white`}>
+        <Script
+          id="main-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(mainStructuredData),
+          }}
+        />
+        <Script
+          id="service-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceStructuredData),
+          }}
+        />
+        <Script
+          id="breadcrumb-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbStructuredData),
+          }}
+        />
         <Navbar />
         <main>{children}</main>
         <Toaster
