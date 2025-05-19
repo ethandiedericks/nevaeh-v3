@@ -221,7 +221,6 @@ export default function RootLayout({
       "https://za.pinterest.com/nevaehsolutions/",
     ],
     priceRange: "$$$",
-    servesCuisine: "Software Development Services",
   };
 
   // BreadcrumbList structured data for improved navigation understanding
