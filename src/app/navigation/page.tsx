@@ -107,7 +107,7 @@ const SitemapPage = () => {
       <div className="max-w-6xl mx-auto px-4 ">
         {/* Header */}
         <div className="text-center flex-col items-center justify-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-normal md:font-light text-left md:text-center mb-2 md:mb-4 ">
+          <h1 className="text-4xl md:text-5xl font-normal md:font-light text-center mb-2 md:mb-4 ">
             Site Map
           </h1>
           <p>
