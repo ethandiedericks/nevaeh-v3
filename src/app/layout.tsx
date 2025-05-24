@@ -9,6 +9,7 @@ import CookieConsentBanner from "@/components/CookieConsentBanner";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { PostHogProvider } from "@/components/PostHogProvider";
+import WhatsAppButton from "@/components/WhatsappButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -252,9 +253,10 @@ export default function RootLayout({
               },
             }}
           />
+          <WhatsAppButton />
+          <Footer />
           <SpeedInsights />
           <Analytics />
-          <Footer />
         </PostHogProvider>
       </body>
     </html>
