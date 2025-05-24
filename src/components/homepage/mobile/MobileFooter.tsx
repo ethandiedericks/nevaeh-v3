@@ -133,7 +133,7 @@ export const MobileFooter = () => {
 
           {/* Legal */}
           <div className="col-span-2 mt-8">
-            <h1 className="text-lg font-medium text-white mb-4">Legal</h1>
+            <h1 className="text-lg font-medium text-white mb-4">General</h1>
             <nav className="flex flex-col space-y-3">
               {footerLinks.general.map((link) => (
                 <Link
