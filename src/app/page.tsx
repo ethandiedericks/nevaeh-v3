@@ -1,8 +1,9 @@
-import { CTASection } from "@/components/homepage/CTASection";
 import { HeroSection } from "@/components/homepage/HeroSection";
-import { ServicesSection } from "@/components/homepage/ServicesSection";
 import { StorySection } from "@/components/homepage/StorySection";
+import { ServicesSection } from "@/components/homepage/ServicesSection";
 import { ValueSection } from "@/components/homepage/ValueSection";
+import { CTASection } from "@/components/homepage/CTASection";
+import { FaqSection } from "@/components/homepage/FaqSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <StorySection />
         <ServicesSection />
         <ValueSection />
+        <FaqSection />
         <CTASection />
       </main>
     </div>

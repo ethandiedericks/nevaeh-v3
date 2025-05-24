@@ -26,29 +26,41 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/contact`,
+        {
+      url: `${baseUrl}/services`,
       lastModified: new Date().toISOString(),
       changeFrequency: "monthly" as const,
-      priority: 0.8,
+      priority: 0.9,
     },
-    {
+        {
       url: `${baseUrl}/pricing`,
       lastModified: new Date().toISOString(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
+      {
       url: `${baseUrl}/blog`,
       lastModified: new Date().toISOString(),
       changeFrequency: "weekly" as const,
       priority: 0.9,
+    },
+      {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/navigation`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     },
   ];
 
@@ -58,7 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: post.date ? new Date(post.date).toISOString() : new Date().toISOString(),
     changeFrequency: "weekly" as const,
-    priority: 0.8,
+    priority: post.featured ? 0.9 : 0.7,
   }));
 
   // Combine static, case study, and blog routes

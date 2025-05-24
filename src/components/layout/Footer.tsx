@@ -11,7 +11,6 @@ const footerLinks = {
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Pricing", href: "/pricing" },
-
     { label: "Contact", href: "/contact" },
   ],
   services: [
@@ -20,10 +19,11 @@ const footerLinks = {
     { label: "Landing Pages", href: "/services#landing-pages" },
     { label: "Full Scale Websites", href: "/services#websites" },
   ],
-  legal: [
+  general: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms and Conditions", href: "/terms" },
     { label: "Cookie Policy", href: "/cookie-policy" },
+    { label: "Site Map", href: "/navigation" },
   ],
 };
 
@@ -152,7 +152,7 @@ export const Footer = () => {
               <div className="text-left space-y-4">
                 <h1 className="text-base font-semibold text-white">Legal</h1>
                 <nav className="flex flex-col space-y-2">
-                  {footerLinks.legal.map((link) => (
+                  {footerLinks.general.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
@@ -261,7 +261,7 @@ export const Footer = () => {
               <div className="space-y-4">
                 <h1 className="text-base font-semibold text-white">Legal</h1>
                 <nav className="flex flex-col space-y-2">
-                  {footerLinks.legal.map((link) => (
+                  {footerLinks.general.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
