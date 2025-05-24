@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
       : "technology insights, web development, mobile app development";
 
   return {
-    title: "Blog | Nevaeh Solutions | Technology Insights & Development Trends",
+    title: "Blog | Nevaeh Solutions",
     description:
       "Explore our latest articles on web development, mobile apps, and tech trends. Stay updated with insights from Nevaeh Solutions' development experts.",
     keywords: [

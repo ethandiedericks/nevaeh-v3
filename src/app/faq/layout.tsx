@@ -162,8 +162,7 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "FAQ | Nevaeh Solutions | Your Questions Answered on Software Development",
+  title: "FAQ | Nevaeh Solutions",
   description:
     "Find answers to common questions about Nevaeh Solutions' software development services, including web and mobile app development, pricing, processes, and support in South Africa.",
   keywords: [

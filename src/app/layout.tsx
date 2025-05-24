@@ -39,12 +39,11 @@ export const metadata: Metadata = {
     "API development services",
   ],
   openGraph: {
-    title:
-      "Nevaeh Solutions | Custom Web & Mobile App Development South Africa",
+    title: "Home | Nevaeh Solutions",
     description:
       "Nevaeh Solutions provides expert custom software development, mobile app creation, and enterprise-grade web app solutions for businesses across South Africa.",
     url: BASE_URL,
-    siteName: "Nevaeh Solutions (Pty) Ltd",
+    siteName: "Nevaeh Solutions",
     images: [
       {
         url: OG_IMAGE_URL,
@@ -170,32 +169,44 @@ export default function RootLayout({
       {
         "@type": "ListItem",
         position: 2,
-        name: "Services",
-        item: `${baseUrl}/services`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Pricing",
-        item: `${baseUrl}/pricing`,
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
         name: "About",
         item: `${baseUrl}/about`,
       },
       {
         "@type": "ListItem",
+        position: 3,
+        name: "Services",
+        item: `${baseUrl}/services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Pricing",
+        item: `${baseUrl}/pricing`,
+      },
+      {
+        "@type": "ListItem",
         position: 5,
+        name: "Faq",
+        item: `${baseUrl}/faq`,
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
         name: "Blog",
         item: `${baseUrl}/blog`,
       },
       {
         "@type": "ListItem",
-        position: 6,
+        position: 7,
         name: "Contact",
         item: `${baseUrl}/contact`,
+      },
+      {
+        "@type": "ListItem",
+        position: 8,
+        name: "Site Map",
+        item: `${baseUrl}/navigation`,
       },
     ],
   };

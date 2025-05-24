@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Services | Nevaeh Solutions | Web & Mobile Development Experts in South Africa",
+  title: "Services | Nevaeh Solutions",
   description:
     "Explore Nevaeh Solutions' comprehensive software development services including web applications, mobile apps, landing pages, and full-scale websites tailored for your business.",
   keywords: [

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sitemap | Nevaeh Solutions | Website Navigation & Page Directory",
+  title: "Site Map | Nevaeh Solutions",
   description:
     "Complete sitemap of Nevaeh Solutions website. Navigate through all pages including services, blog articles, pricing, and more. Find everything you need about our software development services.",
   keywords: [
