@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "sonner";
 import Script from "next/script";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -238,6 +239,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <CookieConsentBanner />
+        <SpeedInsights/>
         <Toaster
           position="bottom-right"
           toastOptions={{
