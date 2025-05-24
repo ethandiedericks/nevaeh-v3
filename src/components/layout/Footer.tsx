@@ -23,6 +23,7 @@ const footerLinks = {
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms and Conditions", href: "/terms" },
     { label: "Cookie Policy", href: "/cookie-policy" },
+    { label: "FAQ", href: "/faq" },
     { label: "Site Map", href: "/navigation" },
   ],
 };
@@ -150,7 +151,7 @@ export const Footer = () => {
             {/* Legal */}
             <div className="flex flex-col items-center md:items-start lg:items-end">
               <div className="text-left space-y-4">
-                <h1 className="text-base font-semibold text-white">Legal</h1>
+                <h1 className="text-base font-semibold text-white">General</h1>
                 <nav className="flex flex-col space-y-2">
                   {footerLinks.general.map((link) => (
                     <Link
@@ -259,7 +260,7 @@ export const Footer = () => {
 
               {/* Legal */}
               <div className="space-y-4">
-                <h1 className="text-base font-semibold text-white">Legal</h1>
+                <h1 className="text-base font-semibold text-white">General</h1>
                 <nav className="flex flex-col space-y-2">
                   {footerLinks.general.map((link) => (
                     <Link
