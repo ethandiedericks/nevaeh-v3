@@ -8,6 +8,7 @@ import Script from "next/script";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import { PostHogProvider } from "@/components/PostHogProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -216,43 +217,45 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased text-white`}>
-        <Script
-          id="main-structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(mainStructuredData),
-          }}
-        />
-        <Script
-          id="service-structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(serviceStructuredData),
-          }}
-        />
-        <Script
-          id="breadcrumb-structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(breadcrumbStructuredData),
-          }}
-        />
-        <Navbar />
-        <main>{children}</main>
-        <CookieConsentBanner />
+        <PostHogProvider>
+          <Script
+            id="main-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(mainStructuredData),
+            }}
+          />
+          <Script
+            id="service-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(serviceStructuredData),
+            }}
+          />
+          <Script
+            id="breadcrumb-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(breadcrumbStructuredData),
+            }}
+          />
+          <Navbar />
+          <main>{children}</main>
+          <CookieConsentBanner />
 
-        <Toaster
-          position="bottom-right"
-          toastOptions={{
-            classNames: {
-              toast:
-                "bg-gradient-to-r from-[#001e05] via-black to-black text-white",
-            },
-          }}
-        />
-        <SpeedInsights />
-        <Analytics />
-        <Footer />
+          <Toaster
+            position="bottom-right"
+            toastOptions={{
+              classNames: {
+                toast:
+                  "bg-gradient-to-r from-[#001e05] via-black to-black text-white",
+              },
+            }}
+          />
+          <SpeedInsights />
+          <Analytics />
+          <Footer />
+        </PostHogProvider>
       </body>
     </html>
   );
