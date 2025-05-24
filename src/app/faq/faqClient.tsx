@@ -161,7 +161,7 @@ export const FaqClient = () => {
         <h1 className="text-5xl leading-tight tracking-[-4%]">
           Frequently Asked Questions
         </h1>
-        <p className="text-white/70 mt-2 text-base">
+        <p className="text-white/70 mt-2 text-base ">
           Everything you need to know about working with Nevaeh Solutions.
         </p>
       </div>
@@ -184,7 +184,7 @@ export const FaqClient = () => {
                         isOpen ? null : { group: groupIndex, faq: faqIndex }
                       )
                     }
-                    className="cursor-pointer border border-white/20 rounded-[30px] p-6 bg-white/5 hover:bg-white/10 transition-all"
+                    className="cursor-pointer gradient-border p-6 bg-white/5 hover:bg-white/10 transition-all"
                   >
                     <div className="flex items-center justify-between">
                       <h3 className="font-semibold text-white mb-0">

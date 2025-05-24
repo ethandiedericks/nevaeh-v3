@@ -41,7 +41,7 @@ export const FaqSection = () => {
       <div className="text-center">
         <span className="section-tag">FAQs</span>
         <h2 className="section-title">Frequently Asked Questions</h2>
-        <p className="mt-2 text-white/70">
+        <p className="mt-2 text-white text-left md:text-center">
           Got questions? Here are some of the ones we hear most often.
         </p>
       </div>
@@ -54,7 +54,7 @@ export const FaqSection = () => {
             <div
               key={index}
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className="cursor-pointer border border-white/20 rounded-[30px] p-6 transition-all duration-300 bg-white/5 hover:bg-white/10"
+              className="cursor-pointer gradient-border p-6 transition-all duration-300 bg-white/5 hover:bg-white/10"
             >
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-white">{faq.question}</h3>
