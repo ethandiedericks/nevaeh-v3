@@ -8,9 +8,10 @@ import { MobileFooter } from "../homepage/mobile/MobileFooter";
 const footerLinks = {
   quickLinks: [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Pricing", href: "/pricing" },
-    { label: "About", href: "/about" },
+
     { label: "Contact", href: "/contact" },
   ],
   services: [
@@ -20,7 +21,8 @@ const footerLinks = {
     { label: "Full Scale Websites", href: "/services#websites" },
   ],
   legal: [
-    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms and Conditions", href: "/terms" },
     { label: "Cookie Policy", href: "/cookie-policy" },
   ],
 };

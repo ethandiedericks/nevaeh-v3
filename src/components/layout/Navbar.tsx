@@ -11,9 +11,9 @@ import GradientButton from "../GradientButton";
 export const Navbar = () => {
   const navItems = [
     { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Pricing", href: "/pricing" },
-    { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
   ];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "sonner";
 import Script from "next/script";
+import CookieConsentBanner from "@/components/CookieConsentBanner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -225,6 +226,7 @@ export default function RootLayout({
         />
         <Navbar />
         <main>{children}</main>
+        <CookieConsentBanner />
         <Toaster
           position="bottom-right"
           toastOptions={{
