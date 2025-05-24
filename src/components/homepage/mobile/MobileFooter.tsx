@@ -7,9 +7,9 @@ import logo from "@/assets/images/homepage/nevaeh-solutions-logo.png";
 const footerLinks = {
   quickLinks: [
     { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
-    { label: "Projects", href: "/projects" },
     { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
   ],
   services: [
@@ -18,9 +18,11 @@ const footerLinks = {
     { label: "Landing Pages", href: "/services#landing-pages" },
     { label: "Full Scale Websites", href: "/services#websites" },
   ],
-  legal: [
-    { label: "Terms of Service", href: "/terms-of-service" },
+  general: [
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms and Conditions", href: "/terms" },
     { label: "Cookie Policy", href: "/cookie-policy" },
+    { label: "Site Map", href: "/navigation" },
   ],
 };
 
@@ -133,7 +135,7 @@ export const MobileFooter = () => {
           <div className="col-span-2 mt-8">
             <h1 className="text-lg font-medium text-white mb-4">Legal</h1>
             <nav className="flex flex-col space-y-3">
-              {footerLinks.legal.map((link) => (
+              {footerLinks.general.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
