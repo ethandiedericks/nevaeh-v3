@@ -23,7 +23,7 @@ const TWITTER_IMAGE_URL =
   process.env.NEXT_PUBLIC_TWITTER_IMAGE_URL || "/opengraph-image.jpg";
 
 export const metadata: Metadata = {
-  title: "Nevaeh Solutions | Custom Web & Mobile App Development South Africa",
+  title: "Home | Nevaeh Solutions",
   description:
     "Nevaeh Solutions (Pty) Ltd provides expert custom software development, mobile app creation, and enterprise-grade web app solutions for businesses across South Africa.",
   keywords: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "API development services",
   ],
   openGraph: {
-    title: "Home | Nevaeh Solutions",
+    title: "Nevaeh Solutions | Web & Mobile App Experts South Africa",
     description:
       "Nevaeh Solutions provides expert custom software development, mobile app creation, and enterprise-grade web app solutions for businesses across South Africa.",
     url: BASE_URL,
