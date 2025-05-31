@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import GradientButton from "@/components/GradientButton";
 import MobileAboutPage from "@/components/about/MobileAboutPage";
-import DesktopAboutImage from "@/assets/images/about/nevaeh-solutions-desktop-about-image.png";
-import DesktopAboutImage2 from "@/assets/images/about/nevaeh-solutions-desktop-about-image-2.png";
+import DesktopAboutImage from "@/assets/images/about/nevaeh-solutions-desktop-about-image.avif";
+import DesktopAboutImage2 from "@/assets/images/about/nevaeh-solutions-desktop-about-image-2.avif";
 import { CodeIcon, UserIcon, ZapIcon } from "@/components/Icons";
 import { Blocks, FastForward, Gem, Lightbulb, Trophy } from "lucide-react";
 import { ValueCard } from "@/components/homepage/cards/ValueCard";

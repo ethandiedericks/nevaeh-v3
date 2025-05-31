@@ -1,6 +1,6 @@
 import GradientButton from "@/components/GradientButton";
 import Image from "next/image";
-import DesktopServicesImage from "@/assets/images/services/nevaeh-solutions-desktop-services-image.png";
+import DesktopServicesImage from "@/assets/images/services/nevaeh-solutions-desktop-services-image.avif";
 import { CodeIcon, LaptopIcon } from "@/components/Icons";
 import { Globe, Smartphone } from "lucide-react";
 import ServicesCard from "@/components/cards/ServicesCard";

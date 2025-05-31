@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import CTA from "@/assets/images/homepage/nevaeh-solutions-cta-background-image.png";
+import CTA from "@/assets/images/homepage/nevaeh-solutions-cta-background-image.avif";
 import Link from "next/link";
 import GradientButton from "../GradientButton";
 import { MobileCTA } from "./mobile/MobileCTA";

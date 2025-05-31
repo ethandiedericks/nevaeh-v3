@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import GradientButton from "@/components/GradientButton";
-import CTA from "@/assets/images/homepage/nevaeh-solutions-mobile-cta-background-image.png";
+import CTA from "@/assets/images/homepage/nevaeh-solutions-mobile-cta-background-image.avif";
 export const MobileCTA = () => {
   return (
     <div className="md:hidden">

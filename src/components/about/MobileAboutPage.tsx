@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import MobileAboutImage from "@/assets/images/about/nevaeh-solutions-desktop-about-image.png";
-import MobileAboutImage2 from "@/assets/images/about/nevaeh-solutions-desktop-about-image-2.png";
+import MobileAboutImage from "@/assets/images/about/nevaeh-solutions-desktop-about-image.avif";
+import MobileAboutImage2 from "@/assets/images/about/nevaeh-solutions-desktop-about-image-2.avif";
 import GradientButton from "@/components/GradientButton";
 import { CodeIcon, UserIcon, ZapIcon } from "@/components/Icons";
 import { Blocks, FastForward, Gem, Lightbulb, Trophy } from "lucide-react";

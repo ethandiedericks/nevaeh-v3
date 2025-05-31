@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import DesktopServicesImage from "@/assets/images/services/nevaeh-solutions-desktop-services-image.png";
+import DesktopServicesImage from "@/assets/images/services/nevaeh-solutions-desktop-services-image.avif";
 import Image from "next/image";
 
 import { Globe, Smartphone } from "lucide-react";
