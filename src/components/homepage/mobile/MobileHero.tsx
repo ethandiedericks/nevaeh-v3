@@ -31,8 +31,9 @@ export const MobileHeroSection = () => {
               alt="Hero Background decoration"
               width={393}
               height={209}
-              className="w-full object-contain"
+              className="w-full object-cover"
               priority
+              fetchPriority="high"
               quality={80}
               sizes="100vw"
             />
