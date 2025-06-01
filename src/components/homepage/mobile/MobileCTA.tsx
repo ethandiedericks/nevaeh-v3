@@ -24,6 +24,7 @@ export const MobileCTA = () => {
               height={560}
               className="w-full h-full"
               priority
+              loading="lazy"
             />
           </div>
           <div className=" flex justify-center items-center mt-10">
