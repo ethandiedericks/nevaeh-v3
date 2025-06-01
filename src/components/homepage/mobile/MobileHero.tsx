@@ -31,7 +31,7 @@ export const MobileHeroSection = () => {
               alt="Nevaeh Hero Background decoration"
               width={393}
               height={209}
-              className="w-full max-w-none object-cover"
+              className="w-full object-contain"
               priority
               quality={80}
               sizes="100vw"
