@@ -33,7 +33,8 @@ export const MobileHeroSection = () => {
               height={209}
               className="w-full max-w-none object-cover"
               priority
-              quality={100}
+              quality={80}
+              sizes="100vw"
             />
           </div>
           <div className="rotate-[-10deg]">
