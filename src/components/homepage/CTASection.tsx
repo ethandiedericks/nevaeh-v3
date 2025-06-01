@@ -24,8 +24,8 @@ export const CTASection = () => {
               <Image
                 src={CTA}
                 alt="Nevaeh Solutions Call To Action"
-                width={710}
-                height={560}
+                width={1440}
+                height={713}
               />
             </div>
             <div className=" flex justify-center items-center">

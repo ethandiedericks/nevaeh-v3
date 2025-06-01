@@ -20,8 +20,8 @@ export const MobileCTA = () => {
             <Image
               src={CTA}
               alt="Nevaeh Solutions Call To Action"
-              width={1440}
-              height={713}
+              width={710}
+              height={560}
               className="w-full h-full"
               priority
             />
