@@ -33,7 +33,6 @@ export const MobileHeroSection = () => {
               height={209}
               className="w-full object-contain"
               priority
-              fetchPriority="high"
               quality={80}
               sizes="100vw"
             />
