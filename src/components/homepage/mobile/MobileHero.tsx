@@ -25,14 +25,15 @@ export const MobileHeroSection = () => {
         {/* Feature blocks */}
         <div className="grid grid-cols-2 gap-8">
           {/* Background Decoration Image */}
-          <div className="absolute left-0 w-full z-0 sm:hidden flex justify-center">
+          <div className="absolute left-0 w-full z-0 sm:hidden flex justify-center pointer-events-none">
             <Image
               src={heroDecoration}
-              alt="Nevaeh Hero Background decoration"
+              alt="Hero Background decoration"
               width={393}
               height={209}
               className="w-full object-contain"
               priority
+              fetchPriority="high"
               quality={80}
               sizes="100vw"
             />
