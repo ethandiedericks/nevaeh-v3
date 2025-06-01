@@ -6,7 +6,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "sonner";
 import Script from "next/script";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import WhatsAppButton from "@/components/WhatsappButton";
@@ -255,7 +254,6 @@ export default function RootLayout({
           />
           <WhatsAppButton />
           <Footer />
-          <SpeedInsights />
           <Analytics />
         </PostHogProvider>
       </body>
