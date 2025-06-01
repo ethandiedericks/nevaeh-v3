@@ -20,7 +20,7 @@ const inter = Inter({
 type Metadata = NextMetadata;
 
 const GOOGLE_VERIFICATION = process.env.GOOGLE_VERIFICATION || "";
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://www.nevaeh.co.za";
 const OG_IMAGE_URL =
   process.env.NEXT_PUBLIC_OG_IMAGE_URL || "/opengraph-image.jpg";
 const TWITTER_IMAGE_URL =

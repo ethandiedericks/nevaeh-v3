@@ -15,7 +15,7 @@ const CookiePolicyPage = () => {
           This Cookie Policy explains how NEVAEH SOLUTIONS (PTY) LTD ({"we"},
           {"us"}, and {"our"}) uses cookies and similar tracking technologies
           when you visit our website{" "}
-          <a href="https://nevaeh.co.za">https://nevaeh.co.za</a>.
+          <a href="https://www.nevaeh.co.za">https://www.nevaeh.co.za</a>.
         </p>
 
         <h2>What Are Cookies?</h2>
