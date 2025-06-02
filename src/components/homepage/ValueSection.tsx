@@ -11,14 +11,15 @@ export const ValueSection = () => {
           <div className="section-spacing">
             {/* text wrapper */}
             <div className="text-center items-center">
-              <span className="section-tag">Our Core Values</span>
+              <span className="section-tag">Why Work With Us</span>
               <h1 className="section-title">
-                Driven by Purpose, <br />
-                Grounded in Values
+                Small Team. <br /> Big Impact.
               </h1>
-              <p className="mt-4">
-                These principles guide everything we do and define how we work
-                with our clients.
+              <p className="mt-4 max-w-3xl mx-auto">
+                We’re not an agency. We’re a senior software developer and
+                product designer who collaborate closely with every client. You
+                work with us directly — no account managers, no layers, no
+                delays.
               </p>
             </div>
             {/* Value Cards */}

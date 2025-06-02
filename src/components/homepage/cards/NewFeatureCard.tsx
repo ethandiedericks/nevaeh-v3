@@ -8,7 +8,7 @@ interface FeatureCardProps {
 const NewFeatureCard = ({ icon, title, description }: FeatureCardProps) => {
   return (
     <div className="new-hero-card-container">
-      <div className="new-hero-card">
+      <div className="new-hero-card h-full">
         <div className="flex flex-col p-4 items-center justify-center">
           <div className="relative">
             <div className="absolute inset-0 hero-icon-glow"></div>

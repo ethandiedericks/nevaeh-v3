@@ -8,13 +8,12 @@ export const MobileValuesSection = () => {
         <div className="section-spacing">
           {/* text wrapper */}
           <div className="">
-            <span className="section-tag">Our Core Values</span>
-            <h1 className="section-title">
-              Driven by Purpose, Grounded in Values
-            </h1>
+            <span className="section-tag">Why Work With Us</span>
+            <h1 className="section-title">Small Team. Big Impact.</h1>
             <p className="mt-4 text-base text-white font-thin leading-[20px] tracking-[-4%]">
-              These principles guide everything we do and define how we work
-              with our clients.
+              We’re not an agency. We’re a senior software developer and product
+              designer who collaborate closely with every client. You work with
+              us directly — no account managers, no layers, no delays.
             </p>
           </div>
           {/* Value Cards */}

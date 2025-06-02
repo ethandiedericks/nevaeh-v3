@@ -7,29 +7,39 @@ import GradientButton from "../GradientButton";
 
 const faqs = [
   {
-    question: "What services does Nevaeh Solutions provide?",
+    question: "What types of companies do you work with?",
     answer:
-      "We provide end-to-end software development services including custom web and mobile applications tailored to your business needs.",
+      "We partner with businesses of all sizes — from consultants and startups to enterprise clients — who need reliable, long-term software development support. If your project requires clean architecture, modern tooling, and strategic thinking, we’re a good fit.",
   },
   {
-    question: "Where is Nevaeh Solutions located?",
+    question: "What technologies do you specialize in?",
     answer:
-      "We're based in South Africa, offering local insight with global development standards.",
+      "We specialize in .NET, Angular, and Next.js for enterprise web apps, as well as both native and cross-platform mobile development. We choose tech stacks that are maintainable, scalable, and suited to your unique business case.",
   },
   {
-    question: "How experienced is your development team?",
+    question: "Can you handle ongoing updates and maintenance?",
     answer:
-      "Our team consists of experienced specialists delivering scalable, enterprise-grade applications.",
+      "Yes. Most of our clients work with us on a retainer basis. We not only build your product, we maintain it, iterate with you, and ensure it evolves with your business needs.",
   },
   {
-    question: "What is your software development process?",
+    question: "What does your typical development process look like?",
     answer:
-      "We follow a structured, iterative approach from planning to deployment with constant client feedback.",
+      "We start with a strategy call to understand your business goals. From there, we move into design, development, testing, and long-term deployment support — always in close collaboration with your team.",
   },
   {
-    question: "Do I need technical knowledge to work with you?",
+    question: "Can you modernize or rebuild an existing system?",
     answer:
-      "No, just a clear vision. We handle all technical complexity and communicate in simple terms.",
+      "Absolutely. Many of our clients approach us with legacy tools or platforms that need to be modernized. We handle audits, refactors, replatforming, and clean rewrites depending on your needs.",
+  },
+  {
+    question: "Do you work with international clients?",
+    answer:
+      "Yes. While we’re based in South Africa, we operate with global standards and collaborate seamlessly with remote teams across time zones.",
+  },
+  {
+    question: "What’s the next step if we want to work with you?",
+    answer:
+      "Schedule a free strategy call. We’ll discuss your goals, challenges, and how we can support you — then outline the next steps for a successful engagement.",
   },
 ];
 

@@ -1,38 +1,34 @@
 import Link from "next/link";
 import GradientButton from "@/components/GradientButton";
-import {
-  CodeIcon,
-  LaptopIcon,
-  MobilePhonesIcon,
-  WebIcon,
-} from "@/components/Icons";
+import { LaptopIcon, MobilePhonesIcon, WebIcon } from "@/components/Icons";
 import MobileServiceCard from "../cards/MobileServiceCard";
+import { Handshake } from "lucide-react";
 
 export const MobileServices = () => {
   const services = [
     {
       icon: <LaptopIcon />,
-      title: "Web Applications Development",
+      title: "Enterprise Web Apps",
       description:
-        "Secure, scalable, and tailored web apps built for performance-ideal for e-commerce, booking systems, CRMs, internal tools, and more. Includes responsive UI, admin dashboard, user management, API integration, and full documentation. Automate processes, gain insights, and reduce costs with solutions built around your business.",
+        "Tailored systems using .NET, Angular, and Next.js — built for performance, integrations, and long-term maintainability.",
     },
     {
       icon: <MobilePhonesIcon />,
-      title: "Mobile Application Development",
+      title: "Cross-Platform & Native Mobile Apps",
       description:
-        "High-performance native and cross-platform apps for iOS and Android-perfect for e-commerce, booking, social, and service-based platforms. Includes backend integration, push notifications, analytics, and app store launch support. Elevate your brand, engage users, and grow your reach across all devices.",
+        "Flutter, React Native, or fully native — we build robust mobile apps designed to evolve with your product roadmap.",
     },
     {
       icon: <WebIcon />,
-      title: "Websites",
+      title: "Modern Websites",
       description:
-        "Professional, conversion-focused websites that combine beautiful design with powerful functionality. Ideal for businesses, portfolios, blogs, and service providers. Includes custom design, CMS, SEO, performance and security optimization, and lead generation tools. Build trust, attract traffic, and convert visitors with a site that works for your goals.",
+        "Clean, conversion-focused websites built with your brand in mind. Fast, responsive, and easy to update.",
     },
     {
-      icon: <CodeIcon />,
-      title: "API Development",
+      icon: <Handshake />,
+      title: "Long-Term Retainer Support",
       description:
-        "Robust, secure, and scalable APIs built with .NET to power your apps, websites, and integrations. Ideal for internal tools, mobile apps, third-party services, and enterprise systems. Includes authentication, data validation, documentation, and performance tuning. Enable seamless communication across platforms with reliable backend infrastructure.",
+        "Retainer-based development partnerships with guaranteed availability, iterative development, and proactive maintenance.",
     },
   ];
   return (
@@ -41,14 +37,12 @@ export const MobileServices = () => {
         <div className="section-spacing">
           {/* text wrapper */}
           <div className="">
-            <span className="section-tag">Professional Services</span>
-            <h1 className="section-title">
-              Tailored Solutions for Business Growth
-            </h1>
+            <span className="section-tag">What We Do</span>
+            <h1 className="section-title">Solutions Built for Scale</h1>
             <p className="mt-4 text-base text-white font-thin leading-[20px] tracking-[-4%]">
-              We deliver comprehensive software development services designed to
-              address <br /> your specific business challenges and drive
-              measurable results.
+              We design and engineer digital platforms that power growth.
+              <br /> Whether it&apos;s a web portal, internal tool, or mobile
+              product — we&apos;ve done it across industries.
             </p>
           </div>
           {/* Service Cards */}
