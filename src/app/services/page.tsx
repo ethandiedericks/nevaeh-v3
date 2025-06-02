@@ -5,7 +5,7 @@ import { CodeIcon, LaptopIcon } from "@/components/Icons";
 import { Globe, Smartphone } from "lucide-react";
 import ServicesCard from "@/components/cards/ServicesCard";
 import Link from "next/link";
-import MobileServicesPage from "@/components/services/MobileServicesPage";
+import MobileServicesPage from "@/app/services/MobileServicesPage";
 
 const Services = () => {
   const services = [

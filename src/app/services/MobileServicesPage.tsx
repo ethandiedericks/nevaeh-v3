@@ -5,9 +5,9 @@ import DesktopServicesImage from "@/assets/images/services/nevaeh-solutions-desk
 import Image from "next/image";
 
 import { Globe, Smartphone } from "lucide-react";
-import { CodeIcon, LaptopIcon } from "../Icons";
-import GradientButton from "../GradientButton";
-import MobileServicesCard from "../cards/MobileServicesCard";
+import { CodeIcon, LaptopIcon } from "@/components/Icons";
+import GradientButton from "@/components/GradientButton";
+import MobileServicesCard from "@/components/cards/MobileServicesCard";
 
 const MobileServicesPage = () => {
   const services = [
