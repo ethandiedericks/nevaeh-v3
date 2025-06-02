@@ -1,0 +1,28 @@
+/* Main CSS file - Import all component stylesheets */
+
+/* Base styles and variables */
+@import "./globals.css";
+
+/* Typography and text styles */
+@import "./typography.css";
+
+/* Button and interactive elements */
+@import "./buttons.css";
+
+/* Card components */
+@import "./cards.css";
+
+/* Hero section styles */
+@import "./hero.css";
+
+/* Icon and glow effects */
+@import "./icons.css";
+
+/* Table and tab components */
+@import "./tables-tabs.css";
+
+/* Border and gradient border styles */
+@import "./borders.css";
+
+/* Miscellaneous components */
+@import "./components.css";

@@ -1,0 +1,40 @@
+/* Header meta info styling */
+.meta-info {
+  @apply flex items-center gap-4 text-sm text-[var(--text-secondary)] mb-4;
+}
+
+.meta-info svg {
+  @apply w-4 h-4 mr-1;
+}
+
+/* Category tag styling */
+.category-tag {
+  @apply px-3 py-1 bg-transparent text-white rounded-[10px] text-sm;
+}
+
+/* Tags styling */
+.tags {
+  @apply flex flex-wrap gap-2 mt-6;
+}
+
+.tags span {
+  @apply px-3 py-1 bg-teal-900/50 text-white rounded-full text-sm;
+}
+
+/* Conclusion and call-to-action */
+.conclusion {
+  @apply mt-8;
+}
+
+/* Share section */
+.share-section {
+  @apply flex justify-between items-center mt-8 border-t border-gray-800 pt-4;
+}
+
+.share-section h3 {
+  @apply text-lg text-white;
+}
+
+.share-section .social-share {
+  @apply gap-2;
+}

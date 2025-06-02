@@ -23,7 +23,6 @@ export const MobileCTA = () => {
               width={710}
               height={560}
               className="w-full h-full"
-              priority
               loading="lazy"
             />
           </div>

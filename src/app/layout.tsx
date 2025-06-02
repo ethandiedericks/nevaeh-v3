@@ -1,12 +1,11 @@
 import type { Metadata as NextMetadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./styles/main.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "sonner";
 import Script from "next/script";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
-import { Analytics } from "@vercel/analytics/next";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import WhatsAppButton from "@/components/WhatsappButton";
 
@@ -254,7 +253,6 @@ export default function RootLayout({
           />
           <WhatsAppButton />
           <Footer />
-          <Analytics />
         </PostHogProvider>
       </body>
     </html>
