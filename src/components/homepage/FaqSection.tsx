@@ -10,56 +10,50 @@ export const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="section-spacing container mx-auto">
-      <div className="text-center">
+    <section className="section-spacing container mx-auto">
+      <header className="text-center">
         <span className="section-tag">FAQs</span>
         <h2 className="section-title">Frequently Asked Questions</h2>
         <p className="mt-2 text-white text-left md:text-center">
           Got questions? Here are some of the ones we hear most often.
         </p>
-      </div>
-
+      </header>
       <div className="mt-10 grid gap-4">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
-
           return (
-            <div
+            <article
               key={index}
               onClick={() => setOpenIndex(isOpen ? null : index)}
               className="cursor-pointer gradient-border p-6 transition-all duration-300 bg-white/5 hover:bg-white/10"
             >
-              <div className="flex items-center justify-between">
+              <header className="flex items-center justify-between">
                 <h3 className="font-semibold text-white">{faq.question}</h3>
                 <ChevronDown
                   size={20}
-                  className={`text-white transition-transform duration-300 ${
-                    isOpen ? "rotate-180" : ""
-                  }`}
+                  className={`text-white transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
                 />
-              </div>
+              </header>
               <div
-                className={`overflow-hidden transition-all duration-500 ${
-                  isOpen ? "max-h-[500px] mt-2" : "max-h-0"
-                }`}
+                className={`overflow-hidden transition-all duration-500 ${isOpen ? "max-h-[500px] mt-2" : "max-h-0"}`}
               >
                 <p className="text-sm text-white/70 leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
-            </div>
+            </article>
           );
         })}
       </div>
-
-      <div className="mt-10 flex justify-center">
+      <footer className="mt-10 flex justify-center">
         <Link
           href="/faq"
+          passHref
           className="underline text-white hover:text-blue-400 transition-colors"
         >
           <GradientButton text="View more FAQs" />
         </Link>
-      </div>
-    </div>
+      </footer>
+    </section>
   );
 };

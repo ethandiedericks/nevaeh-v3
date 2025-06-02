@@ -12,31 +12,30 @@ export const HeroSection = () => {
       <MobileHeroSection />
 
       {/* Desktop/Tablet Hero */}
-      <div className="relative overflow-hidden  hidden md:block">
+      <section className="relative overflow-hidden hidden md:block">
         <div className="container mx-auto relative z-10 pt-10 pb-16 px-4">
           <div className="section-spacing">
-            <h1 className="hero-headline text-white">
-              Enterprise-grade software. <br /> Delivered with care.
-            </h1>
-
+            <header>
+              <h1 className="hero-headline text-white">
+                Enterprise-grade software. <br /> Delivered with care.
+              </h1>
+            </header>
             <div className="max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 justify-center items-center">
               <div className="md:col-span-4 flex justify-center md:justify-end">
                 <Link href="/contact" aria-label="Book a Free Strategy Call">
                   <GradientButton text="Book a Free Strategy Call" />
                 </Link>
               </div>
-
-              <div className="text-center md:text-left m-0 md:col-span-8">
-                <p className="hero-sub-headline">
+              <div className="md:col-span-8">
+                <p className="hero-sub-headline text-center md:text-left">
                   We design and develop high-performance web platforms, internal
                   tools, and mobile apps tailored for growing companies and
                   enterprise teams.
                 </p>
               </div>
             </div>
-            {/* feature cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 ">
-              <div className="new-hero-card-container">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+              <article className="new-hero-card-container">
                 <div className="left-hero-card h-full">
                   <div className="flex flex-col p-4 items-center justify-center">
                     <div className="relative">
@@ -45,23 +44,23 @@ export const HeroSection = () => {
                         <Cpu size={40} />
                       </div>
                     </div>
-                    <h2 className="text-xl font-normal tracking-[-4%] leading-[20px] mt-6">
-                      Deep Tech Expertise
-                    </h2>
+                    <header>
+                      <h2 className="text-xl font-normal tracking-[-4%] leading-[20px] mt-6">
+                        Deep Tech Expertise
+                      </h2>
+                    </header>
                     <p className="text-base text-center font-thin tracking-[-4%] leading-[20px] mt-2">
                       We build scalable systems across .NET, Angular, and
                       Next.js — tailored to your stack.
                     </p>
                   </div>
                 </div>
-              </div>
-
+              </article>
               <NewFeatureCard
                 icon={<ShieldCheck size={40} />}
                 title="Personal & Accountable"
-                description="Work directly with a senior dev and designer — no handoffs, no fluff.."
+                description="Work directly with a senior dev and designer — no handoffs, no fluff."
               />
-
               <NewFeatureCard
                 icon={<Handshake size={40} />}
                 title="Flexible Retainer Model"
@@ -70,7 +69,7 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

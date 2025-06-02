@@ -36,9 +36,8 @@ export const MobileFooter = () => {
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#103A21] to-white" />
       </div>
       <div className="px-6">
-        {/* Logo */}
-        <div className="">
-          <div className="relative w-44 h-8">
+        <div>
+          <figure className="relative w-44 h-8">
             <Image
               src={logo}
               alt="Nevaeh.dev Logo"
@@ -47,16 +46,12 @@ export const MobileFooter = () => {
               className="object-contain"
               priority
             />
-          </div>
+          </figure>
         </div>
-
-        {/* Tagline */}
-        <p className=" text-white/80 mb-4 text-base font-thin leading-[20px] tracking-[-4%]">
+        <p className="text-white/80 mb-4 text-base font-thin leading-[20px] tracking-[-4%]">
           Creating exceptional digital experiences with precision and expertise.
         </p>
-
-        {/* Social Icons */}
-        <div className="flex space-x-4 mb-12">
+        <nav className="flex space-x-4 mb-12">
           <a
             href="https://www.facebook.com/nevaehsolutions/"
             target="_blank"
@@ -96,67 +91,58 @@ export const MobileFooter = () => {
               <path d="M20.452 20.452h-3.554v-5.569c0-1.327-.027-3.038-1.852-3.038-1.853 0-2.137 1.447-2.137 2.943v5.664H9.356V9h3.414v1.561h.049c.475-.899 1.637-1.852 3.368-1.852 3.599 0 4.263 2.368 4.263 5.451v6.292zM5.337 7.433a2.065 2.065 0 1 1 0-4.13 2.065 2.065 0 0 1 0 4.13zM6.912 20.452H3.761V9h3.151v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.228.792 24 1.771 24h20.451C23.2 24 24 23.228 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
             </svg>
           </a>
-        </div>
-
-        {/* Two-column layout for links */}
+        </nav>
         <div className="grid grid-cols-2 gap-x-4 gap-y-12">
-          {/* Quick Links */}
-          <div>
-            <h1 className="text-lg font-medium text-white mb-4">Quick Links</h1>
-            <nav className="flex flex-col space-y-3">
+          <nav>
+            <h2 className="text-lg font-medium text-white mb-4">Quick Links</h2>
+            <ul className="flex flex-col space-y-3">
               {footerLinks.quickLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-white/80 hover:text-[#40b16d] transition-colors"
-                >
-                  {link.label}
-                </Link>
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-white/80 hover:text-[#40b16d] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
               ))}
-            </nav>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h1 className="text-lg font-medium text-white mb-4">Services</h1>
-            <nav className="flex flex-col space-y-3">
+            </ul>
+          </nav>
+          <nav>
+            <h2 className="text-lg font-medium text-white mb-4">Services</h2>
+            <ul className="flex flex-col space-y-3">
               {footerLinks.services.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-white/80 hover:text-[#40b16d] transition-colors"
-                >
-                  {link.label}
-                </Link>
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-white/80 hover:text-[#40b16d] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
               ))}
-            </nav>
-          </div>
-
-          {/* Legal */}
-          <div className="col-span-2 mt-8">
-            <h1 className="text-lg font-medium text-white mb-4">General</h1>
-            <nav className="flex flex-col space-y-3">
+            </ul>
+          </nav>
+          <nav className="col-span-2 mt-8">
+            <h2 className="text-lg font-medium text-white mb-4">General</h2>
+            <ul className="flex flex-col space-y-3">
               {footerLinks.general.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-white/80 hover:text-[#40b16d] transition-colors"
-                >
-                  {link.label}
-                </Link>
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-white/80 hover:text-[#40b16d] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
               ))}
-            </nav>
-          </div>
+            </ul>
+          </nav>
         </div>
-
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-[#103A21] to-white my-8"></div>
-
-        {/* Copyright */}
         <div className="text-center text-sm text-white/70 pb-4">
-          © {currentYear} Nevaeh Solutions (Pty) Ltd.
-          <br />
-          All rights reserved.
+          <p>© {currentYear} Nevaeh Solutions (Pty) Ltd.</p>
+          <p>All rights reserved.</p>
         </div>
       </div>
     </footer>

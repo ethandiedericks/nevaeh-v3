@@ -6,11 +6,10 @@ export const ValueSection = () => {
   return (
     <>
       <MobileValuesSection />
-      <div className="hidden md:block">
+      <section className="hidden md:block">
         <div className="container mx-auto">
           <div className="section-spacing">
-            {/* text wrapper */}
-            <div className="text-center items-center">
+            <header className="text-center items-center">
               <span className="section-tag">Why Work With Us</span>
               <h1 className="section-title">
                 Small Team. <br /> Big Impact.
@@ -21,8 +20,7 @@ export const ValueSection = () => {
                 work with us directly — no account managers, no layers, no
                 delays.
               </p>
-            </div>
-            {/* Value Cards */}
+            </header>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
               <div className="h-full">
                 <ValueCard
@@ -55,7 +53,7 @@ export const ValueSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

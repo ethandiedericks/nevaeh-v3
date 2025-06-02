@@ -8,11 +8,9 @@ import { Handshake, ShieldCheck } from "lucide-react";
 
 export const MobileHeroSection = () => {
   return (
-    <div className="relative overflow-hidden md:hidden">
-      {/* Mobile hero content */}
+    <section className="relative overflow-hidden md:hidden">
       <div className="relative z-10 px-6 flex flex-col h-full">
-        {/* Headline and subheadline */}
-        <div className="mb-10">
+        <header className="mb-10">
           <h1 className="hero-headline text-white text-left">
             Enterprise-grade software. <br /> Delivered with care.
           </h1>
@@ -21,12 +19,9 @@ export const MobileHeroSection = () => {
             tools, and mobile apps tailored for growing companies and enterprise
             teams
           </p>
-        </div>
-
-        {/* Feature blocks */}
+        </header>
         <div className="grid grid-cols-2 gap-8">
-          {/* Background Decoration Image */}
-          <div className="absolute left-0 w-full z-0 sm:hidden pointer-events-none">
+          <figure className="absolute left-0 w-full z-0 sm:hidden pointer-events-none">
             <Image
               src={heroDecoration}
               alt="Hero Background decoration"
@@ -38,12 +33,12 @@ export const MobileHeroSection = () => {
               quality={80}
               sizes="100vw"
             />
-          </div>
+          </figure>
           <div className="rotate-[-10deg]">
             <MobileFeatureCard
               icon={<ShieldCheck size={40} className="text-white" />}
               title="Personal & Accountable"
-              description="Work directly with a senior dev and designer — no handoffs, no fluff.."
+              description="Work directly with a senior dev and designer — no handoffs, no fluff."
             />
           </div>
           <div className="rotate-[10deg]">
@@ -54,14 +49,12 @@ export const MobileHeroSection = () => {
             />
           </div>
         </div>
-
-        {/* CTA Button */}
-        <div className="my-10 w-full flex justify-center">
+        <footer className="my-10 w-full flex justify-center">
           <Link href="/contact" aria-label="Book your consultation">
             <GradientButton text="Book your consultation" />
           </Link>
-        </div>
+        </footer>
       </div>
-    </div>
+    </section>
   );
 };

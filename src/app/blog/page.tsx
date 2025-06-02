@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getFeaturedPost, getLatestArticles } from "@/lib/posts";
 import { CalendarDays, Clock } from "lucide-react";
 import GradientButton from "@/components/GradientButton";
-import { MobileBlogPage } from "@/components/blog/MobileBlogPage";
+import { MobileBlogPage } from "@/app/blog/MobileBlogPage";
 import LatestArticles from "@/components/blog/LatestArticles";
 
 // Make the component async

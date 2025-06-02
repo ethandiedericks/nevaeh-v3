@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import GradientButton from "@/components/GradientButton";
-import MobileAboutPage from "@/components/about/MobileAboutPage";
+import MobileAboutPage from "@/app/about/MobileAboutPage";
 import DesktopAboutImage from "@/assets/images/about/nevaeh-solutions-desktop-about-image.avif";
 import DesktopAboutImage2 from "@/assets/images/about/nevaeh-solutions-desktop-about-image-2.avif";
 import { CodeIcon, UserIcon, ZapIcon } from "@/components/Icons";

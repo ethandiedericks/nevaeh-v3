@@ -9,12 +9,11 @@ export const ServicesSection = () => {
   return (
     <>
       <MobileServices />
-      <div className="hidden md:block">
+      <section className="hidden md:block">
         <div className="container mx-auto">
           <div className="section-spacing">
-            {/* text wrapper */}
-            <div className="text-center items-center">
-              <span className="section-tag"> What We Do</span>
+            <header className="text-center items-center">
+              <span className="section-tag">What We Do</span>
               <h1 className="section-title">Solutions Built for Scale</h1>
               <p className="mt-4">
                 We design and engineer digital platforms that power growth.{" "}
@@ -22,8 +21,7 @@ export const ServicesSection = () => {
                 Whether it&apos;s a web portal, internal tool, or mobile product
                 — we&apos;ve done it across industries.
               </p>
-            </div>
-            {/* Service Cards */}
+            </header>
             <div className="grid grid-cols-2 gap-8 mt-16">
               <div className="h-full">
                 <ServiceCard
@@ -54,14 +52,14 @@ export const ServicesSection = () => {
                 />
               </div>
             </div>
-            <div className="my-16 flex justify-center items-center">
-              <Link href={"/services"} passHref>
+            <footer className="my-16 flex justify-center items-center">
+              <Link href="/services" passHref>
                 <GradientButton text="Explore Our Services" />
               </Link>
-            </div>
+            </footer>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

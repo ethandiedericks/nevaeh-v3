@@ -17,14 +17,14 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <motion.div
+    <motion.article
       className="text-center rounded-[0.938rem] p-2 sm:p-4"
       whileHover={{
         scale: 1.03,
         transition: { duration: 0.3 },
       }}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
         className="relative rounded-[0.938rem] border overflow-hidden p-4 sm:p-6"
@@ -49,12 +49,12 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
           >
             {icon}
           </motion.div>
-
-          <h2>{title}</h2>
-
+          <header>
+            <h3>{title}</h3>
+          </header>
           <p className="text-[#E2E8F0]">{description}</p>
         </div>
       </motion.div>
-    </motion.div>
+    </motion.article>
   );
 };

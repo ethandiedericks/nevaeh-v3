@@ -6,8 +6,8 @@ import { useState } from "react";
 
 import { PostData } from "@/lib/posts";
 import { CalendarDays, Clock } from "lucide-react";
-import GradientButton from "../GradientButton";
-import SelectMenu from "./SelectMenu";
+import GradientButton from "../../components/GradientButton";
+import SelectMenu from "../../components/blog/SelectMenu";
 
 export const MobileBlogPage = ({
   latestArticles,
