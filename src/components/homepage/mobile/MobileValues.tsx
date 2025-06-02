@@ -1,5 +1,5 @@
 import { MedalIcon, TimeIcon, UserIcon, ZapIcon } from "@/components/Icons";
-import { ValueCard } from "../cards/ValueCard";
+import { HomeValueCard } from "../cards/HomeValueCard";
 
 export const MobileValuesSection = () => {
   return (
@@ -17,28 +17,28 @@ export const MobileValuesSection = () => {
           </header>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
             <div className="h-full">
-              <ValueCard
+              <HomeValueCard
                 icon={<UserIcon />}
                 title="Client Partnership"
                 description="We build lasting relationships based on trust and mutual success."
               />
             </div>
             <div className="h-full">
-              <ValueCard
+              <HomeValueCard
                 icon={<MedalIcon />}
                 title="Excellence"
                 description="We're committed to delivering exceptional quality in everything we do."
               />
             </div>
             <div className="h-full">
-              <ValueCard
+              <HomeValueCard
                 icon={<TimeIcon />}
                 title="Reliability"
                 description="We deliver on our promises, on time and within budget."
               />
             </div>
             <div className="h-full">
-              <ValueCard
+              <HomeValueCard
                 icon={<ZapIcon />}
                 title="Innovation"
                 description="We embrace new technologies and approaches to solve complex problems."
