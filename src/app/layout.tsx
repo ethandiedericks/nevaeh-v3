@@ -183,30 +183,24 @@ export default function RootLayout({
       {
         "@type": "ListItem",
         position: 4,
-        name: "Pricing",
-        item: `${baseUrl}/pricing`,
-      },
-      {
-        "@type": "ListItem",
-        position: 5,
         name: "Faq",
         item: `${baseUrl}/faq`,
       },
       {
         "@type": "ListItem",
-        position: 6,
+        position: 5,
         name: "Blog",
         item: `${baseUrl}/blog`,
       },
       {
         "@type": "ListItem",
-        position: 7,
+        position: 6,
         name: "Contact",
         item: `${baseUrl}/contact`,
       },
       {
         "@type": "ListItem",
-        position: 8,
+        position: 7,
         name: "Site Map",
         item: `${baseUrl}/navigation`,
       },
