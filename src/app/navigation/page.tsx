@@ -4,7 +4,6 @@ import {
   Home,
   User,
   Settings,
-  DollarSign,
   BookOpen,
   HelpCircle,
   Mail,
@@ -37,12 +36,7 @@ const SitemapPage = () => {
       icon: <Settings size={20} />,
       description: "Comprehensive software development services we offer",
     },
-    {
-      title: "Pricing",
-      url: "/pricing",
-      icon: <DollarSign size={20} />,
-      description: "Transparent pricing for our development services",
-    },
+
     {
       title: "Blog",
       url: "/blog",
