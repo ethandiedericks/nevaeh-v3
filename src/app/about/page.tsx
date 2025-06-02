@@ -87,9 +87,9 @@ const AboutPage = () => {
       <MobileAboutPage />
       <div className="min-h-screen hidden md:block">
         <div className="max-w-6xl mx-auto pt-10 px-4">
-          {/* header */}
-          <div className="grid grid-cols-2 gap-8">
-            <div className="flex flex-col gap-[25px] items-start justify-center">
+          {/* Hero Section */}
+          <section className="grid grid-cols-2 gap-8">
+            <header className="flex flex-col gap-[25px] items-start justify-center">
               <h1 className="text-5xl">
                 Building Tomorrow&apos;s Digital Solutions Today
               </h1>
@@ -101,8 +101,8 @@ const AboutPage = () => {
               <Link href={"/contact"} aria-label="Contact Nevaeh Solutions">
                 <GradientButton text="Book your consultation" />
               </Link>
-            </div>
-            <div className="flex items-end justify-end ">
+            </header>
+            <figure className="flex items-end justify-end">
               <Image
                 src={DesktopAboutImage}
                 alt="Nevaeh Solutions Services Image"
@@ -110,12 +110,15 @@ const AboutPage = () => {
                 height={334}
                 className="object-cover rounded-[30px]"
               />
-            </div>
-          </div>
-          {/* our vision */}
-          <div className="flex flex-col items-center justify-center mt-10">
+            </figure>
+          </section>
+
+          {/* Vision Section */}
+          <section className="flex flex-col items-center justify-center mt-10">
             <div className="max-w-4xl">
-              <h2 className="section-title">Our Vision</h2>
+              <header>
+                <h2 className="section-title">Our Vision</h2>
+              </header>
               <p className="text-center mt-5 leading-5">
                 We envision a future where businesses of all sizes can harness
                 the power of cutting-edge technology to achieve their goals. Our
@@ -123,8 +126,11 @@ const AboutPage = () => {
                 software solutions and exceptional service.
               </p>
             </div>
-          </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-10">
+          </section>
+
+          {/* Values Section */}
+          <section className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-10">
+            <h2 className="sr-only">Our Core Values</h2>
             {values.map((value, index) => (
               <ValueCard
                 key={index}
@@ -133,32 +139,36 @@ const AboutPage = () => {
                 description={value.description}
               />
             ))}
-          </div>
-          {/* our approach */}
-          <div className="flex flex-col items-center justify-center mt-10">
+          </section>
+
+          {/* Approach Section */}
+          <section className="flex flex-col items-center justify-center mt-10">
             <div className="max-w-3xl">
-              <h2 className="section-title">Our Approach</h2>
+              <header>
+                <h2 className="section-title">Our Approach</h2>
+              </header>
               <p className="text-center mt-5 leading-5">
                 We follow a structured yet flexible approach to ensure your
                 project&apos;s success from concept to completion.
               </p>
             </div>
-          </div>
-          <div className="grid grid-cols-3 gap-8 mt-10">
-            {approach.map((approach, index) => (
-              <div key={index} className="top-bottom-gradient-card">
-                <div className="flex flex-col gap-4">
-                  <h3 className="text-base font-bold">{approach.title}</h3>
-                  <p className="text-sm font-normal text-white tracking-[-4%] leading-5">
-                    {approach.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+            <div className="grid grid-cols-3 gap-8 mt-10">
+              {approach.map((step, index) => (
+                <article key={index} className="top-bottom-gradient-card">
+                  <div className="flex flex-col gap-4">
+                    <h3 className="text-base font-bold">{step.title}</h3>
+                    <p className="text-sm font-normal text-white tracking-[-4%] leading-5">
+                      {step.description}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
 
-          <div className="grid grid-cols-2 gap-8 my-20">
-            <div className="flex items-start justify-start ">
+          {/* Expert Solutions Section */}
+          <section className="grid grid-cols-2 gap-8 my-20">
+            <figure className="flex items-start justify-start">
               <Image
                 src={DesktopAboutImage2}
                 alt="Nevaeh Solutions Services Image"
@@ -166,9 +176,13 @@ const AboutPage = () => {
                 height={334}
                 className="object-cover rounded-[30px]"
               />
-            </div>
+            </figure>
             <div className="flex flex-col gap-[25px] items-start justify-center">
-              <h1 className="text-5xl">Expert Solutions, Personal Attention</h1>
+              <header>
+                <h2 className="text-5xl">
+                  Expert Solutions, Personal Attention
+                </h2>
+              </header>
               <p>
                 As developers with comprehensive expertise, we provide dedicated
                 attention to each project while delivering professional,
@@ -179,27 +193,32 @@ const AboutPage = () => {
                 development.
               </p>
             </div>
-          </div>
-          {/* Concept Cards */}
-          <div className="grid grid-cols-2 gap-4 my-20">
+          </section>
+
+          {/* Services/Concepts Section */}
+          <section className="grid grid-cols-2 gap-4 my-20">
+            <h2 className="sr-only">Our Services</h2>
             {concepts.map((concept, index) => (
               <ConceptCard key={index} concept={concept} />
             ))}
-          </div>
-          {/* cta */}
-          <div className="flex flex-col gap-[25px] items-center justify-center my-20">
-            <h1 className="text-5xl">Ready to Build Something Amazing?</h1>
-            <p>
-              Let&apos;s collaborate to bring your digital vision to life with
-              innovative solutions tailored to your needs.
-            </p>
+          </section>
+
+          {/* Call to Action Section */}
+          <section className="flex flex-col gap-[25px] items-center justify-center my-20">
+            <header className="text-center">
+              <h2 className="text-5xl">Ready to Build Something Amazing?</h2>
+              <p>
+                Let&apos;s collaborate to bring your digital vision to life with
+                innovative solutions tailored to your needs.
+              </p>
+            </header>
             <Link
               href={"/contact"}
               aria-label="Start a Conversation with Nevaeh Solutions"
             >
               <GradientButton text="Start a Conversation" />
             </Link>
-          </div>
+          </section>
         </div>
       </div>
     </>

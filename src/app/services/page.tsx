@@ -73,8 +73,8 @@ const Services = () => {
       <div className="min-h-screen hidden md:block">
         <div className="max-w-6xl mx-auto pt-10 px-4">
           {/* Hero Section */}
-          <div className="grid grid-cols-2 gap-8">
-            <div className="flex flex-col gap-[25px] items-start justify-center">
+          <section className="grid grid-cols-2 gap-8">
+            <header className="flex flex-col gap-[25px] items-start justify-center">
               <h1 className="text-5xl">Comprehensive Software Solutions</h1>
               <p>
                 We offer end-to-end development services to bring your digital
@@ -83,8 +83,8 @@ const Services = () => {
               <Link href={"/contact"} aria-label="Contact Nevaeh Solutions">
                 <GradientButton text="Book your consultation" />
               </Link>
-            </div>
-            <div className="flex items-end justify-end ">
+            </header>
+            <figure className="flex items-end justify-end">
               <Image
                 src={DesktopServicesImage}
                 alt="Nevaeh Solutions Services Image"
@@ -92,13 +92,14 @@ const Services = () => {
                 height={334}
                 className="object-cover rounded-[30px]"
               />
-            </div>
-          </div>
+            </figure>
+          </section>
 
-          {/* Services Card Section */}
-          <div className="relative grid grid-cols-1 gap-8 md:grid-cols-2 mt-20">
+          {/* Services Section */}
+          <section className="relative grid grid-cols-1 gap-8 md:grid-cols-2 mt-20">
+            <h2 className="sr-only">Our Services</h2>
             {services.map((service, index) => (
-              <div
+              <article
                 key={index}
                 className={`w-full mb-10 flex ${
                   index % 2 === 0 ? "justify-start" : "justify-end"
@@ -112,9 +113,9 @@ const Services = () => {
                     key_features={service.key_features}
                   />
                 </div>
-              </div>
+              </article>
             ))}
-          </div>
+          </section>
         </div>
       </div>
     </>

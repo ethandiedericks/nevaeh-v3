@@ -25,7 +25,7 @@ const MobileServicesCard = ({
             </div>
           </div>
 
-          <h1 className="text-[1.25rem] font-normal">{title}</h1>
+          <h3 className="text-[1.25rem] font-normal">{title}</h3>
         </div>
         <p className="flex-1 mb-4 text-sm">{description}</p>
       </div>

@@ -13,7 +13,7 @@ const ConceptCard: React.FC<{ concept: Concept }> = ({ concept }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <motion.div
+    <motion.article
       className={`rounded-[0.9rem] h-full flex-1 values-card-wrapper ${
         isHovered ? "gradient-border-hover" : "gradient-border"
       }`}
@@ -28,7 +28,10 @@ const ConceptCard: React.FC<{ concept: Concept }> = ({ concept }) => {
       <div className="flex flex-row flex-1 gap-8 items-center justify-center p-2">
         <div className="relative">
           <div className="absolute inset-0 icon-glow"></div>
-          <div className="rounded-[0.438rem] p-2 gradient-border relative z-10">
+          <div
+            className="rounded-[0.438rem] p-2 gradient-border relative z-10"
+            aria-hidden="true"
+          >
             {concept.icon}
           </div>
         </div>
@@ -39,7 +42,7 @@ const ConceptCard: React.FC<{ concept: Concept }> = ({ concept }) => {
           </p>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 };
 

@@ -72,8 +72,8 @@ const MobileServicesPage = () => {
     <div className="min-h-screen md:hidden">
       <div className="max-w-6xl mx-auto pt-8 px-4">
         {/* Hero Section */}
-        <div className="grid grid-cols-1 gap-[30px]">
-          <div className="flex items-end justify-end ">
+        <section className="grid grid-cols-1 gap-[30px]">
+          <figure className="flex items-end justify-end">
             <Image
               src={DesktopServicesImage}
               alt="Nevaeh Solutions Services Image"
@@ -81,8 +81,9 @@ const MobileServicesPage = () => {
               height={334}
               className="object-cover rounded-[30px]"
             />
-          </div>
-          <div className="flex flex-col gap-[11px] w-full justify-center">
+          </figure>
+
+          <header className="flex flex-col gap-[11px] w-full justify-center">
             <h1 className="text-[32px] leading-[100%]">
               Comprehensive Software Solutions
             </h1>
@@ -90,26 +91,30 @@ const MobileServicesPage = () => {
               We offer end-to-end development services to bring your digital
               vision to life with precision and excellence.
             </p>
-          </div>
-          <Link
-            href={"/contact"}
-            aria-label="Contact Nevaeh Solutions"
-            className="flex items-center justify-center"
-          >
-            <GradientButton text="Book your consultation" />
-          </Link>
-        </div>
+          </header>
 
-        {/* Services Card Section */}
-        <div className="relative grid grid-cols-1 gap-4 mt-10">
+          <div className="flex items-center justify-center">
+            <Link
+              href={"/contact"}
+              aria-label="Contact Nevaeh Solutions"
+              className="flex items-center justify-center"
+            >
+              <GradientButton text="Book your consultation" />
+            </Link>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="relative grid grid-cols-1 gap-4 mt-10">
+          <h2 className="sr-only">Our Services</h2>
           {services.map((service, index) => (
-            <div
+            <article
               key={index}
               className={`w-full mb-10 flex ${
                 index % 2 === 0 ? "justify-start" : "justify-end"
               }`}
             >
-              <div className=" w-full">
+              <div className="w-full">
                 <MobileServicesCard
                   icon={service.icon}
                   title={service.title}
@@ -117,9 +122,9 @@ const MobileServicesPage = () => {
                   key_features={service.key_features}
                 />
               </div>
-            </div>
+            </article>
           ))}
-        </div>
+        </section>
       </div>
     </div>
   );

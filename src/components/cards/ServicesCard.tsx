@@ -26,11 +26,11 @@ const ServicesCard = ({
               {icon}
             </div>
           </div>
-          <h1 className="text-2xl font-thin">{title}</h1>
+          <h3 className="text-2xl font-thin">{title}</h3>
         </div>
         <p className="flex-1">{description}</p>
         <div>
-          <h2 className="font-medium text-base leading-7">Key Features</h2>
+          <h4 className="font-medium text-base leading-7">Key Features</h4>
           <ul className="list-none space-y-2 mt-4">
             {key_features.map((feature, index) => (
               <li key={index} className="flex items-start">
