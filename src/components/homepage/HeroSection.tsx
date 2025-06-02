@@ -2,8 +2,8 @@ import Link from "next/link";
 
 import { MobileHeroSection } from "./mobile/MobileHero";
 import GradientButton from "../GradientButton";
-import { EarthIcon, RocketIcon, WaypointsIcon } from "../Icons";
 import NewFeatureCard from "./cards/NewFeatureCard";
+import { Cpu, Handshake, ShieldCheck } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -42,7 +42,7 @@ export const HeroSection = () => {
                     <div className="relative">
                       <div className="absolute inset-0 hero-icon-glow"></div>
                       <div className="relative z-10">
-                        <WaypointsIcon size={40} />
+                        <Cpu size={40} />
                       </div>
                     </div>
                     <h2 className="text-xl font-normal tracking-[-4%] leading-[20px] mt-6">
@@ -57,13 +57,13 @@ export const HeroSection = () => {
               </div>
 
               <NewFeatureCard
-                icon={<RocketIcon size={40} />}
+                icon={<ShieldCheck size={40} />}
                 title="Personal & Accountable"
                 description="Work directly with a senior dev and designer — no handoffs, no fluff.."
               />
 
               <NewFeatureCard
-                icon={<EarthIcon size={40} />}
+                icon={<Handshake size={40} />}
                 title="Flexible Retainer Model"
                 description="Ongoing support and delivery through predictable monthly retainers."
               />

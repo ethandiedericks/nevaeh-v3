@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { MobileFeatureCard } from "../cards/MobileFeatureCard";
-import { RocketIcon, WaypointsIcon } from "@/components/Icons";
 import GradientButton from "@/components/GradientButton";
 import heroDecoration from "@/assets/images/homepage/hero-decoration.png";
+import { Handshake, ShieldCheck } from "lucide-react";
 
 export const MobileHeroSection = () => {
   return (
@@ -41,14 +41,14 @@ export const MobileHeroSection = () => {
           </div>
           <div className="rotate-[-10deg]">
             <MobileFeatureCard
-              icon={<WaypointsIcon size={40} className="text-white" />}
+              icon={<ShieldCheck size={40} className="text-white" />}
               title="Personal & Accountable"
               description="Work directly with a senior dev and designer — no handoffs, no fluff.."
             />
           </div>
           <div className="rotate-[10deg]">
             <MobileFeatureCard
-              icon={<RocketIcon size={40} className="text-white" />}
+              icon={<Handshake size={40} className="text-white" />}
               title="Flexible Retainer Model"
               description="Ongoing support and delivery through predictable monthly retainers."
             />
