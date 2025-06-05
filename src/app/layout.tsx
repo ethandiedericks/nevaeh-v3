@@ -4,6 +4,8 @@ import "./styles/main.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "sonner";
+import { ReactLenis } from "@/lib/lenis";
+
 import Script from "next/script";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
 import { PostHogProvider } from "@/components/PostHogProvider";
@@ -209,46 +211,48 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased text-white`}>
-        <PostHogProvider>
-          <Script
-            id="main-structured-data"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(mainStructuredData),
-            }}
-          />
-          <Script
-            id="service-structured-data"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(serviceStructuredData),
-            }}
-          />
-          <Script
-            id="breadcrumb-structured-data"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(breadcrumbStructuredData),
-            }}
-          />
-          <Navbar />
-          <main>{children}</main>
-          <CookieConsentBanner />
+      <ReactLenis root>
+        <body className={`${inter.variable} antialiased text-white`}>
+          <PostHogProvider>
+            <Script
+              id="main-structured-data"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(mainStructuredData),
+              }}
+            />
+            <Script
+              id="service-structured-data"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(serviceStructuredData),
+              }}
+            />
+            <Script
+              id="breadcrumb-structured-data"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(breadcrumbStructuredData),
+              }}
+            />
+            <Navbar />
+            <main>{children}</main>
+            <CookieConsentBanner />
 
-          <Toaster
-            position="bottom-right"
-            toastOptions={{
-              classNames: {
-                toast:
-                  "bg-gradient-to-r from-[#001e05] via-black to-black text-white",
-              },
-            }}
-          />
-          <WhatsAppButton />
-          <Footer />
-        </PostHogProvider>
-      </body>
+            <Toaster
+              position="bottom-right"
+              toastOptions={{
+                classNames: {
+                  toast:
+                    "bg-gradient-to-r from-[#001e05] via-black to-black text-white",
+                },
+              }}
+            />
+            <WhatsAppButton />
+            <Footer />
+          </PostHogProvider>
+        </body>
+      </ReactLenis>
     </html>
   );
 }
