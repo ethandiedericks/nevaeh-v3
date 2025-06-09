@@ -113,10 +113,10 @@ const MobileAboutPage = () => {
         </section>
 
         {/* Values Section */}
-        <section>
+        <section className="mt-[25px]">
           <h2 className="sr-only">Our Core Values</h2>
           {values.map((value, index) => (
-            <article key={index} className="flex flex-col gap-[15px]">
+            <article key={index} className="flex flex-col gap-4 mt-4">
               <header className="flex flex-row gap-4">
                 <span className="font-bold" aria-hidden="true">
                   {value.icon}
@@ -146,7 +146,7 @@ const MobileAboutPage = () => {
         {/* Expert Solutions Section */}
         <section className="flex flex-col gap-[25px] w-full justify-center">
           <header>
-            <h2 className="text-[32px] leading-[100%]">
+            <h2 className="text-[32px] leading-[100%] mt-[25px]">
               Expert Solutions, Personal Attention
             </h2>
           </header>
@@ -163,7 +163,7 @@ const MobileAboutPage = () => {
         <section>
           <h2 className="sr-only">Our Services</h2>
           {concepts.map((concept, index) => (
-            <article key={index} className="mt-4">
+            <article key={index} className="mt-8">
               <div className="mobile-top-bottom-gradient-card">
                 <div className="flex justify-end mt-[-2.7rem]">
                   <div className="relative">
@@ -190,7 +190,7 @@ const MobileAboutPage = () => {
 
         {/* Call to Action Section */}
         <section className="flex flex-col gap-[18px] items-center justify-center my-10">
-          <header className="text-center">
+          <header className="text-center space-y-4">
             <h2 className="text-[32px] tracking-[-4%] leading-8">
               Ready to Build Something Amazing?
             </h2>

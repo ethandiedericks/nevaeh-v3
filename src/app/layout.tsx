@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         alt: "Nevaeh Solutions Logo",
       },
     ],
-    locale: "en_ZA",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
@@ -101,7 +101,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://nevaeh.co.za";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.nevaeh.co.za";
 
   const mainStructuredData = {
     "@context": "https://schema.org",
