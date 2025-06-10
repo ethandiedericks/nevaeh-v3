@@ -59,7 +59,7 @@ const Contact = () => {
         <ContactCard
           icon={Mail}
           title="Email"
-          line1="info@nevaeh.co.za"
+          line1="ethan@nevaeh.co.za"
           line2="Online support"
         />
         <ContactCard
