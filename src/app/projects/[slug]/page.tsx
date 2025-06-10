@@ -8,12 +8,11 @@ interface ProjectPageProps {
   }>;
 }
 
-export async function generateMetadata(
-  props: Promise<ProjectPageProps>
-): Promise<Metadata> {
-  const { params: paramsPromise } = await props;
-  const params = await paramsPromise;
-  const project = projects.find((p) => p.slug === params.slug);
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const project = projects.find((p) => p.slug === resolvedParams.slug);
 
   if (!project) {
     return {
@@ -27,21 +26,26 @@ export async function generateMetadata(
     title: `${project.title} | Nevaeh Solutions`,
     description: project.intro,
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/projects/${project.slug}`,
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/projects/${resolvedParams.slug}`,
     },
     openGraph: {
       title: `${project.title} | Nevaeh Solutions`,
       description: project.intro,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/projects/${project.slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/projects/${resolvedParams.slug}`,
       type: "article",
       images: [
         {
-          url:
-            `${process.env.NEXT_PUBLIC_BASE_URL}${project.imagesLeft?.[0]?.src}` ||
-            `${process.env.NEXT_PUBLIC_OG_IMAGE_URL}`,
+          url: project.imagesLeft?.[0]?.src
+            ? `${process.env.NEXT_PUBLIC_BASE_URL}${project.imagesLeft[0].src}`
+            : project.imagesRight?.[0]?.src
+              ? `${process.env.NEXT_PUBLIC_BASE_URL}${project.imagesRight[0].src}`
+              : `${process.env.NEXT_PUBLIC_OG_IMAGE_URL}`,
           width: 1200,
           height: 630,
-          alt: `${project.title} screenshot`,
+          alt:
+            project.imagesLeft?.[0]?.alt ||
+            project.imagesRight?.[0]?.alt ||
+            `${project.title} screenshot`,
         },
       ],
     },
@@ -53,8 +57,7 @@ export async function generateMetadata(
   };
 }
 
-export default async function ProjectPage(props: Promise<ProjectPageProps>) {
-  const { params: paramsPromise } = await props;
-  const params = await paramsPromise;
-  return <ProjectDetailClient slug={params.slug} />;
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const resolvedParams = await params;
+  return <ProjectDetailClient slug={resolvedParams.slug} />;
 }
