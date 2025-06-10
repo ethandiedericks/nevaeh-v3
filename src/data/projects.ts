@@ -21,17 +21,17 @@ export const projects: Project[] = [
     category: "Website Development",
     title: "IT Support EC",
     intro:
-      "Nevaeh Solutions proudly designed and developed the website for IT Support EC, a leading IT support provider based in South Africa. This project showcases our expertise in creating professional, user-centric, and visually appealing websites tailored to the needs of businesses in the technology sector. The IT Support EC website was crafted to highlight their comprehensive IT services, enhance their online presence, and provide an intuitive experience for their clients.",
-    body: "The IT Support EC website serves as a digital hub for a company specializing in managed IT services, cybersecurity, and technical support for businesses in the Eastern Cape region. Our goal was to create a clean, modern, and responsive website that reflects IT Support EC’s professionalism and commitment to excellence while ensuring accessibility and ease of navigation for users. Key features of the website include:",
+      "Nevaeh Solutions proudly designed and developed a sleek informational website for IT Support EC, a South Africa-based IT service provider. This project demonstrates our ability to create clean, responsive, and business-oriented websites tailored to the tech industry's needs. The platform effectively presents IT Support EC’s core offerings and serves as a digital front door for client engagement.",
+    body: "The IT Support EC website was built as a landing page to highlight the company's services and enhance its online presence. Developed using Next.js 15 and styled with Tailwind CSS, the site prioritizes performance, mobile responsiveness, and clarity. It’s an ideal digital brochure for businesses looking to understand IT Support EC’s capabilities at a glance. Key features include:",
     benefits: [
-      "Clear Service Showcase: A dedicated services section that outlines IT Support EC’s offerings, such as network management, cloud solutions, and cybersecurity, presented in an organized and engaging format.",
-      "User-Friendly Design: A responsive layout optimized for desktop, tablet, and mobile devices, ensuring seamless access for all users.",
-      "Call-to-Action Integration: Strategically placed contact forms and buttons to encourage client inquiries and drive business engagement.",
-      "SEO Optimization: Implementation of search engine optimization best practices to improve visibility and attract organic traffic from businesses seeking IT solutions.",
-      "Professional Branding: A sleek design incorporating IT Support EC’s brand colors, logo, and imagery to reinforce their identity as a trusted IT partner.",
+      "Service-Focused Layout: Highlights the company’s IT solutions, such as technical support, cloud services, and network management.",
+      "Optimized Responsiveness: Fully responsive across devices, providing users with a seamless experience on mobile, tablet, and desktop.",
+      "Modern Tech Stack: Built with Next.js 15 and Tailwind CSS for fast loading, clean UI, and scalability.",
+      "Strong Visual Identity: Consistent use of brand colors, logo, and tone to reinforce professionalism and trust.",
+      "Simple Navigation: Clear calls to action and contact options to help users connect with the business easily.",
     ],
     conclusion:
-      "Nevaeh Solutions collaborated closely with IT Support EC to understand their business objectives and target audience. We utilized modern web development technologies to deliver a fast, secure, and scalable website. The project was completed on time and within budget, resulting in a platform that has strengthened IT Support EC’s ability to connect with clients and showcase their expertise.",
+      "Through close collaboration with the IT Support EC team, we delivered a lightweight, fast, and informative site that supports their business goals. The final product stands as a reliable, modern web presence that reflects their values and commitment to client satisfaction.",
     imagesLeft: [
       {
         src: "/projects/itsupport-screen-1.png",
@@ -58,17 +58,17 @@ export const projects: Project[] = [
     category: "Website Development",
     title: "Liam Graham Psychometry",
     intro:
-      "Nevaeh Solutions designed and developed the website for Liam Graham Psychometry, a professional psychometry practice based in South Africa. This project highlights our ability to create tailored, user-friendly, and professional websites for specialized service providers in the mental health and assessment sector. The website effectively showcases Liam Graham Psychometry’s expertise in psychometric assessments while ensuring an accessible and engaging experience for clients.",
-    body: "The Liam Graham Psychometry website serves as a digital platform for a psychometrist specializing in cognitive ability evaluations, ADHD screening, school readiness, career guidance, and more. Our goal was to create a clean, modern, and responsive website that reflects the practice’s professionalism and commitment to personalized client care. Key features include:",
+      "Nevaeh Solutions created a full-featured website for Liam Graham Psychometry, a private psychometry practice in South Africa. This project showcases our skill in delivering secure, informative, and highly accessible websites for professionals in the mental health space. The site clearly communicates the range of services and provides a trusted digital experience for prospective clients.",
+    body: "This website was developed to support the professional practice of Liam Graham, offering services including psychometric assessments, school readiness evaluations, and career guidance. Built using Next.js and Tailwind CSS, the site is fully responsive, SEO-optimized, and features enhanced security with CAPTCHA and a secure email server. Key features include:",
     benefits: [
-      "Clear Service Showcase: A structured layout detailing services like scholastic screening, special school placement, and career assessments, making it easy for clients to understand offerings.",
-      "Responsive Design: Optimized for seamless navigation across desktop, tablet, and mobile devices, ensuring accessibility for all users.",
-      "User-Friendly Navigation: Intuitive menus and contact forms to facilitate client inquiries and appointment bookings, with a free 15-minute consultation option highlighted.",
-      "SEO Optimization: Built with search engine best practices to enhance visibility for individuals seeking psychometric services in South Africa.",
-      "Professional Branding: A minimalist design incorporating Liam Graham Psychometry’s branding, fostering trust and credibility.",
+      "Detailed Service Sections: Clearly outlines each assessment offering, helping clients understand the value of each service.",
+      "Secure Communication: Includes CAPTCHA and a secure mail server to protect client inquiries and ensure confidentiality.",
+      "Responsive Design: Fully optimized for mobile, tablet, and desktop experiences, enhancing user accessibility.",
+      "Professional Aesthetic: Clean and trustworthy design that aligns with the mental health sector’s need for clarity and calm.",
+      "Booking Enablement: A clear call-to-action system encouraging contact, with highlighted options for a free 15-minute consultation.",
     ],
     conclusion:
-      "Nevaeh Solutions collaborated closely with Liam Graham to align the website with their unique requirements to deliver a fast, secure, and scalable platform. The result is a website that enhances client engagement, streamlines communication, and reinforces the practice’s reputation as a trusted psychometry provider.",
+      "We worked closely with Liam Graham to reflect the tone and values of the practice in a digital format. The result is a secure, visually clear, and functionally effective site that supports client education and professional outreach.",
     imagesLeft: [
       {
         src: "/projects/liamgrahampsychometry-screen-1.png",
@@ -104,17 +104,17 @@ export const projects: Project[] = [
     category: "Mobile App Development",
     title: "John B. Scott Attorneys",
     intro:
-      "Nevaeh Solutions developed the John B. Scott Attorneys mobile application, designed to streamline the consultation process for clients seeking to claim from the Road Accident Fund in South Africa. This project showcases our expertise in creating user-friendly, efficient mobile applications tailored to the legal sector, enhancing client accessibility and operational efficiency for John B. Scott Attorneys.",
-    body: "The John B. Scott Attorneys app is a specialized tool that automates the consultation process for Road Accident Fund claims, allowing clients to efficiently submit claims without lengthy paperwork. Built to reflect the firm’s commitment to accessible legal services, the app offers a seamless, intuitive experience. Key features include:",
+      "Nevaeh Solutions developed a powerful mobile application for John B. Scott Attorneys, transforming their Road Accident Fund claims process into a fully digital, client-first experience. This solution highlights our ability to build scalable, secure mobile tools that enhance client accessibility and reduce operational complexity for law firms.",
+    body: "The John B. Scott Attorneys app replaces a manual, paperwork-heavy claims process with a streamlined, user-friendly mobile experience. Built using Flutter and Firebase, the app enables users to submit claims, receive updates via push notifications, and track their progress in real time. An integrated admin dashboard allows the firm’s legal team to manage claims efficiently. Key features include:",
     benefits: [
-      "Automated Consultation Process: Simplifies claim submissions by guiding users through a streamlined, form-free process, saving time and effort.",
-      "User-Friendly Interface: Designed for ease of use, ensuring clients of all technical abilities can navigate and submit claims effortlessly.",
-      "Responsive Design: Optimized for iOS devices (requires iOS 13.0 or later), providing a consistent experience across iPhones and iPads.",
-      "Secure and Efficient: Built with secure data handling to protect sensitive client information, aligning with privacy standards.",
-      "Professional Branding: A minimalist design incorporating John B. Scott Attorney’s branding, fostering trust and credibility.",
+      "Claims Automation: Digitizes the claims consultation workflow, eliminating lengthy paper forms.",
+      "Claim Tracking: Clients can view real-time updates on the progress of their case via the app.",
+      "Push Notifications: Keeps users informed of claim status changes or messages from the legal team.",
+      "Admin Dashboard: A secure backend interface where staff can manage and respond to claim submissions.",
+      "Cross-Platform Support: Built with Flutter for both Android and iOS compatibility, ensuring wide user access.",
     ],
     conclusion:
-      "Nevaeh Solutions collaborated with John B. Scott Attorneys to understand their operational needs and client expectations, utilizing [insert technologies used, e.g., Swift, Xcode, Firebase, etc., if applicable] to deliver a robust, scalable, and secure application. The result is a mobile solution that enhances client engagement, reduces administrative burdens, and strengthens the firm’s ability to serve clients efficiently.",
+      "Nevaeh Solutions collaborated with John B. Scott Attorneys to build a robust, mobile-first tool tailored to their legal processes. By combining a sleek frontend with a scalable Firebase backend, we delivered a solution that significantly improves both client engagement and internal efficiency.",
     imagesLeft: [],
     imagesRight: [
       { src: "/projects/johnscott-mockup.png", alt: "Mockup" },
