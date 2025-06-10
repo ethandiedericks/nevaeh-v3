@@ -4,9 +4,9 @@ const PrivacyPolicyPage = () => {
   return (
     <div className="section-spacing space-y-12 max-w-5xl mx-auto">
       <div className="text-center">
-        <h1 className="text-5xl leading-[100%] tracking-[-4%]">
+        <h2 className="text-5xl leading-[100%] tracking-[-4%]">
           Privacy Policy
-        </h1>
+        </h2>
         <p className="text-sm text-white/70 mt-2">Last updated: May 24, 2025</p>
       </div>
 

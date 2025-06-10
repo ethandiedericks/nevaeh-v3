@@ -33,9 +33,9 @@ const Contact = () => {
   return (
     <main className="min-h-screen text-white md:flex flex-col items-center">
       <header className="w-full max-w-6xl px-4 pt-10 flex flex-col items-center mb-8 md:mb-16">
-        <h1 className="text-4xl md:text-5xl font-normal md:font-light text-left md:text-center mb-2 md:mb-4 w-full md:max-w-3xl">
+        <h2 className="text-4xl md:text-5xl font-normal md:font-light text-left md:text-center mb-2 md:mb-4 w-full md:max-w-3xl">
           Let&apos;s Build Something Amazing Together
-        </h1>
+        </h2>
         <p>
           Ready to start your project? Get in touch with us and let&apos;s
           discuss how we can help bring your vision to life.

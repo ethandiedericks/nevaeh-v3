@@ -78,9 +78,9 @@ const MobileAboutPage = () => {
           </figure>
 
           <header className="flex flex-col gap-[25px] w-full justify-center">
-            <h1 className="text-[32px] leading-[100%]">
+            <h2 className="text-[32px] leading-[100%]">
               Building Tomorrow&apos;s Digital Solutions Today
-            </h1>
+            </h2>
             <p className="text-[#E2E8F0] text-base tracking-tight leading-4">
               As a dynamic new software development company, we combine fresh
               perspectives with technical expertise to deliver innovative

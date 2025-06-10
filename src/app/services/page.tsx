@@ -75,7 +75,7 @@ const Services = () => {
           {/* Hero Section */}
           <section className="grid grid-cols-2 gap-8">
             <header className="flex flex-col gap-[25px] items-start justify-center">
-              <h1 className="text-5xl">Comprehensive Software Solutions</h1>
+              <h2 className="text-5xl">Comprehensive Software Solutions</h2>
               <p>
                 We offer end-to-end development services to bring your digital
                 vision to life with precision and excellence.

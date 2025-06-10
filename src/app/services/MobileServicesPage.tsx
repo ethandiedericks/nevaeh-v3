@@ -84,9 +84,9 @@ const MobileServicesPage = () => {
           </figure>
 
           <header className="flex flex-col gap-[11px] w-full justify-center">
-            <h1 className="text-[32px] leading-[100%]">
+            <h2 className="text-[32px] leading-[100%]">
               Comprehensive Software Solutions
-            </h1>
+            </h2>
             <p className="text-[#E2E8F0] text-base tracking-tight leading-4">
               We offer end-to-end development services to bring your digital
               vision to life with precision and excellence.

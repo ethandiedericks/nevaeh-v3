@@ -10,10 +10,11 @@ import GradientButton from "../GradientButton";
 
 export const Navbar = () => {
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Blog", href: "/blog" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Our Projects", href: "/projects" },
+    { label: "Blog", href: "/blog" },
   ];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -72,7 +73,7 @@ export const Navbar = () => {
           <nav className="flex gap-8">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.label}
                 href={item.href}
                 className={`text-sm 2xl:text-base font-medium transition-colors hover:text-gray-300 relative
                   ${
@@ -81,7 +82,7 @@ export const Navbar = () => {
                       : "text-gray-300"
                   }`}
               >
-                {item.name}
+                {item.label}
               </Link>
             ))}
           </nav>
@@ -110,7 +111,7 @@ export const Navbar = () => {
           <div className="flex flex-col text-center space-y-3 pb-4 pt-2">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.label}
                 href={item.href}
                 className={`text-base font-medium transition-colors p-2 rounded-md
                   ${
@@ -118,7 +119,7 @@ export const Navbar = () => {
                   }`}
                 onClick={handleMenuClose}
               >
-                {item.name}
+                {item.label}
               </Link>
             ))}
             <div className="pt-2">

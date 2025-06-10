@@ -28,9 +28,9 @@ const Blog = async () => {
         <div className="section-spacing space-y-12">
           {/* Intro Section */}
           <div className="flex flex-col items-center text-center space-y-4">
-            <h1 className="text-5xl leading-[100%] tracking-[-4%]">
+            <h2 className="text-5xl leading-[100%] tracking-[-4%]">
               Insights & Expertise
-            </h1>
+            </h2>
             <p className="text-base leading-[20px]">
               Explore our latest thoughts on technology and development trends.
             </p>

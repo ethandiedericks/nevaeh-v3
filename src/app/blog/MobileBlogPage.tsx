@@ -32,9 +32,9 @@ export const MobileBlogPage = ({
       <div className="section-spacing space-y-8">
         {/* Page Intro */}
         <div className="space-y-4">
-          <h1 className="text-[32px] font-thin tracking-[-4%] leading-[100%]">
+          <h2 className="text-[32px] font-thin tracking-[-4%] leading-[100%]">
             Insights & Expertise
-          </h1>
+          </h2>
           <p className="text-base font-thin tracking-[-4%] leading-[20px]">
             Explore our latest thoughts on technology and development trends.
           </p>

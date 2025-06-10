@@ -101,7 +101,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.nevaeh.co.za";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://www.nevaeh.co.za";
 
   const mainStructuredData = {
     "@context": "https://schema.org",
@@ -185,24 +186,30 @@ export default function RootLayout({
       {
         "@type": "ListItem",
         position: 4,
+        name: "Projects",
+        item: `${baseUrl}/projects`,
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
         name: "Faq",
         item: `${baseUrl}/faq`,
       },
       {
         "@type": "ListItem",
-        position: 5,
+        position: 6,
         name: "Blog",
         item: `${baseUrl}/blog`,
       },
       {
         "@type": "ListItem",
-        position: 6,
+        position: 7,
         name: "Contact",
         item: `${baseUrl}/contact`,
       },
       {
         "@type": "ListItem",
-        position: 7,
+        position: 8,
         name: "Site Map",
         item: `${baseUrl}/navigation`,
       },

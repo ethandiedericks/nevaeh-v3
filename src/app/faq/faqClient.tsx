@@ -13,9 +13,9 @@ export const FaqClient = () => {
   return (
     <div className="section-spacing max-w-5xl mx-auto">
       <div className="text-center mb-12">
-        <h1 className="text-5xl leading-tight tracking-[-4%]">
+        <h2 className="text-5xl leading-tight tracking-[-4%]">
           Frequently Asked Questions
-        </h1>
+        </h2>
         <p className="text-white/70 mt-2 text-base ">
           Everything you need to know about working with Nevaeh Solutions.
         </p>

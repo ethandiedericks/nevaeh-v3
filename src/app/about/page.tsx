@@ -90,9 +90,9 @@ const AboutPage = () => {
           {/* Hero Section */}
           <section className="grid grid-cols-2 gap-8">
             <header className="flex flex-col gap-[25px] items-start justify-center">
-              <h1 className="text-5xl">
+              <h2 className="text-5xl">
                 Building Tomorrow&apos;s Digital Solutions Today
-              </h1>
+              </h2>
               <p>
                 As a dynamic new software development company, we combine fresh
                 perspectives with technical expertise to deliver innovative
