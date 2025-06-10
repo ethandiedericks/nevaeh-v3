@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectsProps } from "../../../interfaces/projects";
+import { ProjectsProps } from "../../interfaces/projects";
 import Image from "next/image";
 import GradientButton from "../GradientButton";
 import Link from "next/link";

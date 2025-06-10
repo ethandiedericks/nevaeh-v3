@@ -51,9 +51,10 @@ const ProjectDetailClient = ({ slug }: ProjectDetailClientProps) => {
               <Image
                 src={imagesLeft[0].src}
                 alt={imagesLeft[0].alt || "Main desktop image"}
-                width={800}
-                height={500}
-                className="rounded-xl shadow-2xl"
+                width={1896}
+                height={902}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                className="rounded-xl shadow-2xl "
               />
             )}
             <div className="space-y-4 ">
@@ -104,6 +105,7 @@ const ProjectDetailClient = ({ slug }: ProjectDetailClientProps) => {
                   src={imagesRight[0].src}
                   alt={imagesRight[0].alt || "Mockup image"}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-contain"
                   priority
                 />
@@ -117,6 +119,7 @@ const ProjectDetailClient = ({ slug }: ProjectDetailClientProps) => {
                   alt={img.alt || `Screen image ${idx + 2}`}
                   width={517} // Fixed width
                   height={0} // Let height auto-adjust with aspect ratio
+                  sizes="(max-width: 768px) 100vw, 517px"
                   className="h-auto rounded-xl shadow-md object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>

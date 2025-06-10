@@ -34,20 +34,20 @@ export const projects: Project[] = [
       "Through close collaboration with the IT Support EC team, we delivered a lightweight, fast, and informative site that supports their business goals. The final product stands as a reliable, modern web presence that reflects their values and commitment to client satisfaction.",
     imagesLeft: [
       {
-        src: "/projects/itsupport-screen-1.png",
+        src: "/projects/itsupport-screen-1.avif",
         alt: "Homepage desktop view",
       },
     ],
     imagesRight: [
       { src: "/projects/itsupport-mockup.png", alt: "Mobile menu" },
       {
-        src: "/projects/itsupport-screen-2.png",
+        src: "/projects/itsupport-screen-2.avif",
         alt: "Homepage desktop view 2",
       },
-      { src: "/projects/itsupport-screen-3.png", alt: "Mobile menu" },
-      { src: "/projects/itsupport-screen-4.png", alt: "About screen" },
+      { src: "/projects/itsupport-screen-3.avif", alt: "Mobile menu" },
+      { src: "/projects/itsupport-screen-4.avif", alt: "About screen" },
       {
-        src: "/projects/itsupport-screen-5.png",
+        src: "/projects/itsupport-screen-5.avif",
         alt: "Why Choose Us section",
       },
     ],
@@ -71,11 +71,11 @@ export const projects: Project[] = [
       "We worked closely with Liam Graham to reflect the tone and values of the practice in a digital format. The result is a secure, visually clear, and functionally effective site that supports client education and professional outreach.",
     imagesLeft: [
       {
-        src: "/projects/liamgrahampsychometry-screen-1.png",
+        src: "/projects/liamgrahampsychometry-screen-1.avif",
         alt: "Homepage desktop",
       },
       {
-        src: "/projects/liamgrahampsychometry-screen-2.png",
+        src: "/projects/liamgrahampsychometry-screen-2.avif",
         alt: "Guidance section",
       },
     ],
@@ -85,15 +85,15 @@ export const projects: Project[] = [
         alt: "Mobile homepage",
       },
       {
-        src: "/projects/liamgrahampsychometry-screen-3.png",
+        src: "/projects/liamgrahampsychometry-screen-3.avif",
         alt: "Mobile homepage",
       },
       {
-        src: "/projects/liamgrahampsychometry-screen-4.png",
+        src: "/projects/liamgrahampsychometry-screen-4.avif",
         alt: "Assessment services",
       },
       {
-        src: "/projects/liamgrahampsychometry-screen-5.png",
+        src: "/projects/liamgrahampsychometry-screen-5.avif",
         alt: "Appointment booking",
       },
     ],

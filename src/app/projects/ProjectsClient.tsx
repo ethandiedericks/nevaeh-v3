@@ -5,7 +5,7 @@ const projects = [
   {
     id: "it-support-ec",
     category: "Website Development",
-    imageUrl: "/projects/itsupport.png",
+    imageUrl: "/projects/itsupport.avif",
     title: "IT Support EC (Pty) Ltd",
     description:
       "Nevaeh Solutions crafted a modern, responsive website for IT Support EC, a provider of IT services, cybersecurity, and support in the Eastern Cape. The site ensures accessibility, ease of navigation, and reflects the company's professionalism.",
@@ -13,7 +13,7 @@ const projects = [
   {
     id: "liam-graham-psychometry",
     category: "Website Development",
-    imageUrl: "/projects/liamgrahampsychometry.png",
+    imageUrl: "/projects/liamgrahampsychometry.avif",
     title: "Liam Graham Psychometry",
     description:
       "The Liam Graham Psychometry website, built by Nevaeh Solutions, is a modern, responsive platform for a psychometrist offering cognitive evaluations, ADHD screening, school readiness, and career guidance. It reflects professionalism and personalized care with a clean, user-friendly design.",
@@ -41,7 +41,7 @@ const ProjectsClient = () => {
             impact. From modern website revamps to tailored IT solutions, our
             recent projects showcase our expertise in delivering user-focused,
             high-quality digital experiences that drive results. Dive in to see
-            how we bring our clients’ visions to life!
+            how we bring our clients&apos; visions to life!
           </p>
         </header>
       </section>
