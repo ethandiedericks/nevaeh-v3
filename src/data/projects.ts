@@ -81,7 +81,7 @@ export const projects: Project[] = [
     ],
     imagesRight: [
       {
-        src: "/projects/liamgrahampsychometry-mockup.png",
+        src: "/projects/liamgrahampsychometry-mockup.avif",
         alt: "Mobile homepage",
       },
       {
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     imagesLeft: [],
     imagesRight: [
       { src: "/projects/johnscott-mockup.png", alt: "Mockup" },
-      { src: "/projects/johnscott-screens.png", alt: "Dashboard screen" },
+      { src: "/projects/johnscott-screens.avif", alt: "Dashboard screen" },
     ],
   },
 ];

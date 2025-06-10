@@ -21,7 +21,7 @@ const projects = [
   {
     id: "john-b-scott-attorneys",
     category: "Mobile App Development",
-    imageUrl: "/projects/johnscott.png",
+    imageUrl: "/projects/johnscott.avif",
     title: "John B. Scott Attorneys",
     description:
       "The John B. Scott Attorneys app is a specialized tool that automates the consultation process for Road Accident Fund claims, allowing clients to efficiently submit claims without lengthy paperwork. Built to reflect the firm's commitment to accessible legal services, the app offers a seamless, intuitive experience",
