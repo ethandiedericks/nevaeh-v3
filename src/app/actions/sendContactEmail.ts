@@ -1,67 +1,97 @@
 "use server";
 
+import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { z } from "zod";
-import { Resend } from "resend";
 
-const contactSchema = z.object({
-  fullName: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
+const schema = z.object({
+  fullName: z.string().min(1, "Full name is required."),
+  email: z.string().email("Invalid email address."),
   phoneNumber: z.string().optional(),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  subject: z.string().min(1, "Subject is required."),
+  message: z.string().min(1, "Message is required."),
 });
 
-export async function sendContactEmail(formData: FormData): Promise<{ success: boolean; error?: string }> {
-    const raw = {
-      fullName: formData.get("fullName"),
-      email: formData.get("email"),
-      phoneNumber: formData.get("phoneNumber"),
-      subject: formData.get("subject"),
-      message: formData.get("message"),
+const ses = new SESClient({
+  region: process.env.AWS_REGION,
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+  },
+});
+
+export async function sendContactEmail(formData: FormData) {
+  const parsed = schema.safeParse(Object.fromEntries(formData.entries()));
+
+  if (!parsed.success) {
+    const flat = parsed.error.flatten().fieldErrors;
+    return {
+      success: false,
+      error: Object.values(flat).flat().join(", ") || "Validation error.",
     };
-  
-    const result = contactSchema.safeParse(raw);
-    if (!result.success) {
-      console.error("Validation failed:", result.error.format());
-      return { success: false, error: "Invalid form submission." };
-    }
-  
-    const { fullName, email, phoneNumber, subject, message } = result.data;
-  
-    const ownerEmail = process.env.CONTACT_EMAIL;
-    const fromEmail = process.env.RESEND_FROM_EMAIL;
-  
-    if (!ownerEmail || !fromEmail) {
-      console.error("Missing env vars");
-      return { success: false, error: "Server misconfiguration." };
-    }
-  
-    const resend = new Resend(process.env.RESEND_API_KEY);
-  
-    const htmlContent = `
-      <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${fullName}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      ${phoneNumber ? `<p><strong>Phone:</strong> ${phoneNumber}</p>` : ""}
-      <p><strong>Subject:</strong> ${subject}</p>
-      <p><strong>Message:</strong> ${message}</p>
-    `;
-  
-    try {
-      await resend.emails.send({
-        from: `Contact Form <${fromEmail}>`,
-        to: ownerEmail,
-        subject: `New Contact: ${subject}`,
-        html: htmlContent,
-        replyTo: email,
-      });
-  
-      return { success: true };
-    } catch (err) {
-      console.error("Failed to send email:", err);
-      return { success: false, error: "Email failed to send. Please try again." };
-    }
   }
-  
 
+  const { fullName, email, phoneNumber, subject, message } = parsed.data;
 
+  const htmlBody = `
+    <div style="font-family: Arial, sans-serif; color: #333; background-color: #f9f9f9; padding: 30px;">
+      <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); overflow: hidden;">
+        <tr style="background-color: #0f172a;">
+          <td style="padding: 20px; text-align: center; color: #ffffff;">
+            <h2 style="margin: 0; font-size: 22px;">New Business Inquiry</h2>
+            <p style="margin: 4px 0 0; font-size: 14px;">from your website contact form</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 30px;">
+            <table cellpadding="6" cellspacing="0" width="100%" style="font-size: 14px; line-height: 1.6;">
+              <tr><td style="font-weight: bold;">Full Name:</td><td>${fullName}</td></tr>
+              <tr><td style="font-weight: bold;">Email:</td><td>${email}</td></tr>
+              <tr><td style="font-weight: bold;">Phone:</td><td>${phoneNumber || "N/A"}</td></tr>
+              <tr><td style="font-weight: bold;">Subject:</td><td>${subject}</td></tr>
+              <tr><td style="font-weight: bold;">Message:</td><td style="white-space: pre-wrap;">${message}</td></tr>
+            </table>
+            <p style="margin-top: 20px; font-size: 13px; color: #888;">
+              Submitted from your business site: ${process.env.NEXT_PUBLIC_BASE_URL || "your website"}
+            </p>
+          </td>
+        </tr>
+        <tr style="background-color: #f1f5f9;">
+          <td style="text-align: center; padding: 16px; font-size: 12px; color: #666;">
+            &copy; ${new Date().getFullYear()} Your Company. All rights reserved.
+          </td>
+        </tr>
+      </table>
+    </div>
+  `;
+
+  const command = new SendEmailCommand({
+    Destination: {
+      ToAddresses: [process.env.CONTACT_RECEIVER_EMAIL!],
+    },
+    Message: {
+      Subject: {
+        Data: `Website Contact: ${subject}`,
+        Charset: "UTF-8",
+      },
+      Body: {
+        Html: {
+          Data: htmlBody,
+          Charset: "UTF-8",
+        },
+      },
+    },
+    Source: process.env.SES_VERIFIED_SENDER_EMAIL!,
+    ReplyToAddresses: [email],
+  });
+
+  try {
+    await ses.send(command);
+    return { success: true };
+  } catch (err) {
+    console.error("SES error:", err);
+    return {
+      success: false,
+      error: "Could not send your message. Please try again later.",
+    };
+  }
+}

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import ContactCard from "@/components/contact/ContactInfoCards";
 import GradientButton from "@/components/GradientButton";
@@ -7,16 +7,19 @@ import { contactInfo } from "@/contactInfo";
 import { Clock, Mail, Phone } from "lucide-react";
 import { sendContactEmail } from "@/app/actions/sendContactEmail";
 import { toast } from "sonner";
-import { useRef, useTransition } from "react";
+import { useRef, useTransition, useState } from "react";
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isPending, startTransition] = useTransition();
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const handleSubmit = (formData: FormData) => {
+    setIsDisabled(true);
     startTransition(async () => {
       try {
         const response = await sendContactEmail(formData);
+
         if (response.success) {
           toast.success("Message sent successfully!");
           formRef.current?.reset();
@@ -26,6 +29,8 @@ const Contact = () => {
       } catch (error) {
         console.error("Error sending contact email:", error);
         toast.error("An unexpected error occurred.");
+      } finally {
+        setIsDisabled(false);
       }
     });
   };
@@ -42,7 +47,6 @@ const Contact = () => {
         </p>
       </header>
 
-      {/* Contact Info Cards */}
       <section
         aria-labelledby="contact-info-heading"
         className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 w-full max-w-6xl px-4"
@@ -70,16 +74,15 @@ const Contact = () => {
         />
       </section>
 
-      {/* Contact Section */}
       <section
         aria-labelledby="contact-form-heading"
         className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-6xl px-4 mb-16"
       >
-        {/* Contact Form */}
         <article className="border border-[#A6A6A6] p-6 md:p-8 rounded-[1.875rem]">
           <h2 id="contact-form-heading" className="text-xl mb-4">
             Send us a Message
           </h2>
+
           <form ref={formRef} action={handleSubmit} noValidate>
             <div className="flex flex-col md:flex-row md:gap-4">
               <div className="mb-4 w-full">
@@ -151,11 +154,14 @@ const Contact = () => {
               />
             </div>
 
-            <GradientButton text={isPending ? "Sending..." : "Send Message"} />
+            <GradientButton
+              text={isPending ? 'Sending...' : 'Send Message'}
+              disabled={isPending || isDisabled}
+            />
           </form>
         </article>
 
-        {/* Project Info */}
+        {/* Sidebar */}
         <aside className="flex flex-col space-y-6">
           <div>
             <h2 className="text-xl mb-4">Let&apos;s Discuss Your Project</h2>
@@ -172,11 +178,11 @@ const Contact = () => {
             </h3>
             <ul className="space-y-3">
               {[
-                "Expert consultation on your project requirements",
-                "Detailed project scope and timeline estimates",
-                "Flexible engagement models",
-                "Transparent communication throughout the process",
-                "Post-launch support and maintenance",
+                'Expert consultation on your project requirements',
+                'Detailed project scope and timeline estimates',
+                'Flexible engagement models',
+                'Transparent communication throughout the process',
+                'Post-launch support and maintenance',
               ].map((point, idx) => (
                 <li key={idx} className="flex items-start">
                   <CheckIcon className="mr-2 mt-1" />
@@ -187,12 +193,9 @@ const Contact = () => {
           </section>
 
           <div className="flex flex-col top-bottom-gradient-card p-4 justify-center">
-            <h3 className="text-lg mb-3 text-left">
-              Need immediate assistance?
-            </h3>
+            <h3 className="text-lg mb-3 text-left">Need immediate assistance?</h3>
             <p className="text-white/80 mb-4">
-              If you&apos;re in need of urgent assistance, don&apos;t hesitate
-              to give us a call!
+              If you&apos;re in need of urgent assistance, don&apos;t hesitate to give us a call!
             </p>
             <a href={`tel:${contactInfo.phone}`} className="max-w-fit">
               <GradientButton text="Give us a call" />
