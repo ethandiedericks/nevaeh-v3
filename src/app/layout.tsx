@@ -5,11 +5,10 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "sonner";
 import { ReactLenis } from "@/lib/lenis";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import Script from "next/script";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
-import { PostHogProvider } from "@/components/PostHogProvider";
-import WhatsAppButton from "@/components/WhatsappButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,6 +19,7 @@ const inter = Inter({
 type Metadata = NextMetadata;
 
 const GOOGLE_VERIFICATION = process.env.GOOGLE_VERIFICATION || "";
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://www.nevaeh.co.za";
 const OG_IMAGE_URL =
   process.env.NEXT_PUBLIC_OG_IMAGE_URL || "/opengraph-image.jpg";
@@ -103,7 +103,7 @@ export default function RootLayout({
 }>) {
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://www.nevaeh.co.za";
-
+  const GA_ID = process.env.GA_ID;
   const mainStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -220,44 +220,42 @@ export default function RootLayout({
     <html lang="en">
       <ReactLenis root>
         <body className={`${inter.variable} antialiased text-white`}>
-          <PostHogProvider>
-            <Script
-              id="main-structured-data"
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(mainStructuredData),
-              }}
-            />
-            <Script
-              id="service-structured-data"
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(serviceStructuredData),
-              }}
-            />
-            <Script
-              id="breadcrumb-structured-data"
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(breadcrumbStructuredData),
-              }}
-            />
-            <Navbar />
-            <main>{children}</main>
-            <CookieConsentBanner />
+          <GoogleAnalytics gaId={`${GA_ID}`} />
+          <Script
+            id="main-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(mainStructuredData),
+            }}
+          />
+          <Script
+            id="service-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(serviceStructuredData),
+            }}
+          />
+          <Script
+            id="breadcrumb-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(breadcrumbStructuredData),
+            }}
+          />
+          <Navbar />
+          <main>{children}</main>
+          <CookieConsentBanner />
 
-            <Toaster
-              position="bottom-right"
-              toastOptions={{
-                classNames: {
-                  toast:
-                    "bg-gradient-to-r from-[#001e05] via-black to-black text-white",
-                },
-              }}
-            />
-            <WhatsAppButton />
-            <Footer />
-          </PostHogProvider>
+          <Toaster
+            position="bottom-right"
+            toastOptions={{
+              classNames: {
+                toast:
+                  "bg-gradient-to-r from-[#001e05] via-black to-black text-white",
+              },
+            }}
+          />
+          <Footer />
         </body>
       </ReactLenis>
     </html>
